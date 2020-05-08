@@ -1,4 +1,4 @@
-.sheet-main {
+div.sheet-main {
 	display: grid;
 	width: 800px;
 	grid-gap: 4px;
@@ -8,7 +8,7 @@
 							"four";
 }
 
-.sheet-one {
+div.sheet-one {
 	grid-area: one;
 	display: grid;
 	grid-gap: 4px;
@@ -16,126 +16,40 @@
 	grid-template-areas: "general chars image";
 }
 
-.sheet-general {
+div.sheet-general {
 	grid-area: general;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-areas:	"general1Labels general1Inputs"
-							"general2Labels general2Inputs"
-							"general3Labels general3Inputs"
-							"general4Labels general4Inputs"
-							"general5Labels general5Inputs"
-							"general6Labels general6Inputs";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-generalLabels {
-	grid-area: generalLabels;
-}
-
-.sheet-generalInputs {
-	grid-area: generalInputs;
-}
-
-.sheet-chars {
+div.sheet-chars {
 	grid-area: chars;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-areas:	"charsHeader	charsHeader		charsHeader		charsHeader		charsHeader		charsHeader"
-							"chars1LLabels	chars1LInputs	chars1CLabels	chars1CInputs	chars1RLabels	chars1RInputs"
-							"chars2LLabels	chars2LInputs	chars2CLabels	chars2CInputs	chars2RLabels	chars2RInputs"
-							"chars3LLabels	chars3LInputs	chars3CLabels	chars3CInputs	chars3RLabels	chars3RInputs";
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 3em repeat(3, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-charsHeader {
-	grid-area: charsHeader;
+div.sheet-chars h2 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
-.sheet-chars1LLabels {
-	grid-area: chars1LLabels;
-}
-
-.sheet-chars1LInputs {
-	grid-area: chars1LInputs;
-}
-
-.sheet-chars1CLabels {
-	grid-area: chars1CLabels;
-}
-
-.sheet-chars1CInputs {
-	grid-area: chars1CInputs;
-}
-
-.sheet-chars1RLabels {
-	grid-area: chars1RLabels;
-}
-
-.sheet-chars1RInputs {
-	grid-area: chars1RInputs;
-}
-
-.sheet-chars2LLabels {
-	grid-area: chars2LLabels;
-}
-
-.sheet-chars2LInputs {
-	grid-area: chars2LInputs;
-}
-
-.sheet-chars2CLabels {
-	grid-area: chars2CLabels;
-}
-
-.sheet-chars2CInputs {
-	grid-area: chars2CInputs;
-}
-
-.sheet-chars2RLabels {
-	grid-area: chars2RLabels;
-}
-
-.sheet-chars2RInputs {
-	grid-area: chars2RInputs;
-}
-
-.sheet-chars3LLabels {
-	grid-area: chars3LLabels;
-}
-
-.sheet-chars3LInputs {
-	grid-area: chars3LInputs;
-}
-
-.sheet-chars3CLabels {
-	grid-area: chars3CLabels;
-}
-
-.sheet-chars3CInputs {
-	grid-area: chars3CInputs;
-}
-
-.sheet-chars3RLabels {
-	grid-area: chars3RLabels;
-}
-
-.sheet-chars3RInputs {
-	grid-area: chars3RInputs;
-}
-
-.sheet-image {
+div.sheet-image {
 	grid-area: image;
     border-style: solid;
 	border-width: thin;
 }
 
-.sheet-two {
+div.sheet-two {
 	grid-area: two;
 	display: grid;
 	grid-gap: 4px;
@@ -143,154 +57,65 @@
 	grid-template-areas: "hitPoints logo spiritPoints";
 }
 
-.sheet-hitPoints {
+div.sheet-hitPoints {
 	grid-area: hitPoints;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-areas:	"hitPointsHeader	hitPointsHeader"
-							"hitPoints1Labels	hitPoints1Inputs"
-							"hitPoints2Labels	hitPoints2Inputs"
-							"hitPoints3Labels	hitPoints3Inputs"
-							"hitPoints4Labels	hitPoints4Inputs"
-							"hitPoints5Labels	hitPoints5Inputs";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 3em repeat(5, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-hitPointsHeader {
-	grid-area: hitPointsHeader;
+div.sheet-hitPoints h3 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
-.sheet-hitPoints1Labels {
-	grid-area: hitPoints1Labels;
-}
-
-.sheet-hitPoints1Inputs {
-	grid-area: hitPoints1Inputs;
-}
-
-.sheet-hitPoints2Labels {
-	grid-area: hitPoints2Labels;
-}
-
-.sheet-hitPoints2Inputs {
-	grid-area: hitPoints2Inputs;
-}
-
-.sheet-hitPoints3Labels {
-	grid-area: hitPoints3Labels;
-}
-
-.sheet-hitPoints3Inputs {
-	grid-area: hitPoints3Inputs;
-}
-
-.sheet-hitPoints4Labels {
-	grid-area: hitPoints4Labels;
-}
-
-.sheet-hitPoints4Inputs {
-	grid-area: hitPoints4Inputs;
-}
-
-.sheet-hitPoints5Labels {
-	grid-area: hitPoints5Labels;
-}
-
-.sheet-hitPoints5Inputs {
-	grid-area: hitPoints5Inputs;
-}
-
-.sheet-logo {
+div.sheet-logo {
 	grid-area: logo;
+	padding: 10px;
 }
 
-.sheet-spiritPoints {
+div.sheet-logo h1 {
+	text-align: center;
+}
+
+div.sheet-spiritPoints {
 	grid-area: spiritPoints;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-areas:	"spiritPointsHeader spiritPointsHeader"
-							"spiritPoints1Labels spiritPoints1Inputs"
-							"spiritPoints2Labels spiritPoints2Inputs";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 3em 2em 2em;
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-spiritPointsHeader {
-	grid-area: spiritPointsHeader;
+div.sheet-spiritPoints h3 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
-.sheet-spiritPoints1Labels {
-	grid-area: spiritPoints1Labels;
-}
-
-.sheet-spiritPoints1Inputs {
-	grid-area: spiritPoints1Inputs;
-}
-
-.sheet-spiritPoints2Labels {
-	grid-area: spiritPoints2Labels;
-}
-
-.sheet-spiritPoints2Inputs {
-	grid-area: spiritPoints2Inputs;
-}
-
-.sheet-three {
+div.sheet-three {
 	grid-area: three;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 9fr 2fr 1fr 9fr 2fr 1fr 9fr 2fr;
-	grid-template-areas:	"skillsHeader	skillsHeader	skillsHeader	skillsHeader	skillsHeader	skillsHeader	skillsHeader	skillsHeader	skillsHeader"
-							"skillsLChecks	skillsLLabels	skillsLInputs	skillsCChecks	skillsCLabels	skillsCInputs	skillsRChecks	skillsRLabels	skillsRInputs";
-    border-style: solid;
+	grid-template-columns: repeat(3, 1fr 9fr 2fr);
+	grid-template-rows: 3em repeat(17, 2em);
+  	grid-auto-flow: column;
+  	border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-skillsHeader {
-	grid-area: skillsHeader;
+div.sheet-three h2 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
-.sheet-skillsLChecks {
-	grid-area: skillsLChecks;
-}
-
-.sheet-skillsLLabels {
-	grid-area: skillsLLabels;
-}
-
-.sheet-skillsLInputs {
-	grid-area: skillsLInputs;
-}
-
-.sheet-skillsCChecks {
-	grid-area: skillsCChecks;
-}
-
-.sheet-skillsCLabels {
-	grid-area: skillsCLabels;
-}
-
-.sheet-skillsCInputs {
-	grid-area: skillsCInputs;
-}
-
-.sheet-skillsRChecks {
-	grid-area: skillsRChecks;
-}
-
-.sheet-skillsRLabels {
-	grid-area: skillsRLabels;
-}
-
-.sheet-skillsRInputs {
-	grid-area: skillsRInputs;
-}
-
-.sheet-four {
+div.sheet-four {
 	grid-area: four;
 	display: grid;
 	grid-gap: 4px;
@@ -298,227 +123,47 @@
 	grid-template-areas: "weapons combat";
 }
 
-.sheet-weapons {
+div.sheet-weapons {
 	grid-area: weapons;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 3fr 3fr 2fr 2fr 1fr;
-	grid-template-areas:	"weaponsHeader		weaponsHeader		weaponsHeader		weaponsHeader		weaponsHeader"
-							"weaponsHeaderName	weaponsHeaderSkill	weaponsHeaderDamage	weaponsHeaderRange	weaponsHeaderAmmo"
-							"weapons1Name		weapons1Skill		weapons1Damage		weapons1Range		weapons1Ammo"
-							"weapons2Name		weapons2Skill		weapons2Damage		weapons2Range		weapons2Ammo"
-							"weapons3Name		weapons3Skill		weapons3Damage		weapons3Range		weapons3Ammo"
-							"weapons4Name		weapons4Skill		weapons4Damage		weapons4Range		weapons4Ammo"
-							"weapons5Name		weapons5Skill		weapons5Damage		weapons5Range		weapons5Ammo"
-							"weapons6Name		weapons6Skill		weapons6Damage		weapons6Range		weapons6Ammo";
+	grid-template-columns: 4fr 2fr 2fr 2fr 1fr;
+	grid-template-rows: 3em repeat(7, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-weaponsHeader {
-	grid-area: weaponsHeader;
+div.sheet-weapons h2 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
-.sheet-weaponsHeaderName {
-	grid-area: weaponsHeaderName;
-}
-
-.sheet-weaponsHeaderSkill {
-	grid-area: weaponsHeaderSkill;
-}
-
-.sheet-weaponsHeaderDamage {
-	grid-area: weaponsHeaderDamage;
-}
-
-.sheet-weaponsHeaderRange {
-	grid-area: weaponsHeaderRange;
-}
-
-.sheet-weaponsHeaderAmmo {
-	grid-area: weaponsHeaderAmmo;
-}
-
-.sheet-weapons1Name {
-	grid-area: weapons1Name;
-}
-
-.sheet-weapons1Skill {
-	grid-area: weapons1Skill;
-}
-
-.sheet-weapons1Damage {
-	grid-area: weapons1Damage;
-}
-
-.sheet-weapons1Range {
-	grid-area: weapons1Range;
-}
-
-.sheet-weapons1Ammo {
-	grid-area: weapons1Ammo;
-}
-
-.sheet-weapons2Name {
-	grid-area: weapons2Name;
-}
-
-.sheet-weapons2Skill {
-	grid-area: weapons2Skill;
-}
-
-.sheet-weapons2Damage {
-	grid-area: weapons2Damage;
-}
-
-.sheet-weapons2Range {
-	grid-area: weapons2Range;
-}
-
-.sheet-weapons2Ammo {
-	grid-area: weapons2Ammo;
-}
-
-.sheet-weapons3Name {
-	grid-area: weapons3Name;
-}
-
-.sheet-weapons3Skill {
-	grid-area: weapons3Skill;
-}
-
-.sheet-weapons3Damage {
-	grid-area: weapons3Damage;
-}
-
-.sheet-weapons3Range {
-	grid-area: weapons3Range;
-}
-
-.sheet-weapons3Ammo {
-	grid-area: weapons3Ammo;
-}
-
-.sheet-weapons4Name {
-	grid-area: weapons4Name;
-}
-
-.sheet-weapons4Skill {
-	grid-area: weapons4Skill;
-}
-
-.sheet-weapons4Damage {
-	grid-area: weapons4Damage;
-}
-
-.sheet-weapons4Range {
-	grid-area: weapons4Range;
-}
-
-.sheet-weapons4Ammo {
-	grid-area: weapons4Ammo;
-}
-
-.sheet-weapons5Name {
-	grid-area: weapons5Name;
-}
-
-.sheet-weapons5Skill {
-	grid-area: weapons5Skill;
-}
-
-.sheet-weapons5Damage {
-	grid-area: weapons5Damage;
-}
-
-.sheet-weapons5Range {
-	grid-area: weapons5Range;
-}
-
-.sheet-weapons5Ammo {
-	grid-area: weapons5Ammo;
-}
-
-.sheet-weapons6Name {
-	grid-area: weapons6Name;
-}
-
-.sheet-weapons6Skill {
-	grid-area: weapons6Skill;
-}
-
-.sheet-weapons6Damage {
-	grid-area: weapons6Damage;
-}
-
-.sheet-weapons6Range {
-	grid-area: weapons6Range;
-}
-
-.sheet-weapons6Ammo {
-	grid-area: weapons6Ammo;
-}
-
-.sheet-combat {
+div.sheet-combat {
 	grid-area: combat;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-areas:	"combatHeader	combatHeader"
-							"combat1Labels	combat1Inputs"
-							"combat2Labels	combat2Inputs"
-							"combat3Labels	combat3Inputs"
-							"combat4Labels	combat4Inputs";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 3em repeat(4, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px;
 }
 
-.sheet-combatHeader {
-	grid-area: combatHeader;
-}
-
-.sheet-combat1Labels {
-	grid-area: combat1Labels;
-}
-
-.sheet-combat1Inputs {
-	grid-area: combat1Inputs;
-}
-
-.sheet-combat2Labels {
-	grid-area: combat2Labels;
-}
-
-.sheet-combat2Inputs {
-	grid-area: combat2Inputs;
-}
-
-.sheet-combat3Labels {
-	grid-area: combat3Labels;
-}
-
-.sheet-combat3Inputs {
-	grid-area: combat3Inputs;
-}
-
-.sheet-combat4Labels {
-	grid-area: combat4Labels;
-}
-
-.sheet-combat4Inputs {
-	grid-area: combat4Inputs;
+div.sheet-combat h2 {
+    grid-column: 1 / -1;
+	text-align: center;
 }
 
 /* Targetted styling that only effects elements with these classes */
-input.sheet-short100 {
+input.sheet-width100 {
 	width: 100%;
 }
 
-input.sheet-short50 {
-	width: 50%;
+input.sheet-narrow {
+	width: 38%;
 }
 
-input.sheet-short25 {
+input.sheet-Vnarrow {
 	width: 25%;
 }
