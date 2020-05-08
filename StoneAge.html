@@ -1,250 +1,479 @@
-<h1>Stone Age</h1>
-
-<hr>
-
-<div class="3colrow">
-    
-    <div class="col">
-    	<label>Name</label><input type="text" name="attr_Name" />
-    	<br />
-		<label>Player</label><input type="text" name="attr_Player" />
-		<br />
-		<label>Path</label><input type="text" name="attr_Path" />
-		<br />
-		<label>Age</label><input type="number" name="attr_Age" />
-		<br />
-		<label>Sex</label><input type="text" name="attr_Sex" />
-		<br />
-		<label>Tribe</label><input type="text" name="attr_Tribe" />
-	</div>
-
-	<div class="col">
-		<h2>Characteristics</h2>
-		<div class="3colrow">
-		    <div class="col">
-		        <label>STR</label><input type="number" name="attr_STR" />
-            	<br />
-		        <label>CON</label><input type="number" name="attr_CON" />
-		        <br />
-		        <label>SIZ</label><input type="number" name="attr_SIZ" />
-		    </div>
-		    
-		    <div class="col">
-		        <label>DEX</label><input type="number" name="attr_DEX" />
-            	<br />
-		        <label>APP</label><input type="number" name="attr_APP" />
-		        <br />
-		        <label>Luck</label><input type="number" name="attr_Luck" />
-		    </div>
-		    
-		    <div class="col">
-		        <label>INT</label><input type="number" name="attr_INT" />
-            	<br />
-		        <label>POW</label><input type="number" name="attr_POW" />
-		        <br />
-		        <label>Move Rate</label><input type="number" name="attr_MoveRate" />
-		    </div>
+<div class="main">
+	<div class="one">
+		<div class="general">
+			<div class="general1Labels">
+				<p>Name</p>
+			</div>
+			<div class="general1Inputs">
+				<input type="text" name="attr_Name" />
+			</div>
+			<div class="general2Labels">
+				<p>Player</p>
+			</div>
+			<div class="general2Inputs">
+				<input type="text" name="attr_Player" />
+			</div>
+			<div class="general3Labels">
+				<p>Path</p>
+			</div>
+			<div class="general3Inputs">
+				<input type="text" name="attr_Path" />
+			</div>
+			<div class="general4Labels">
+				<p>Age</p>
+			</div>
+			<div class="general4Inputs">
+				<input type="text" name="attr_Age" class='sheet-short25' />
+			</div>
+			<div class="general5Labels">
+				<p>Sex</p>
+			</div>
+			<div class="general5Inputs">
+				<input type="text" name="attr_Sex" />
+			</div>
+			<div class="general6Labels">
+				<p>Tribe</p>
+			</div>
+			<div class="general6Inputs">
+				<input type="text" name="attr_Tribe" />
+			</div>
+		</div>
+		<div class="chars">
+			<div class="charsHeader">
+				<h2>Characteristics</h2>
+			</div>
+			<div class="chars1LLabels">
+				<p>STR</p>
+			</div>
+			<div class="chars1LInputs">
+				<input type="text" name="attr_STR" class='sheet-short100' />
+			</div>
+			<div class="chars1CLabels">
+				<p>DEX</p>
+			</div>
+			<div class="chars1CInputs">
+				<input type="text" name="attr_DEX" class='sheet-short100' />
+			</div>
+			<div class="chars1RLabels">
+				<p>INT</p>
+			</div>
+			<div class="chars1RInputs">
+				<input type="text" name="attr_INT" class='sheet-short100' />
+			</div>
+			<div class="chars2LLabels">
+				<p>CON</p>
+			</div>
+			<div class="chars2LInputs">
+				<input type="text" name="attr_CON" class='sheet-short100' />
+			</div>
+			<div class="chars2CLabels">
+				<p>APP</p>
+			</div>
+			<div class="chars2CInputs">
+				<input type="text" name="attr_APP" class='sheet-short100' />
+			</div>
+			<div class="chars2RLabels">
+				<p>POW</p>
+			</div>
+			<div class="chars2RInputs">
+				<input type="text" name="attr_POW" class='sheet-short100' />
+			</div>
+			<div class="chars3LLabels">
+				<p>SIZ</p>
+			</div>
+			<div class="chars3LInputs">
+				<input type="text" name="attr_SIZ" class='sheet-short100' />
+			</div>
+			<div class="chars3CLabels">
+				<p>Luck</p>
+			</div>
+			<div class="chars3CInputs">
+				<input type="text" name="attr_Luck" class='sheet-short100' />
+			</div>
+			<div class="chars3RLabels">
+				<p>Move Rate</p>
+			</div>
+			<div class="chars3RInputs">
+				<input type="text" name="attr_MoveRate" class='sheet-short100' />
+			</div>
+		</div>
+		<div class="image">
 		</div>
 	</div>
-
-	<div class="col">
-		<textarea name="attr_sketch"></textarea>
+	<div class="two">
+		<div class="hitPoints">
+			<div class="hitPointsHeader">
+				<h3>Hit Points</h3>
+			</div>
+			<div class="hitPoints1Labels">
+				<p>Max HP</p>
+			</div>
+			<div class="hitPoints1Inputs">
+				<input type="text" name="attr_MaxHP" class='sheet-short25' />
+			</div>
+			<div class="hitPoints2Labels">
+				<p>Major Wound</p>
+			</div>
+			<div class="hitPoints2Inputs">
+				<input type="checkbox" name="attr_MajorWound" value="1" />
+			</div>
+			<div class="hitPoints3Labels">
+				<p>Dying</p>
+			</div>
+			<div class="hitPoints3Inputs">
+				<input type="checkbox" name="attr_Dying" value="1" />
+			</div>
+			<div class="hitPoints4Labels">
+				<p>Unconscious</p>
+			</div>
+			<div class="hitPoints4Inputs">
+				<input type="checkbox" name="attr_Unconscious" value="1" />
+			</div>
+			<div class="hitPoints5Labels">
+				<p>Current HP</p>
+			</div>
+			<div class="hitPoints5Inputs">
+				<input type="number" name="attr_CurrentHP" />
+			</div>
+		</div>
+		<div class="logo">
+			<h1>Stone<br>
+				Age</h1>
+		</div>
+		<div class="spiritPoints">
+			<div class="spiritPointsHeader">
+				<h3>Spirit Points</h3>
+			</div>
+			<div class="spiritPoints1Labels">
+				<p>Max SP</p>
+			</div>
+			<div class="spiritPoints1Inputs">
+				<input type="text" name="attr_MaxSP" class='sheet-short25' />
+			</div>
+			<div class="spiritPoints2Labels">
+				<p>Current SP</p>
+			</div>
+			<div class="spiritPoints2Inputs">
+				<input type="number" name="attr_CurrentSP" />
+			</div>
+		</div>
 	</div>
-
-</div>
-
-<hr>
-
-<div class="2colrow">
-    
-    <div class="col">
-        <h3>Hit Points</h3>
-        <br />
-    	<label>Max HP</label><input type="number" name="attr_MaxHP" />
-    	<br />
-		<label>Major Wound</label><input type="checkbox" name="attr_MajorWound" value="1" />
-    	<br />
-		<label>Dying</label><input type="checkbox" name="attr_Dying" value="1" />
-    	<br />
-		<label>Unconscious</label><input type="checkbox" name="attr_Unconscious" value="1" />
-		<br />
-		<label>Current HP</label><input type="number" name="attr_CurrentHP" />
+	<div class="three">
+		<div class="skillsHeader">
+			<h2>Skills</h2>
+		</div>
+		<div class="skillsLChecks">
+			<input type="checkbox" name="attr_ActingChk" value="1" /><br>
+			<input type="checkbox" name="attr_AnimalGuiseChk" value="1" /><br>
+			<input type="checkbox" name="attr_AnimalHandlingChk" value="1" /><br>
+			<input type="checkbox" name="attr_AppraiseChk" value="1" /><br>
+			<input type="checkbox" name="attr_AxeChk" value="1" /><br>
+			<input type="checkbox" name="attr_BandagingChk" value="1" /><br>
+			<input type="checkbox" name="attr_BlowpipeChk" value="1" /><br>
+			<input type="checkbox" name="attr_BolasChk" value="1" /><br>
+			<input type="checkbox" name="attr_BowChk" value="1" /><br>
+			<input type="checkbox" name="attr_BrawlChk" value="1" /><br>
+			<input type="checkbox" name="attr_CanoeChk" value="1" /><br>
+			<input type="checkbox" name="attr_CharmChk" value="1" /><br>
+			<input type="checkbox" name="attr_ClimbChk" value="1" /><br>
+			<input type="checkbox" name="attr_CookingChk" value="1" /><br>
+			<input type="checkbox" name="attr_DancingChk" value="1" /><br>
+			<input type="checkbox" name="attr_DiplomacyChk" value="1" /><br>
+			<input type="checkbox" name="attr_DodgeChk" value="1" />
+		</div>
+		<div class="skillsLLabels">
+			<p>Acting (05%)</p>
+			<p>Animal Guise (05%)</p>
+			<p>Animal Handling (05%)</p>
+			<p>Appraise (05%)</p>
+			<p>Axe (15%)</p>
+			<p>Bandaging (10%)</p>
+			<p>Blowpipe (15%)</p>
+			<p>Bolas (05%)</p>
+			<p>Bow (15%)</p>
+			<p>Brawl (25%)</p>
+			<p>Canoe (05%)</p>
+			<p>Charm (15%)</p>
+			<p>Climb (20%)</p>
+			<p>Cooking (10%)</p>
+			<p>Dancing (05%)</p>
+			<p>Diplomacy (05%)</p>
+			<p>Dodge (half DEX)</p>
+		</div>
+		<div class="skillsLInputs">
+			<input type="text" name="attr_Acting" class='sheet-short100' /><br>
+			<input type="text" name="attr_AnimalGuise" class='sheet-short100' /><br>
+			<input type="text" name="attr_AnimalHandling" class='sheet-short100' /><br>
+			<input type="text" name="attr_Appraise" class='sheet-short100' /><br>
+			<input type="text" name="attr_Axe" class='sheet-short100' /><br>
+			<input type="text" name="attr_Bandaging" class='sheet-short100' /><br>
+			<input type="text" name="attr_Blowpipe" class='sheet-short100' /><br>
+			<input type="text" name="attr_Bolas" class='sheet-short100' /><br>
+			<input type="text" name="attr_Bow" class='sheet-short100' /><br>
+			<input type="text" name="attr_Brawl" class='sheet-short100' /><br>
+			<input type="text" name="attr_Canoe" class='sheet-short100' /><br>
+			<input type="text" name="attr_Charm" class='sheet-short100' /><br>
+			<input type="text" name="attr_Climb" class='sheet-short100' /><br>
+			<input type="text" name="attr_Cooking" class='sheet-short100' /><br>
+			<input type="text" name="attr_Dancing" class='sheet-short100' /><br>
+			<input type="text" name="attr_Diplomacy" class='sheet-short100' /><br>
+			<input type="text" name="attr_Dodge" class='sheet-short100' />
+		</div>
+		<div class="skillsCChecks">
+			<input type="checkbox" name="attr_EmpathyChk" value="1" /><br>
+			<input type="checkbox" name="attr_FastTalkChk" value="1" /><br>
+			<input type="checkbox" name="attr_GestureChk" value="1" /><br>
+			<input type="checkbox" name="attr_HerbalistChk" value="1" /><br>
+			<input type="checkbox" name="attr_IntimidateChk" value="1" /><br>
+			<input type="checkbox" name="attr_LanguageChk" value="1" /><br>
+			<input type="checkbox" name="attr_LeadershipChk" value="1" /><br>
+			<input type="checkbox" name="attr_LeatherworkChk" value="1" /><br>
+			<input type="checkbox" name="attr_ListenChk" value="1" /><br>
+			<input type="checkbox" name="attr_MimicryChk" value="1" /><br>
+			<input type="checkbox" name="attr_MusicChk" value="1" /><br>
+			<input type="checkbox" name="attr_NaturalistChk" value="1" /><br>
+			<input type="checkbox" name="attr_NavigateChk" value="1" /><br>
+			<input type="checkbox" name="attr_PaintingChk" value="1" /><br>
+			<input type="checkbox" name="attr_PersuadeChk" value="1" /><br>
+			<input type="checkbox" name="attr_RacialMemoryChk" value="1" /><br>
+			<input type="checkbox" name="attr_RitualsCeremoniesChk" value="1" />
+		</div>
+		<div class="skillsCLabels">
+			<p>Empathy (10%)</p>
+			<p>Fast Talk (05%)</p>
+			<p>Gesture (half INT)</p>
+			<p>Herbalist (01%)</p>
+			<p>Intimidate (15%)</p>
+			<p>Language (Own) (INT)</p>
+			<p>Leadership (05%)</p>
+			<p>Leatherwork (10%)</p>
+			<p>Listen (20%)</p>
+			<p>Mimicry (05%)</p>
+			<p>Music (05%)</p>
+			<p>Naturalist (10%)</p>
+			<p>Navigate (10%)</p>
+			<p>Painting (05%)</p>
+			<p>Persuade (10%)</p>
+			<p>Racial Memory (05%)</p>
+			<p>Rituals and Ceremonies (01%)</p>
+		</div>
+		<div class="skillsCInputs">
+			<input type="text" name="attr_Empathy" class='sheet-short100' /><br>
+			<input type="text" name="attr_FastTalk" class='sheet-short100' /><br>
+			<input type="text" name="attr_Gesture" class='sheet-short100' /><br>
+			<input type="text" name="attr_Herbalist" class='sheet-short100' /><br>
+			<input type="text" name="attr_Intimidate" class='sheet-short100' /><br>
+			<input type="text" name="attr_Language" class='sheet-short100' /><br>
+			<input type="text" name="attr_Leadership" class='sheet-short100' /><br>
+			<input type="text" name="attr_Leatherwork" class='sheet-short100' /><br>
+			<input type="text" name="attr_attr_Listen" class='sheet-short100' /><br>
+			<input type="text" name="attr_Mimicry" class='sheet-short100' /><br>
+			<input type="text" name="attr_Music" class='sheet-short100' /><br>
+			<input type="text" name="attr_Naturalist" class='sheet-short100' /><br>
+			<input type="text" name="attr_Navigate" class='sheet-short100' /><br>
+			<input type="text" name="attr_Painting" class='sheet-short100' /><br>
+			<input type="text" name="attr_Persuade" class='sheet-short100' /><br>
+			<input type="text" name="attr_RacialMemory" class='sheet-short100' /><br>
+			<input type="text" name="attr_RitualsCeremonies" class='sheet-short100' />
+		</div>
+		<div class="skillsRChecks">
+			<input type="checkbox" name="attr_RunningChk" value="1" /><br>
+			<input type="checkbox" name="attr_SleightHandChk" value="1" /><br>
+			<input type="checkbox" name="attr_SlingChk" value="1" /><br>
+			<input type="checkbox" name="attr_SpearChk" value="1" /><br>
+			<input type="checkbox" name="attr_SpotHiddenChk" value="1" /><br>
+			<input type="checkbox" name="attr_StatusChk" value="1" /><br>
+			<input type="checkbox" name="attr_StealthChk" value="1" /><br>
+			<input type="checkbox" name="attr_StoneKnappingChk" value="1" /><br>
+			<input type="checkbox" name="attr_SurvivalChk" value="1" /><br>
+			<input type="checkbox" name="attr_SwimChk" value="1" /><br>
+			<input type="checkbox" name="attr_TeachingChk" value="1" /><br>
+			<input type="checkbox" name="attr_ThrowChk" value="1" /><br>
+			<input type="checkbox" name="attr_TrackChk" value="1" /><br>
+			<input type="checkbox" name="attr_WeatherSenseChk" value="1" /><br>
+			<input type="checkbox" name="attr_WoodworkChk" value="1" /><br>
+			<input type="checkbox" name="attr_SkillAChk" value="1" /><br>
+			<input type="checkbox" name="attr_SkillBChk" value="1" /><br>
+		</div>
+		<div class="skillsRLabels">
+			<p>Running (20%)</p>
+			<p>Sleight of Hand (10%)</p>
+			<p>Sling (10%)</p>
+			<p>Spear (20%)</p>
+			<p>Spot Hidden (25%)</p>
+			<p>Status (00%)</p>
+			<p>Stealth (20%)</p>
+			<p>Stone Knapping (10%)</p>
+			<p>Survival (Own) (10%)</p>
+			<p>Swim (20%)</p>
+			<p>Teaching (05%)</p>
+			<p>Throw (20%)</p>
+			<p>Track (10%)</p>
+			<p>Weather Sense (05%)</p>
+			<p>Woodwork (10%)</p>
+			<input type="text" name="attr_SkillAName" />
+			<input type="text" name="attr_SkillBName" />
+		</div>
+		<div class="skillsRInputs">
+			<input type="text" name="attr_Running" class='sheet-short100' /><br>
+			<input type="text" name="attr_SleightHand" class='sheet-short100' /><br>
+			<input type="text" name="attr_Sling" class='sheet-short100' /><br>
+			<input type="text" name="attr_Spear" class='sheet-short100' /><br>
+			<input type="text" name="attr_SpotHidden" class='sheet-short100' /><br>
+			<input type="text" name="attr_Status" class='sheet-short100' /><br>
+			<input type="text" name="attr_Stealth" class='sheet-short100' /><br>
+			<input type="text" name="attr_StoneKnapping" class='sheet-short100' /><br>
+			<input type="text" name="attr_Survival" class='sheet-short100' /><br>
+			<input type="text" name="attr_Swim" class='sheet-short100' /><br>
+			<input type="text" name="attr_Teaching" class='sheet-short100' /><br>
+			<input type="text" name="attr_Throw" class='sheet-short100' /><br>
+			<input type="text" name="attr_skill1" class='sheet-short100' /><br>
+			<input type="text" name="attr_WeatherSense" class='sheet-short100' /><br>
+			<input type="text" name="attr_Woodwork" class='sheet-short100' /><br>
+			<input type="text" name="attr_SkillA" class='sheet-short100' /><br>
+			<input type="text" name="attr_SkillB" class='sheet-short100' />
+		</div>
 	</div>
-
-    <div class="col">
-        <h3>Spirit Points</h3>
-        <br />
-		<label>Max SP</label><input type="number" name="attr_MaxSP" />
-    	<br />
-		<label>Current SP</label><input type="number" name="attr_CurrentSP" />
 	</div>
-
-</div>
-
-<hr>
-
-<h2>Skills</h2>
-
-<div class="3colrow">
-    
-    <div class="col">
-        <input type="checkbox" name="attr_ActingChk" value="1" /><label>Acting (05%)</label><input type="number" name="attr_Acting" />
-        <br />
-        <input type="checkbox" name="attr_AnimalGuiseChk" value="1" /><label>Animal Guise (05%)</label><input type="number" name="attr_AnimalGuise" />
-        <br />
-        <input type="checkbox" name="attr_AnimalHandlingChk" value="1" /><label>Animal Handling (05%)</label><input type="number" name="attr_AnimalHandling" />
-        <br />
-        <input type="checkbox" name="attr_AppraiseChk" value="1" /><label>Appraise (05%)</label><input type="number" name="attr_Appraise" />
-        <br />
-        <input type="checkbox" name="attr_AxeChk" value="1" /><label>Axe (15%)</label><input type="number" name="attr_Axe" />
-        <br />
-        <input type="checkbox" name="attr_BandagingChk" value="1" /><label>Bandaging (10%)</label><input type="number" name="attr_Bandaging" />
-        <br />
-        <input type="checkbox" name="attr_BlowpipeChk" value="1" /><label>Blowpipe (15%)</label><input type="number" name="attr_Blowpipe" />
-        <br />
-        <input type="checkbox" name="attr_BolasChk" value="1" /><label>Bolas (05%)</label><input type="number" name="attr_Bolas" />
-        <br />
-        <input type="checkbox" name="attr_BowChk" value="1" /><label>Bow (15%)</label><input type="number" name="attr_Bow" />
-        <br />
-        <input type="checkbox" name="attr_BrawlChk" value="1" /><label>Brawl (25%)</label><input type="number" name="attr_Brawl" />
-        <br />
-        <input type="checkbox" name="attr_CanoeChk" value="1" /><label>Canoe (05%)</label><input type="number" name="attr_Canoe" />
-        <br />
-        <input type="checkbox" name="attr_CharmChk" value="1" /><label>Charm (15%)</label><input type="number" name="attr_Charm" />
-        <br />
-        <input type="checkbox" name="attr_ClimbChk" value="1" /><label>Climb (20%)</label><input type="number" name="attr_Climb" />
-        <br />
-        <input type="checkbox" name="attr_CookingChk" value="1" /><label>Cooking (10%)</label><input type="number" name="attr_Cooking" />
-        <br />
-        <input type="checkbox" name="attr_DancingChk" value="1" /><label>Dancing (05%)</label><input type="number" name="attr_Dancing" />
-        <br />
-        <input type="checkbox" name="attr_DiplomacyChk" value="1" /><label>Diplomacy (05%)</label><input type="number" name="attr_Diplomacy" />
-        <br />
-        <input type="checkbox" name="attr_DodgeChk" value="1" /><label>Dodge (half DEX)</label><input type="number" name="attr_Dodge" />
+	<div class="four">
+		<div class="weapons">
+			<div class="weaponsHeader">
+				<h2>Weapons</h2>
+			</div>
+			<div class="weaponsHeaderName">
+				<p>Weapon</p>
+			</div>
+			<div class="weaponsHeaderSkill">
+				<p>Skill</p>
+			</div>
+			<div class="weaponsHeaderDamage">
+				<p>Damage</p>
+			</div>
+			<div class="weaponsHeaderRange">
+				<p>Range</p>
+			</div>
+			<div class="weaponsHeaderAmmo">
+				<p>Ammo</p>
+			</div>
+			<div class="weapons1Name">
+				<p>Unarmed</p>
+			</div>
+			<div class="weapons1Skill">
+				<input type="text" name="attr_Brawl" class='sheet-short100' />
+			</div>
+			<div class="weapons1Damage">
+				<p>1d3 + db</p>
+			</div>
+			<div class="weapons1Range">
+				<p>-</p>
+			</div>
+			<div class="weapons1Ammo">
+				<p>-</p>
+			</div>
+			<div class="weapons2Name">
+				<input type="text" name="attr_weapons2Name" class='sheet-short100' />
+			</div>
+			<div class="weapons2Skill">
+				<input type="text" name="attr_weapons2Skill" class='sheet-short100' />
+			</div>
+			<div class="weapons2Damage">
+				<input type="text" name="attr_weapons2Damage" class='sheet-short100' />
+			</div>
+			<div class="weapons2Range">
+				<input type="text" name="attr_weapons2Range" class='sheet-short100' />
+			</div>
+			<div class="weapons2Ammo">
+				<input type="number" name="attr_weapons2Ammo" />
+			</div>
+			<div class="weapons3Name">
+				<input type="text" name="attr_weapons3Name" class='sheet-short100' />
+			</div>
+			<div class="weapons3Skill">
+				<input type="text" name="attr_weapons3Skill" class='sheet-short100' />
+			</div>
+			<div class="weapons3Damage">
+				<input type="text" name="attr_weapons3Damage" class='sheet-short100' />
+			</div>
+			<div class="weapons3Range">
+				<input type="text" name="attr_weapons3Range" class='sheet-short100' />
+			</div>
+			<div class="weapons3Ammo">
+				<input type="number" name="attr_weapons3Ammo" />
+			</div>
+			<div class="weapons4Name">
+				<input type="text" name="attr_weapons4Name" class='sheet-short100' />
+			</div>
+			<div class="weapons4Skill">
+				<input type="text" name="attr_weapons4Skill" class='sheet-short100' />
+			</div>
+			<div class="weapons4Damage">
+				<input type="text" name="attr_weapons4Damage" class='sheet-short100' />
+			</div>
+			<div class="weapons4Range">
+				<input type="text" name="attr_weapons4Range" class='sheet-short100' />
+			</div>
+			<div class="weapons4Ammo">
+				<input type="number" name="attr_weapons4Ammo" />
+			</div>
+			<div class="weapons5Name">
+				<input type="text" name="attr_weapons5Name" class='sheet-short100' />
+			</div>
+			<div class="weapons5Skill">
+				<input type="text" name="attr_weapons5Skill" class='sheet-short100' />
+			</div>
+			<div class="weapons5Damage">
+				<input type="text" name="attr_weapons5Damage" class='sheet-short100' />
+			</div>
+			<div class="weapons5Range">
+				<input type="text" name="attr_weapons5Range" class='sheet-short100' />
+			</div>
+			<div class="weapons5Ammo">
+				<input type="number" name="attr_weapons5Ammo" />
+			</div>
+			<div class="weapons6Name">
+				<input type="text" name="attr_weapons6Name" class='sheet-short100' />
+			</div>
+			<div class="weapons6Skill">
+				<input type="text" name="attr_weapons6Skill" class='sheet-short100' />
+			</div>
+			<div class="weapons6Damage">
+				<input type="text" name="attr_weapons6Damage" class='sheet-short100' />
+			</div>
+			<div class="weapons6Range">
+				<input type="text" name="attr_weapons6Range" class='sheet-short100' />
+			</div>
+			<div class="weapons6Ammo">
+				<input type="number" name="attr_weapons6Ammo" />
+			</div>
+		</div>
+		<div class="combat">
+			<div class="combatHeader">
+				<h2>Combat</h2>
+			</div>
+			<div class="combat1Labels">
+				<p>Damage Bonus</p>
+			</div>
+			<div class="combat1Inputs">
+				<input type="text" name="attr_DamageBonus" class='sheet-short50' />
+			</div>
+			<div class="combat2Labels">
+				<p>Build</p>
+			</div>
+			<div class="combat2Inputs">
+				<input type="text" name="attr_Build" class='sheet-short50' />
+			</div>
+			<div class="combat3Labels">
+				<p>Dodge</p>
+			</div>
+			<div class="combat3Inputs">
+				<input type="text" name="attr_Dodge" class='sheet-short50' />
+			</div>
+			<div class="combat4Labels">
+				<p>Armour</p>
+			</div>
+			<div class="combat4Inputs">
+				<input type="text" name="attr_Armour" class='sheet-short50' />
+			</div>
+		</div>
 	</div>
-
-    <div class="col">
-        <input type="checkbox" name="attr_EmpathyChk" value="1" /><label>Empathy (10%)</label><input type="number" name="attr_Empathy" />
-        <br />
-        <input type="checkbox" name="attr_FastTalkChk" value="1" /><label>Fast Talk (05%)</label><input type="number" name="attr_FastTalk" />
-        <br />
-        <input type="checkbox" name="attr_GestureChk" value="1" /><label>Gesture (half INT)</label><input type="number" name="attr_Gesture" />
-        <br />
-        <input type="checkbox" name="attr_HerbalistChk" value="1" /><label>Herbalist (01%)</label><input type="number" name="attr_Herbalist" />
-        <br />
-        <input type="checkbox" name="attr_IntimidateChk" value="1" /><label>Intimidate (15%)</label><input type="number" name="attr_Intimidate" />
-        <br />
-        <input type="checkbox" name="attr_LanguageChk" value="1" /><label>Language (Own) (INT)</label><input type="number" name="attr_Language" />
-        <br />
-        <input type="checkbox" name="attr_LeadershipChk" value="1" /><label>Leadership (05%)</label><input type="number" name="attr_Leadership" />
-        <br />
-        <input type="checkbox" name="attr_LeatherworkChk" value="1" /><label>Leatherwork (10%)</label><input type="number" name="attr_Leatherwork" />
-        <br />
-        <input type="checkbox" name="attr_ListenChk" value="1" /><label>Listen (20%)</label><input type="number" name="attr_attr_Listen" />
-        <br />
-        <input type="checkbox" name="attr_MimicryChk" value="1" /><label>Mimicry (05%)</label><input type="number" name="attr_Mimicry" />
-        <br />
-        <input type="checkbox" name="attr_MusicChk" value="1" /><label>Music (05%)</label><input type="number" name="attr_Music" />
-        <br />
-        <input type="checkbox" name="attr_NaturalistChk" value="1" /><label>Naturalist (10%)</label><input type="number" name="attr_Naturalist" />
-        <br />
-        <input type="checkbox" name="attr_NavigateChk" value="1" /><label>Navigate (10%)</label><input type="number" name="attr_Navigate" />
-        <br />
-        <input type="checkbox" name="attr_PaintingChk" value="1" /><label>Painting (05%)</label><input type="number" name="attr_Painting" />
-        <br />
-        <input type="checkbox" name="attr_PersuadeChk" value="1" /><label>Persuade (10%)</label><input type="number" name="attr_Persuade" />
-        <br />
-        <input type="checkbox" name="attr_RacialMemoryChk" value="1" /><label>Racial Memory (05%)</label><input type="number" name="attr_RacialMemory" />
-        <br />
-        <input type="checkbox" name="attr_RitualsCeremoniesChk" value="1" /><label>Rituals and Ceremonies (01%)</label><input type="number" name="attr_RitualsCeremonies" />
-	</div>
-	
-	<div class="col">
-        <input type="checkbox" name="attr_RunningChk" value="1" /><label>Running (20%)</label><input type="number" name="attr_Running" />
-        <br />
-        <input type="checkbox" name="attr_SleightHandChk" value="1" /><label>Sleight of Hand (10%)</label><input type="number" name="attr_SleightHand" />
-        <br />
-        <input type="checkbox" name="attr_SlingChk" value="1" /><label>Sling (10%)</label><input type="number" name="attr_Sling" />
-        <br />
-        <input type="checkbox" name="attr_SpearChk" value="1" /><label>Spear (20%)</label><input type="number" name="attr_Spear" />
-        <br />
-        <input type="checkbox" name="attr_SpotHiddenChk" value="1" /><label>Spot Hidden (25%)</label><input type="number" name="attr_SpotHidden" />
-        <br />
-        <input type="checkbox" name="attr_StatusChk" value="1" /><label>Status (00%)</label><input type="number" name="attr_Status" />
-        <br />
-        <input type="checkbox" name="attr_StealthChk" value="1" /><label>Stealth (20%)</label><input type="number" name="attr_Stealth" />
-        <br />
-        <input type="checkbox" name="attr_StoneKnappingChk" value="1" /><label>Stone Knapping (10%)</label><input type="number" name="attr_StoneKnapping" />
-        <br />
-        <input type="checkbox" name="attr_SurvivalChk" value="1" /><label>Survival (Own) (10%)</label><input type="number" name="attr_Survival" />
-        <br />
-        <input type="checkbox" name="attr_SwimChk" value="1" /><label>Swim (20%)</label><input type="number" name="attr_Swim" />
-        <br />
-        <input type="checkbox" name="attr_TeachingChk" value="1" /><label>Teaching (05%)</label><input type="number" name="attr_Teaching" />
-        <br />
-        <input type="checkbox" name="attr_ThrowChk" value="1" /><label>Throw (20%)</label><input type="number" name="attr_Throw" />
-        <br />
-        <input type="checkbox" name="attr_TrackChk" value="1" /><label>Track (10%)</label><input type="number" name="attr_skill1" />
-        <br />
-        <input type="checkbox" name="attr_WeatherSenseChk" value="1" /><label>Weather Sense (05%)</label><input type="number" name="attr_WeatherSense" />
-        <br />
-        <input type="checkbox" name="attr_WoodworkChk" value="1" /><label>Woodwork (10%)</label><input type="number" name="attr_Woodwork" />
-        <br />
-        <input type="checkbox" name="attr_SkillAChk" value="1" /><input type="text" name="attr_SkillAName" /><input type="number" name="attr_SkillA" />
-        <br />
-        <input type="checkbox" name="attr_SkillBChk" value="1" /><input type="text" name="attr_SkillBName" /><input type="number" name="attr_SkillB" />
-	</div>
-
-</div>
-
-<hr>
-
-<div class="2colrow">
-    
-    <div class="col">
-        <h2>Weapons</h2>
-        <div class="2colrow">
-            
-            <div class="col">
-                <div class="3colrow">
-                    <div class="col">
-                        <label>Weapon</label>
-                    </div>
-                    
-                    <div class="col">
-                        <label>Skill</label>
-                    </div>
-                    
-                    <div class="col">
-                        <label>Damage</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col">
-                <div class="2colrow">
-                    <div class="col">
-                        <label>Range</label>
-                    </div>
-                    
-                    <div class="col">
-                        <label>Ammo</label>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    
-    <div class="col">
-        <h2>Combat</h2>
-		<label>Damage Bonus</label><input type="text" name="attr_DamageBonus" class='sheet-short' />
-    	<br />
-		<label>Build</label><input type="text" name="attr_Build" class='sheet-short' />
-		<br />
-		<label>Dodge</label><input type="number" name="attr_Dodge" />
-		<br />
-		<label>Armour</label><input type="text" name="attr_Armour" class='sheet-short' />
-    </div>
-    
 </div>
