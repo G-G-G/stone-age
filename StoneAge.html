@@ -1,70 +1,74 @@
 <div class="main">
-	<div class="one">
-		<div class="general">
-			<span>Name</span>
-			<input type="text" name="attr_Name" />
-			<span>Player</span>
-			<input type="text" name="attr_Player" />
-			<span>Path</span>
-			<input type="text" name="attr_Path" />
-			<span>Age</span>
-			<input type="text" name="attr_Age" class='sheet-Vnarrow' />
-			<span>Sex</span>
-			<input type="text" name="attr_Sex" />
-			<span>Tribe</span>
-			<input type="text" name="attr_Tribe" />
-		</div>
-		<div class="chars">
-			<h2>Characteristics</h2>
-			<span>STR</span>
-			<input type="text" name="attr_STR" class='sheet-width100' />
-			<span>DEX</span>
-			<input type="text" name="attr_DEX" class='sheet-width100' />
-			<span>INT</span>
-			<input type="text" name="attr_INT" class='sheet-width100' />
-			<span>CON</span>
-			<input type="text" name="attr_CON" class='sheet-width100' />
-			<span>APP</span>
-			<input type="text" name="attr_APP" class='sheet-width100' />
-			<span>POW</span>
-			<input type="text" name="attr_POW" class='sheet-width100' />
-			<span>SIZ</span>
-			<input type="text" name="attr_SIZ" class='sheet-width100' />
-			<span>Luck</span>
-			<input type="text" name="attr_Luck" class='sheet-width100' />
-			<span>Move Rate</span>
-			<input type="text" name="attr_MoveRate" class='sheet-width100' />
-		</div>
-		<div class="image">
-		</div>
+	<div class="general">
+		<span>Name</span>
+		<input type="text" name="attr_character_name" class='sheet-width100' />
+		<span>Player</span>
+		<input type="text" name="attr_Player" class='sheet-width100' />
+		<span>Path</span>
+		<input type="text" name="attr_Path" class='sheet-width100' />
+		<span>Age</span>
+		<input type="text" name="attr_Age" class='sheet-width100' />
+		<span>Sex</span>
+		<input type="text" name="attr_Sex" class='sheet-narrow' />
+		<span>Tribe</span>
+		<input type="text" name="attr_Tribe" class='sheet-width100' />
 	</div>
-	<div class="two">
-		<div class="hitPoints">
-			<h3>Hit Points</h3>
-			<span>Max HP</span>
-			<input type="text" name="attr_MaxHP" class='sheet-narrow' />
-			<span>Major Wound</span>
-			<input type="checkbox" name="attr_MajorWound" value="1" />
-			<span>Dying</span>
-			<input type="checkbox" name="attr_Dying" value="1" />
-			<span>Unconscious</span>
-			<input type="checkbox" name="attr_Unconscious" value="1" />
-			<span>Current HP</span>
-			<input type="number" name="attr_CurrentHP" />
-		</div>
-		<div class="logo">
-			<h1>Stone<br>
-				Age</h1>
-		</div>
-		<div class="spiritPoints">
-			<h3>Spirit Points</h3>
-			<span>Max SP</span>
-			<input type="text" name="attr_MaxSP" class='sheet-narrow' />
-			<span>Current SP</span>
-			<input type="number" name="attr_CurrentSP" />
-		</div>
+	<div class="chars">
+		<h2>Characteristics</h2>
+		<span>STR</span>
+		<input type="text" name="attr_STR" class='sheet-width100' />
+		<button type='roll' name='roll_STR' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>DEX</span>
+		<input type="text" name="attr_DEX" class='sheet-width100' />
+		<button type='roll' name='roll_DEX' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>INT</span>
+		<input type="text" name="attr_INT" class='sheet-width100' />
+		<button type='roll' name='roll_INT' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>CON</span>
+		<input type="text" name="attr_CON" class='sheet-width100' />
+		<button type='roll' name='roll_CON' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>APP</span>
+		<input type="text" name="attr_APP" class='sheet-width100' />
+		<button type='roll' name='roll_APP' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>POW</span>
+		<input type="text" name="attr_POW" class='sheet-width100' />
+		<button type='roll' name='roll_POW' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>SIZ</span>
+		<input type="text" name="attr_SIZ" class='sheet-width100' />
+		<button type='roll' name='roll_SIZ' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>Luck</span>
+		<input type="text" name="attr_Luck" class='sheet-width100' />
+		<button type='roll' name='roll_Luck' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span>Move Rate</span>
+		<input type="text" name="attr_MoveRate" class='sheet-width100' />
 	</div>
-	<div class="three">
+	<div class="image">
+	</div>
+	<div class="hitPoints">
+		<h3>Hit Points</h3>
+		<span>Max HP</span>
+		<input type="text" name="attr_MaxHP" class='sheet-narrow' />
+		<span>Major Wound</span>
+		<input type="checkbox" name="attr_MajorWound" value="1" />
+		<span>Dying</span>
+		<input type="checkbox" name="attr_Dying" value="1" />
+		<span>Unconscious</span>
+		<input type="checkbox" name="attr_Unconscious" value="1" />
+		<span>Current HP</span>
+		<input type="number" name="attr_CurrentHP" />
+	</div>
+	<div class="logo">
+		<h1>Stone<br>
+			Age</h1>
+	</div>
+	<div class="spiritPoints">
+		<h3>Spirit Points</h3>
+		<span>Max SP</span>
+		<input type="text" name="attr_MaxSP" class='sheet-narrow' />
+		<span>Current SP</span>
+		<input type="number" name="attr_CurrentSP" />
+	</div>
+	<div class="skills">
 		<h2>Skills</h2>
 		<input type="checkbox" name="attr_ActingChk" value="1" />
 		<input type="checkbox" name="attr_AnimalGuiseChk" value="1" />
@@ -117,6 +121,23 @@
 		<input type="text" name="attr_Dancing" class='sheet-width100' />
 		<input type="text" name="attr_Diplomacy" class='sheet-width100' />
 		<input type="text" name="attr_Dodge" class='sheet-width100' />
+		<button type='roll' name='roll_Acting' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_AnimalGuise' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_AnimalHandling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Appraise' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Axe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Bandaging' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Blowpipe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Bolas' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Bow' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Brawl' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Canoe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Charm' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Climb' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Cooking' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Dancing' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Diplomacy' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Dodge' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<input type="checkbox" name="attr_EmpathyChk" value="1" />
 		<input type="checkbox" name="attr_FastTalkChk" value="1" />
 		<input type="checkbox" name="attr_GestureChk" value="1" />
@@ -159,7 +180,7 @@
 		<input type="text" name="attr_Language" class='sheet-width100' />
 		<input type="text" name="attr_Leadership" class='sheet-width100' />
 		<input type="text" name="attr_Leatherwork" class='sheet-width100' />
-		<input type="text" name="attr_attr_Listen" class='sheet-width100' />
+		<input type="text" name="attr_Listen" class='sheet-width100' />
 		<input type="text" name="attr_Mimicry" class='sheet-width100' />
 		<input type="text" name="attr_Music" class='sheet-width100' />
 		<input type="text" name="attr_Naturalist" class='sheet-width100' />
@@ -168,6 +189,23 @@
 		<input type="text" name="attr_Persuade" class='sheet-width100' />
 		<input type="text" name="attr_RacialMemory" class='sheet-width100' />
 		<input type="text" name="attr_RitualsCeremonies" class='sheet-width100' />
+		<button type='roll' name='roll_Empathy' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_FastTalk' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Gesture' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Herbalist' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Intimidate' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Language' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Leadership' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Leatherwork' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Listen' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Mimicry' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Music' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Naturalist' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Navigate' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Painting' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Persuade' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_RacialMemory' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_RitualsCeremonies' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<input type="checkbox" name="attr_RunningChk" value="1" />
 		<input type="checkbox" name="attr_SleightHandChk" value="1" />
 		<input type="checkbox" name="attr_SlingChk" value="1" />
@@ -183,8 +221,8 @@
 		<input type="checkbox" name="attr_TrackChk" value="1" />
 		<input type="checkbox" name="attr_WeatherSenseChk" value="1" />
 		<input type="checkbox" name="attr_WoodworkChk" value="1" />
-		<input type="checkbox" name="attr_SkillAChk" value="1" />
-		<input type="checkbox" name="attr_SkillBChk" value="1" />
+		<input type="checkbox" name="attr_skill1Chk" value="1" />
+		<input type="checkbox" name="attr_skill2Chk" value="1" />
 		<span>Running (20%)</span>
 		<span>Sleight of Hand (10%)</span>
 		<span>Sling (10%)</span>
@@ -200,8 +238,8 @@
 		<span>Track (10%)</span>
 		<span>Weather Sense (05%)</span>
 		<span>Woodwork (10%)</span>
-		<input type="text" name="attr_SkillAName" />
-		<input type="text" name="attr_SkillBName" />
+		<input type="text" name="attr_SkillAName" class='sheet-width100' />
+		<input type="text" name="attr_SkillBName" class='sheet-width100' />
 		<input type="text" name="attr_Running" class='sheet-width100' />
 		<input type="text" name="attr_SleightHand" class='sheet-width100' />
 		<input type="text" name="attr_Sling" class='sheet-width100' />
@@ -214,62 +252,83 @@
 		<input type="text" name="attr_Swim" class='sheet-width100' />
 		<input type="text" name="attr_Teaching" class='sheet-width100' />
 		<input type="text" name="attr_Throw" class='sheet-width100' />
-		<input type="text" name="attr_skill1" class='sheet-width100' />
+		<input type="text" name="attr_Track" class='sheet-width100' />
 		<input type="text" name="attr_WeatherSense" class='sheet-width100' />
 		<input type="text" name="attr_Woodwork" class='sheet-width100' />
-		<input type="text" name="attr_SkillA" class='sheet-width100' />
-		<input type="text" name="attr_SkillB" class='sheet-width100' />
+		<input type="text" name="attr_skill1" class='sheet-width100' />
+		<input type="text" name="attr_skill2" class='sheet-width100' />
+		<button type='roll' name='roll_Running' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_SleightHand' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Sling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Spear' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_SpotHidden' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Status' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Stealth' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_StoneKnapping' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Survival' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Swim' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Teaching' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Throw' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Track' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_WeatherSense' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_Woodwork' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_skill1' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<button type='roll' name='roll_skill2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 	</div>
+	<div class="weapons">
+		<h2>Weapons</h2>
+		<span>Weapon</span>
+		<span>Skill</span>
+		<span>Damage</span>
+		<span>Range</span>
+		<span>Ammo</span>
+		<span></span>
+		<span>Unarmed</span>
+		<input type="text" name="attr_Brawl" class='sheet-width100' />
+		<span>1d3 + db</span>
+		<span>-</span>
+		<span>-</span>
+		<button type='roll' name='roll_Unarmed' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="text" name="attr_weapons2Name" class='sheet-width100' />
+		<input type="text" name="attr_weapons2Skill" class='sheet-width100' />
+		<input type="text" name="attr_weapons2Damage" class='sheet-width100' />
+		<input type="text" name="attr_weapons2Range" class='sheet-width100' />
+		<input type="number" name="attr_weapons2Ammo" />
+		<button type='roll' name='roll_weapon2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="text" name="attr_weapons3Name" class='sheet-width100' />
+		<input type="text" name="attr_weapons3Skill" class='sheet-width100' />
+		<input type="text" name="attr_weapons3Damage" class='sheet-width100' />
+		<input type="text" name="attr_weapons3Range" class='sheet-width100' />
+		<input type="number" name="attr_weapons3Ammo" />
+		<button type='roll' name='roll_weapon3' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="text" name="attr_weapons4Name" class='sheet-width100' />
+		<input type="text" name="attr_weapons4Skill" class='sheet-width100' />
+		<input type="text" name="attr_weapons4Damage" class='sheet-width100' />
+		<input type="text" name="attr_weapons4Range" class='sheet-width100' />
+		<input type="number" name="attr_weapons4Ammo" />
+		<button type='roll' name='roll_weapon4' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="text" name="attr_weapons5Name" class='sheet-width100' />
+		<input type="text" name="attr_weapons5Skill" class='sheet-width100' />
+		<input type="text" name="attr_weapons5Damage" class='sheet-width100' />
+		<input type="text" name="attr_weapons5Range" class='sheet-width100' />
+		<input type="number" name="attr_weapons5Ammo" />
+		<button type='roll' name='roll_weapon5' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="text" name="attr_weapons6Name" class='sheet-width100' />
+		<input type="text" name="attr_weapons6Skill" class='sheet-width100' />
+		<input type="text" name="attr_weapons6Damage" class='sheet-width100' />
+		<input type="text" name="attr_weapons6Range" class='sheet-width100' />
+		<input type="number" name="attr_weapons6Ammo" />
+		<button type='roll' name='roll_weapon6' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 	</div>
-	<div class="four">
-		<div class="weapons">
-			<h2>Weapons</h2>
-			<span>Weapon</span>
-			<span>Skill</span>
-			<span>Damage</span>
-			<span>Range</span>
-			<span>Ammo</span>
-			<span>Unarmed</span>
-			<input type="text" name="attr_Brawl" class='sheet-width100' />
-			<span>1d3 + db</span>
-			<span>-</span>
-			<span>-</span>
-			<input type="text" name="attr_weapons2Name" class='sheet-width100' />
-			<input type="text" name="attr_weapons2Skill" class='sheet-width100' />
-			<input type="text" name="attr_weapons2Damage" class='sheet-width100' />
-			<input type="text" name="attr_weapons2Range" class='sheet-width100' />
-			<input type="number" name="attr_weapons2Ammo" />
-			<input type="text" name="attr_weapons3Name" class='sheet-width100' />
-			<input type="text" name="attr_weapons3Skill" class='sheet-width100' />
-			<input type="text" name="attr_weapons3Damage" class='sheet-width100' />
-			<input type="text" name="attr_weapons3Range" class='sheet-width100' />
-			<input type="number" name="attr_weapons3Ammo" />
-			<input type="text" name="attr_weapons4Name" class='sheet-width100' />
-			<input type="text" name="attr_weapons4Skill" class='sheet-width100' />
-			<input type="text" name="attr_weapons4Damage" class='sheet-width100' />
-			<input type="text" name="attr_weapons4Range" class='sheet-width100' />
-			<input type="number" name="attr_weapons4Ammo" />
-			<input type="text" name="attr_weapons5Name" class='sheet-width100' />
-			<input type="text" name="attr_weapons5Skill" class='sheet-width100' />
-			<input type="text" name="attr_weapons5Damage" class='sheet-width100' />
-			<input type="text" name="attr_weapons5Range" class='sheet-width100' />
-			<input type="number" name="attr_weapons5Ammo" />
-			<input type="text" name="attr_weapons6Name" class='sheet-width100' />
-			<input type="text" name="attr_weapons6Skill" class='sheet-width100' />
-			<input type="text" name="attr_weapons6Damage" class='sheet-width100' />
-			<input type="text" name="attr_weapons6Range" class='sheet-width100' />
-			<input type="number" name="attr_weapons6Ammo" />
-		</div>
-		<div class="combat">
-			<h2>Combat</h2>
-			<span>Damage Bonus</span>
-			<input type="text" name="attr_DamageBonus" class='sheet-narrow' />
-			<span>Build</span>
-			<input type="text" name="attr_Build" class='sheet-narrow' />
-			<span>Dodge</span>
-			<input type="text" name="attr_Dodge" class='sheet-narrow' />
-			<span>Armour</span>
-			<input type="text" name="attr_Armour" class='sheet-narrow' />
-		</div>
+	<div class="combat">
+		<h2>Combat</h2>
+		<span>Damage Bonus</span>
+		<input type="text" name="attr_DamageBonus" class='sheet-narrow' />
+		<span>Build</span>
+		<input type="text" name="attr_Build" class='sheet-narrow' />
+		<span>Dodge</span>
+		<input type="text" name="attr_Dodge" class='sheet-narrow' />
+		<span>Armour</span>
+		<input type="text" name="attr_Armour" class='sheet-narrow' />
 	</div>
 </div>
