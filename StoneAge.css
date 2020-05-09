@@ -1,10 +1,18 @@
-div.sheet-main {
-	display: grid;
+/* Tab buttons */
+
+div.sheet-tabButtons {
+	margin-bottom: 2em;
+}
+
+/* Character tab */
+
+div.sheet-character {
+	display: none;
 	width: 800px;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-areas:	"general	general		chars	chars	image			image"
-							"hitPoints	hitPoints	logo	logo	spiritPoints	spiritPoints"
+							"hitPoints	hitPoints	hitPoints	hitPoints	spiritPoints	spiritPoints"
 							"skills		skills		skills	skills	skills			skills"
 							"weapons	weapons		weapons	weapons	combat			combat";
 }
@@ -13,7 +21,7 @@ div.sheet-general {
 	grid-area: general;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 3fr;
 	grid-template-rows: repeat(6, 2em);
     border-style: solid;
 	border-width: thin;
@@ -24,16 +32,17 @@ div.sheet-general {
 div.sheet-chars {
 	grid-area: chars;
 	display: grid;
-	grid-gap: 2px;
+	grid-row-gap: 4px;
+	grid-column-gap: 2px;
 	grid-template-columns: repeat(9, 1fr);
-	grid-template-rows: 3em repeat(3, 2em);
+	grid-template-rows: 2em repeat(3, 2em);
     border-style: solid;
 	border-width: thin;
-	padding: 5px;
+	padding: 10px 5px;
 	background-color: #e6e6e6;
 }
 
-div.sheet-chars h2 {
+div.sheet-chars h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
@@ -48,8 +57,8 @@ div.sheet-hitPoints {
 	grid-area: hitPoints;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em repeat(5, 2em);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 2em repeat(3, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
@@ -61,21 +70,12 @@ div.sheet-hitPoints h3 {
 	text-align: center;
 }
 
-div.sheet-logo {
-	grid-area: logo;
-	padding: 10px;
-}
-
-div.sheet-logo h1 {
-	text-align: center;
-}
-
 div.sheet-spiritPoints {
 	grid-area: spiritPoints;
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em 2em 2em;
+	grid-template-rows: 2em 2em 2em;
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
@@ -92,7 +92,7 @@ div.sheet-skills {
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: repeat(3, 1fr 9fr 2fr 1fr);
-	grid-template-rows: 3em repeat(17, 2em);
+	grid-template-rows: 2em repeat(17, 2em);
   	grid-auto-flow: column;
   	border-style: solid;
 	border-width: thin;
@@ -100,7 +100,7 @@ div.sheet-skills {
 	background-color: #e6e6e6;
 }
 
-div.sheet-skills h2 {
+div.sheet-skills h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
@@ -110,14 +110,14 @@ div.sheet-weapons {
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
-	grid-template-rows: 3em repeat(7, 2em);
+	grid-template-rows: 2em repeat(7, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
 	background-color: #e6e6e6;
 }
 
-div.sheet-weapons h2 {
+div.sheet-weapons h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
@@ -127,23 +127,168 @@ div.sheet-combat {
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em repeat(4, 2em);
+	grid-template-rows: 2em repeat(4, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
 	background-color: #e6e6e6;
 }
 
-div.sheet-combat h2 {
+div.sheet-combat h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
+/* Notes tab */
+
+div.sheet-notes {
+	display: none;
+	width: 800px;
+}
+
+div.sheet-notes textarea {
+	height: 60em;
+}
+
+/* NPCs tab */
+
+div.sheet-npcs {
+	display: none;
+	width: 800px;
+}
+
+div.sheet-npc {
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-areas:	"npcgeneral	npcgeneral	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
+							"npcchars	npcchars	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
+							"npcchars	npcchars	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
+							"npcskills	npcskills	npcskills		npcskills		npcskills		npcskills"
+							"npcweapons	npcweapons	npcweapons		npcweapons		npccombat		npccombat"
+							"npcnotes	npcnotes	npcnotes		npcnotes		npcnotes		npcnotes";
+}
+
+div.sheet-npcgeneral {
+	grid-area: npcgeneral;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 2em;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npcchars {
+	grid-area: npcchars;
+	display: grid;
+	grid-row-gap: 4px;
+	grid-column-gap: 2px;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(3, 2em);
+    border-style: solid;
+	border-width: thin;
+	padding: 10px 5px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npchitPoints {
+	grid-area: npchitPoints;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(5, 2em);
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npcspiritPoints {
+	grid-area: npcspiritPoints;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2em 2em;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npcskills {
+	grid-area: npcskills;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: repeat(3, 9fr 2fr 1fr);
+	grid-template-rows: 2em 2em;
+  	grid-auto-flow: column;
+  	border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npcweapons {
+	grid-area: npcweapons;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
+	grid-template-rows: repeat(4, 2em);
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npccombat {
+	grid-area: npccombat;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, 2em);
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
 /* Targetted styling that only effects elements with these classes */
+/* On all the "input" "text" I use either "sheet-narrow" or at least "sheet-width100" to avoid size weirdness */
 input.sheet-width100 {
 	width: 100%;
 }
 
+/* On all the "input" "text" I use either "sheet-narrow" or at least "sheet-width100" to avoid size weirdness */
 input.sheet-narrow {
 	width: 38%;
+}
+
+.sheet-bold {
+	font-weight: bold;
+}
+
+/* On all the "input" "checkbox" I use either "sheet-leftcentre" or at least "sheet-centre" to avoid size weirdness */
+.sheet-leftcentre {
+	justify-self: start;
+	align-self: center;
+}
+
+/* On all the "input" "checkbox" I use either "sheet-leftcentre" or at least "sheet-centre" to avoid size weirdness */
+/* Used for most "span" */
+.sheet-centre {
+	align-self: center;
+}
+
+/* Tab logic */
+
+/* Show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="npcs"] ~ div.sheet-npcs {
+	display: grid;
+}
+.sheet-tabstoggle[value="notes"] ~ div.sheet-notes {
+	display: block;
 }
