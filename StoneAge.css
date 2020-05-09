@@ -11,7 +11,7 @@ div.sheet-character {
 	width: 800px;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:	"general	general		chars	chars	image			image"
+	grid-template-areas:	"general	general		chars	chars	logo			logo"
 							"hitPoints	hitPoints	hitPoints	hitPoints	spiritPoints	spiritPoints"
 							"skills		skills		skills	skills	skills			skills"
 							"weapons	weapons		weapons	weapons	combat			combat";
@@ -47,8 +47,8 @@ div.sheet-chars h3 {
 	text-align: center;
 }
 
-div.sheet-image {
-	grid-area: image;
+div.sheet-logo {
+	grid-area: logo;
     border-style: solid;
 	border-width: thin;
 }
