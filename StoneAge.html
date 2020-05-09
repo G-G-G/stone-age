@@ -11,44 +11,44 @@
 		<span class='sheet-bold sheet-centre' />Name</span>
 		<span name="attr_character_name" class='sheet-bold sheet-centre' /></span>
 		<span class='sheet-centre' >Player</span>
-		<input type="text" name="attr_Player" class='sheet-width100' />
+		<input type="text" name="attr_Player" class='sheet-width100' value="" />
 		<span class='sheet-centre' >Path</span>
-		<input type="text" name="attr_Path" class='sheet-width100' />
+		<input type="text" name="attr_Path" class='sheet-width100' value="" />
 		<span class='sheet-centre' >Age</span>
-		<input type="text" name="attr_Age" class='sheet-width100' />
+		<input type="text" name="attr_Age" class='sheet-width100' value="" />
 		<span class='sheet-centre' >Sex</span>
-		<input type="text" name="attr_Sex" class='sheet-narrow' />
+		<input type="text" name="attr_Sex" class='sheet-narrow' value="" />
 		<span class='sheet-centre' >Tribe</span>
-		<input type="text" name="attr_Tribe" class='sheet-width100' />
+		<input type="text" name="attr_Tribe" class='sheet-width100' value="" />
 	</div>
 	<div class="sheet-chars">
 		<h3>Characteristics</h3>
 		<span class='sheet-centre' >STR</span>
-		<input type="text" name="attr_STR" class='sheet-width100' />
+		<input type="text" name="attr_STR" class='sheet-width100' value="" />
 		<button type='roll' name='roll_STR' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >DEX</span>
-		<input type="text" name="attr_DEX" class='sheet-width100' />
+		<input type="text" name="attr_DEX" class='sheet-width100' value="" />
 		<button type='roll' name='roll_DEX' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >INT</span>
-		<input type="text" name="attr_INT" class='sheet-width100' />
+		<input type="text" name="attr_INT" class='sheet-width100' value="" />
 		<button type='roll' name='roll_INT' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >CON</span>
-		<input type="text" name="attr_CON" class='sheet-width100' />
+		<input type="text" name="attr_CON" class='sheet-width100' value="" />
 		<button type='roll' name='roll_CON' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >APP</span>
-		<input type="text" name="attr_APP" class='sheet-width100' />
+		<input type="text" name="attr_APP" class='sheet-width100' value="" />
 		<button type='roll' name='roll_APP' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >POW</span>
-		<input type="text" name="attr_POW" class='sheet-width100' />
+		<input type="text" name="attr_POW" class='sheet-width100' value="" />
 		<button type='roll' name='roll_POW' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >SIZ</span>
-		<input type="text" name="attr_SIZ" class='sheet-width100' />
+		<input type="text" name="attr_SIZ" class='sheet-width100' value="" />
 		<button type='roll' name='roll_SIZ' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >Luck</span>
-		<input type="text" name="attr_Luck" class='sheet-width100' />
+		<input type="text" name="attr_Luck" class='sheet-width100' value="" />
 		<button type='roll' name='roll_Luck' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<span class='sheet-centre' >Move Rate</span>
-		<input type="text" name="attr_MoveRate" class='sheet-width100' />
+		<input type="text" name="attr_MoveRate" class='sheet-width100' value="" />
 	</div>
 	<div class="sheet-image">
 		<img src="https://raw.githubusercontent.com/cvillarl/stone-age/master/Wolf.png" />
@@ -56,11 +56,11 @@
 	<div class="sheet-hitPoints">
 		<h3>Hit Points</h3>
 		<span class='sheet-centre' >Max HP</span>
-		<input type="text" name="attr_MaxHP" class='sheet-narrow' />
+		<input type="text" name="attr_MaxHP" class='sheet-narrow' value="" />
 		<span class='sheet-centre' >Major Wound</span>
 		<input type="checkbox" name="attr_MajorWound" value="1" class='sheet-leftcentre' />
 		<span class='sheet-centre' >Current HP</span>
-		<input type="number" name="attr_CurrentHP" />
+		<input type="number" name="attr_CurrentHP" value="0" />
 		<span class='sheet-centre' >Unconscious</span>
 		<input type="checkbox" name="attr_Unconscious" value="1" class='sheet-leftcentre' />
 		<span></span>
@@ -71,9 +71,9 @@
 	<div class="sheet-spiritPoints">
 		<h3>Spirit Points</h3>
 		<span class='sheet-centre' >Max SP</span>
-		<input type="text" name="attr_MaxSP" class='sheet-narrow' />
+		<input type="text" name="attr_MaxSP" class='sheet-narrow' value="" />
 		<span class='sheet-centre' >Current SP</span>
-		<input type="number" name="attr_CurrentSP" />
+		<input type="number" name="attr_CurrentSP" value="0" />
 	</div>
 	<div class="sheet-skills">
 		<h3>Skills</h3>
@@ -127,7 +127,7 @@
 		<input type="text" name="attr_Cooking" class='sheet-width100' value="10" />
 		<input type="text" name="attr_Dancing" class='sheet-width100' value="5" />
 		<input type="text" name="attr_Diplomacy" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Dodge" class='sheet-width100' />
+		<input type="text" name="attr_Dodge" class='sheet-width100' value="" />
 		<button type='roll' name='roll_Acting' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<button type='roll' name='roll_AnimalGuise' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<button type='roll' name='roll_AnimalHandling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
@@ -181,10 +181,10 @@
 		<span class='sheet-centre' >Rituals and Ceremonies (01%)</span>
 		<input type="text" name="attr_Empathy" class='sheet-width100' value="10" />
 		<input type="text" name="attr_FastTalk" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Gesture" class='sheet-width100' />
+		<input type="text" name="attr_Gesture" class='sheet-width100' value="" />
 		<input type="text" name="attr_Herbalist" class='sheet-width100' value="1" />
 		<input type="text" name="attr_Intimidate" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Language" class='sheet-width100' />
+		<input type="text" name="attr_Language" class='sheet-width100' value="" />
 		<input type="text" name="attr_Leadership" class='sheet-width100' value="5" />
 		<input type="text" name="attr_Leatherwork" class='sheet-width100' value="10" />
 		<input type="text" name="attr_Listen" class='sheet-width100' value="20" />
@@ -245,8 +245,8 @@
 		<span class='sheet-centre' >Track (10%)</span>
 		<span class='sheet-centre' >Weather Sense (05%)</span>
 		<span class='sheet-centre' >Woodwork (10%)</span>
-		<input type="text" name="attr_SkillAName" class='sheet-width100' />
-		<input type="text" name="attr_SkillBName" class='sheet-width100' />
+		<input type="text" name="attr_SkillAName" class='sheet-width100' value="" />
+		<input type="text" name="attr_SkillBName" class='sheet-width100' value="" />
 		<input type="text" name="attr_Running" class='sheet-width100' value="20" />
 		<input type="text" name="attr_SleightHand" class='sheet-width100' value="10" />
 		<input type="text" name="attr_Sling" class='sheet-width100' value="10" />
@@ -262,8 +262,8 @@
 		<input type="text" name="attr_Track" class='sheet-width100' value="10" />
 		<input type="text" name="attr_WeatherSense" class='sheet-width100' value="5" />
 		<input type="text" name="attr_Woodwork" class='sheet-width100' value="10" />
-		<input type="text" name="attr_skill1" class='sheet-width100' />
-		<input type="text" name="attr_skill2" class='sheet-width100' />
+		<input type="text" name="attr_skill1" class='sheet-width100' value="" />
+		<input type="text" name="attr_skill2" class='sheet-width100' value="" />
 		<button type='roll' name='roll_Running' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<button type='roll' name='roll_SleightHand' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 		<button type='roll' name='roll_Sling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
@@ -296,52 +296,52 @@
 		<span class='sheet-centre' >-</span>
 		<span class='sheet-centre' >-</span>
 		<button type='roll' name='roll_Unarmed' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons2Name" class='sheet-width100' />
-		<input type="text" name="attr_weapons2Skill" class='sheet-width100' />
-		<input type="text" name="attr_weapons2Damage" class='sheet-width100' />
-		<input type="text" name="attr_weapons2Range" class='sheet-width100' />
-		<input type="number" name="attr_weapons2Ammo" />
+		<input type="text" name="attr_weapons2Name" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons2Skill" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons2Damage" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons2Range" class='sheet-width100' value="" />
+		<input type="number" name="attr_weapons2Ammo" value="0" />
 		<button type='roll' name='roll_weapon2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons3Name" class='sheet-width100' />
-		<input type="text" name="attr_weapons3Skill" class='sheet-width100' />
-		<input type="text" name="attr_weapons3Damage" class='sheet-width100' />
-		<input type="text" name="attr_weapons3Range" class='sheet-width100' />
-		<input type="number" name="attr_weapons3Ammo" />
+		<input type="text" name="attr_weapons3Name" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons3Skill" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons3Damage" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons3Range" class='sheet-width100' value="" />
+		<input type="number" name="attr_weapons3Ammo" value="0" />
 		<button type='roll' name='roll_weapon3' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons4Name" class='sheet-width100' />
-		<input type="text" name="attr_weapons4Skill" class='sheet-width100' />
-		<input type="text" name="attr_weapons4Damage" class='sheet-width100' />
-		<input type="text" name="attr_weapons4Range" class='sheet-width100' />
-		<input type="number" name="attr_weapons4Ammo" />
+		<input type="text" name="attr_weapons4Name" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons4Skill" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons4Damage" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons4Range" class='sheet-width100' value="" />
+		<input type="number" name="attr_weapons4Ammo" value="0" />
 		<button type='roll' name='roll_weapon4' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons5Name" class='sheet-width100' />
-		<input type="text" name="attr_weapons5Skill" class='sheet-width100' />
-		<input type="text" name="attr_weapons5Damage" class='sheet-width100' />
-		<input type="text" name="attr_weapons5Range" class='sheet-width100' />
-		<input type="number" name="attr_weapons5Ammo" />
+		<input type="text" name="attr_weapons5Name" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons5Skill" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons5Damage" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons5Range" class='sheet-width100' value="" />
+		<input type="number" name="attr_weapons5Ammo" value="0" />
 		<button type='roll' name='roll_weapon5' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons6Name" class='sheet-width100' />
-		<input type="text" name="attr_weapons6Skill" class='sheet-width100' />
-		<input type="text" name="attr_weapons6Damage" class='sheet-width100' />
-		<input type="text" name="attr_weapons6Range" class='sheet-width100' />
-		<input type="number" name="attr_weapons6Ammo" />
+		<input type="text" name="attr_weapons6Name" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons6Skill" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons6Damage" class='sheet-width100' value="" />
+		<input type="text" name="attr_weapons6Range" class='sheet-width100' value="" />
+		<input type="number" name="attr_weapons6Ammo" value="0" />
 		<button type='roll' name='roll_weapon6' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 	</div>
 	<div class="sheet-combat">
 		<h3>Combat</h3>
 		<span class='sheet-centre' >Damage Bonus</span>
-		<input type="text" name="attr_DamageBonus" class='sheet-narrow' />
+		<input type="text" name="attr_DamageBonus" class='sheet-narrow' value="" />
 		<span class='sheet-centre' >Build</span>
-		<input type="text" name="attr_Build" class='sheet-narrow' />
+		<input type="text" name="attr_Build" class='sheet-narrow' value="" />
 		<span class='sheet-centre' >Dodge</span>
 		<span name="attr_Dodge" class='sheet-centre' ></span>
 		<span class='sheet-centre' >Armour</span>
-		<input type="text" name="attr_Armour" class='sheet-narrow' />
+		<input type="text" name="attr_Armour" class='sheet-narrow' value="" />
 	</div>
 </div>
 
 <div class='sheet-notes'>
-    <textarea name="attr_notes"></textarea>
+    <textarea name="attr_notes" value="" ></textarea>
 </div>
 
 <div class='sheet-npcs'>
@@ -349,41 +349,41 @@
 		<div class="sheet-npc">
 			<div class="sheet-npcgeneral">
 				<span class='sheet-bold sheet-centre' >Name</span>
-				<input type="text" name="attr_npcname" class='sheet-width100' />
+				<input type="text" name="attr_npcname" class='sheet-width100' value="" />
 			</div>
 			<div class="sheet-npcchars">
 				<span class='sheet-centre' >STR</span>
-				<input type="text" name="attr_STR" class='sheet-width100' />
+				<input type="text" name="attr_STR" class='sheet-width100' value="" />
 				<button type='roll' name='roll_STR' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >DEX</span>
-				<input type="text" name="attr_DEX" class='sheet-width100' />
+				<input type="text" name="attr_DEX" class='sheet-width100' value="" />
 				<button type='roll' name='roll_DEX' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >INT</span>
-				<input type="text" name="attr_INT" class='sheet-width100' />
+				<input type="text" name="attr_INT" class='sheet-width100' value="" />
 				<button type='roll' name='roll_INT' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >CON</span>
-				<input type="text" name="attr_CON" class='sheet-width100' />
+				<input type="text" name="attr_CON" class='sheet-width100' value="" />
 				<button type='roll' name='roll_CON' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >APP</span>
-				<input type="text" name="attr_APP" class='sheet-width100' />
+				<input type="text" name="attr_APP" class='sheet-width100' value="" />
 				<button type='roll' name='roll_APP' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >POW</span>
-				<input type="text" name="attr_POW" class='sheet-width100' />
+				<input type="text" name="attr_POW" class='sheet-width100' value="" />
 				<button type='roll' name='roll_POW' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >SIZ</span>
-				<input type="text" name="attr_SIZ" class='sheet-width100' />
+				<input type="text" name="attr_SIZ" class='sheet-width100' value="" />
 				<button type='roll' name='roll_SIZ' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >Luck</span>
-				<input type="text" name="attr_Luck" class='sheet-width100' />
+				<input type="text" name="attr_Luck" class='sheet-width100' value="" />
 				<button type='roll' name='roll_Luck' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<span class='sheet-centre' >Move Rate</span>
-				<input type="text" name="attr_MoveRate" class='sheet-width100' />
+				<input type="text" name="attr_MoveRate" class='sheet-width100' value="" />
 			</div>
 			<div class="sheet-npchitPoints">
 				<span class='sheet-centre' >Max HP</span>
-				<input type="text" name="attr_MaxHP" class='sheet-narrow' />
+				<input type="text" name="attr_MaxHP" class='sheet-narrow' value="" />
 				<span class='sheet-centre' >Current HP</span>
-				<input type="number" name="attr_CurrentHP" />
+				<input type="number" name="attr_CurrentHP" value="0" />
 				<span class='sheet-centre' >Major Wound</span>
 				<input type="checkbox" name="attr_MajorWound" value="1" class='sheet-leftcentre' />
 				<span class='sheet-centre' >Unconscious</span>
@@ -393,27 +393,27 @@
 			</div>
 			<div class="sheet-npcspiritPoints">
 				<span class='sheet-centre' >Max SP</span>
-				<input type="text" name="attr_MaxSP" class='sheet-narrow' />
+				<input type="text" name="attr_MaxSP" class='sheet-narrow' value="" />
 				<span class='sheet-centre' >Current SP</span>
-				<input type="number" name="attr_CurrentSP" />
+				<input type="number" name="attr_CurrentSP" value="0" />
 			</div>
 			<div class="sheet-npcskills">
-				<input type="text" name="attr_npcSkillAName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillBName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillA" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillB" class='sheet-width100' />
+				<input type="text" name="attr_npcSkillAName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillBName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillA" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillB" class='sheet-width100' value="" />
 				<button type='roll' name='roll_npcSkillA' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<button type='roll' name='roll_npcSkillB' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSkillCName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillDName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillC" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillD" class='sheet-width100' />
+				<input type="text" name="attr_npcSkillCName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillDName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillC" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillD" class='sheet-width100' value="" />
 				<button type='roll' name='roll_npcSkillC' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<button type='roll' name='roll_npcSkillD' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSkillEName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillFName" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillE" class='sheet-width100' />
-				<input type="text" name="attr_npcSkillF" class='sheet-width100' />
+				<input type="text" name="attr_npcSkillEName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillFName" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillE" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSkillF" class='sheet-width100' value="" />
 				<button type='roll' name='roll_npcSkillE' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 				<button type='roll' name='roll_npcSkillF' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 			</div>
@@ -430,28 +430,31 @@
 				<input type="text" name="attr_npcSweapons1Range" class='sheet-width100' value="-" />
 				<input type="number" name="attr_npcSweapons1Ammo" value="0" />
 				<button type='roll' name='roll_npcSweapon1' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSweapons2Name" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons2Skill" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons2Damage" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons2Range" class='sheet-width100' />
-				<input type="number" name="attr_npcSweapons2Ammo" />
+				<input type="text" name="attr_npcSweapons2Name" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons2Skill" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons2Damage" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons2Range" class='sheet-width100' value="" />
+				<input type="number" name="attr_npcSweapons2Ammo" value="0" />
 				<button type='roll' name='roll_npcSweapon2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSweapons3Name" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons3Skill" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons3Damage" class='sheet-width100' />
-				<input type="text" name="attr_npcSweapons3Range" class='sheet-width100' />
-				<input type="number" name="attr_npcSweapons3Ammo" />
+				<input type="text" name="attr_npcSweapons3Name" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons3Skill" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons3Damage" class='sheet-width100' value="" />
+				<input type="text" name="attr_npcSweapons3Range" class='sheet-width100' value="" />
+				<input type="number" name="attr_npcSweapons3Ammo" value="0" />
 				<button type='roll' name='roll_npcSweapon3' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
 			</div>
 			<div class="sheet-npccombat">
 				<span class='sheet-centre' >Damage Bonus</span>
-				<input type="text" name="attr_npcSDamageBonus" class='sheet-narrow' />
+				<input type="text" name="attr_npcSDamageBonus" class='sheet-narrow' value="" />
 				<span class='sheet-centre' >Build</span>
-				<input type="text" name="attr_npcSBuild" class='sheet-narrow' />
+				<input type="text" name="attr_npcSBuild" class='sheet-narrow' value="" />
 				<span class='sheet-centre' >Dodge</span>
-				<input type="text" name="attr_npcDodge" class='sheet-narrow' />
+				<input type="text" name="attr_npcDodge" class='sheet-narrow' value="" />
 				<span class='sheet-centre' >Armour</span>
-				<input type="text" name="attr_Armour" class='sheet-narrow' />
+				<input type="text" name="attr_Armour" class='sheet-narrow' value="" />
+			</div>
+			<div class="sheet-npcnotes">
+				<textarea name="attr_npcnotes" value="" ></textarea>
 			</div>
 			<hr>
 		</div>

@@ -144,10 +144,19 @@ div.sheet-combat h3 {
 div.sheet-notes {
 	display: none;
 	width: 800px;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
 }
 
 div.sheet-notes textarea {
 	height: 60em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	resize: vertical;
 }
 
 /* NPCs tab */
@@ -253,6 +262,23 @@ div.sheet-npccombat {
 	border-width: thin;
 	padding: 10px;
 	background-color: #e6e6e6;
+}
+
+div.sheet-npcnotes {
+	grid-area: npcnotes;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+div.sheet-npcnotes textarea {
+	height: 10em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	resize: vertical;
 }
 
 /* Targetted styling that only effects elements with these classes */
