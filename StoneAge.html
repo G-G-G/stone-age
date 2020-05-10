@@ -1,459 +1,463 @@
-<div class="sheet-tabButtons">
+<!-- Tab buttons -->
+<div class="tabbuttons">
     <button type="action" name="act_character" >Character</button>
     <button type="action" name="act_notes" >Notes</button>
     <button type="action" name="act_npcs" >NPCs</button>
 </div>
 
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character'  />
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'  />
 
-<div class="sheet-character">
+<!-- Character tab -->
+<div class="character">
 	<div class="general">
-		<span class='sheet-bold sheet-centre' />Name</span>
-		<span name="attr_character_name" class='sheet-bold sheet-centre' /></span>
-		<span class='sheet-centre' >Player</span>
-		<input type="text" name="attr_Player" class='sheet-width100' value="" />
-		<span class='sheet-centre' >Path</span>
-		<input type="text" name="attr_Path" class='sheet-width100' value="" />
-		<span class='sheet-centre' >Age</span>
-		<input type="text" name="attr_Age" class='sheet-width100' value="" />
-		<span class='sheet-centre' >Sex</span>
-		<input type="text" name="attr_Sex" class='sheet-narrow' value="" />
-		<span class='sheet-centre' >Tribe</span>
-		<input type="text" name="attr_Tribe" class='sheet-width100' value="" />
+		<span class='bold sheet-centre' >Name</span>
+		<span name="attr_character_name" class='bold sheet-centre' ></span>
+		<span class='centre' >Player</span>
+		<input type="text" name="attr_player" class='width100' value="" />
+		<span class='centre' >Path</span>
+		<input type="text" name="attr_path" class='width100' value="" />
+		<span class='centre' >Age</span>
+		<input type="text" name="attr_age" class='width100' value="" />
+		<span class='centre' >Sex</span>
+		<input type="text" name="attr_sex" class='narrow' value="" />
+		<span class='centre' >Tribe</span>
+		<input type="text" name="attr_tribe" class='width100' value="" />
 	</div>
-	<div class="sheet-chars">
+	<div class="chars">
 		<h3>Characteristics</h3>
-		<span class='sheet-centre' >STR</span>
-		<input type="text" name="attr_STR" class='sheet-width100' value="" />
-		<button type='roll' name='roll_STR' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >DEX</span>
-		<input type="text" name="attr_DEX" class='sheet-width100' value="" />
-		<button type='roll' name='roll_DEX' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >INT</span>
-		<input type="text" name="attr_INT" class='sheet-width100' value="" />
-		<button type='roll' name='roll_INT' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >CON</span>
-		<input type="text" name="attr_CON" class='sheet-width100' value="" />
-		<button type='roll' name='roll_CON' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >APP</span>
-		<input type="text" name="attr_APP" class='sheet-width100' value="" />
-		<button type='roll' name='roll_APP' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >POW</span>
-		<input type="text" name="attr_POW" class='sheet-width100' value="" />
-		<button type='roll' name='roll_POW' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >SIZ</span>
-		<input type="text" name="attr_SIZ" class='sheet-width100' value="" />
-		<button type='roll' name='roll_SIZ' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >Luck</span>
-		<input type="text" name="attr_Luck" class='sheet-width100' value="" />
-		<button type='roll' name='roll_Luck' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<span class='sheet-centre' >Move Rate</span>
-		<input type="text" name="attr_MoveRate" class='sheet-width100' value="" />
+		<span class='centre' >STR</span>
+		<input type="text" name="attr_str" class='width100' value="0" />
+		<button type='roll' name='roll_str' value='&{template:roll} {{name=STR}} {{success=[[@{str}]]}} {{hard=[[floor(@{str}/2)]]}} {{extreme=[[floor(@{str}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >DEX</span>
+		<input type="text" name="attr_dex" class='width100' value="0" />
+    <button type='roll' name='roll_dex' value='&{template:roll} {{name=DEX}} {{success=[[@{dex}]]}} {{hard=[[floor(@{dex}/2)]]}} {{extreme=[[floor(@{dex}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >INT</span>
+		<input type="text" name="attr_int" class='width100' value="0" />
+    <button type='roll' name='roll_int' value='&{template:roll} {{name=INT}} {{success=[[@{int}]]}} {{hard=[[floor(@{int}/2)]]}} {{extreme=[[floor(@{int}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >CON</span>
+		<input type="text" name="attr_con" class='width100' value="0" />
+    <button type='roll' name='roll_con' value='&{template:roll} {{name=CON}} {{success=[[@{con}]]}} {{hard=[[floor(@{con}/2)]]}} {{extreme=[[floor(@{con}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >APP</span>
+		<input type="text" name="attr_app" class='width100' value="0" />
+    <button type='roll' name='roll_app' value='&{template:roll} {{name=APP}} {{success=[[@{app}]]}} {{hard=[[floor(@{app}/2)]]}} {{extreme=[[floor(@{app}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >POW</span>
+		<input type="text" name="attr_pow" class='width100' value="0" />
+    <button type='roll' name='roll_pow' value='&{template:roll} {{name=POW}} {{success=[[@{pow}]]}} {{hard=[[floor(@{pow}/2)]]}} {{extreme=[[floor(@{pow}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >SIZ</span>
+		<input type="text" name="attr_siz" class='width100' value="0" />
+    <button type='roll' name='roll_siz' value='&{template:roll} {{name=SIZ}} {{success=[[@{siz}]]}} {{hard=[[floor(@{siz}/2)]]}} {{extreme=[[floor(@{siz}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >Luck</span>
+		<input type="text" name="attr_luck" class='width100' value="0" />
+    <button type='roll' name='roll_luck' value='&{template:roll} {{name=Luck}} {{success=[[@{luck}]]}} {{hard=[[floor(@{luck}/2)]]}} {{extreme=[[floor(@{luck}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<span class='centre' >Move Rate</span>
+		<input type="text" name="attr_moverate" class='width100' value="" />
 	</div>
-	<div class="sheet-logo">
+	<div class="logo">
 		<img src="https://raw.githubusercontent.com/cvillarl/stone-age/master/Wolf Title.png" />
 	</div>
-	<div class="sheet-hitPoints">
+	<div class="hitpoints">
 		<h3>Hit Points</h3>
-		<span class='sheet-centre' >Max HP</span>
-		<input type="text" name="attr_MaxHP" class='sheet-narrow' value="" />
-		<span class='sheet-centre' >Major Wound</span>
-		<input type="checkbox" name="attr_MajorWound" value="1" class='sheet-leftcentre' />
-		<span class='sheet-centre' >Current HP</span>
-		<input type="number" name="attr_CurrentHP" value="0" />
-		<span class='sheet-centre' >Unconscious</span>
-		<input type="checkbox" name="attr_Unconscious" value="1" class='sheet-leftcentre' />
+		<span class='centre' >Max HP</span>
+		<input type="text" name="attr_maxhp" class='narrow' value="0" />
+		<span class='centre' >Major Wound</span>
+		<input type="checkbox" name="attr_majorwound" value="1" class='leftcentre' />
+		<span class='centre' >Current HP</span>
+		<input type="number" name="attr_currenthp" value="0" />
+		<span class='centre' >Unconscious</span>
+		<input type="checkbox" name="attr_unconscious" value="1" class='leftcentre' />
 		<span></span>
 		<span></span>
-		<span class='sheet-centre' >Dying</span>
-		<input type="checkbox" name="attr_Dying" value="1" class='sheet-leftcentre' />
+		<span class='centre' >Dying</span>
+		<input type="checkbox" name="attr_dying" value="1" class='leftcentre' />
 	</div>
-	<div class="sheet-spiritPoints">
+	<div class="spiritpoints">
 		<h3>Spirit Points</h3>
-		<span class='sheet-centre' >Max SP</span>
-		<input type="text" name="attr_MaxSP" class='sheet-narrow' value="" />
-		<span class='sheet-centre' >Current SP</span>
-		<input type="number" name="attr_CurrentSP" value="0" />
+		<span class='centre' >Max SP</span>
+		<input type="text" name="attr_maxsp" class='narrow' value="0" />
+		<span class='centre' >Current SP</span>
+		<input type="number" name="attr_currentsp" value="0" />
 	</div>
-	<div class="sheet-skills">
+	<div class="skills">
 		<h3>Skills</h3>
-		<input type="checkbox" name="attr_ActingChk" value="1" class='sheet-centre' />
-		<input type="checkbox" name="attr_AnimalGuiseChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_AnimalHandlingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_AppraiseChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_AxeChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_BandagingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_BlowpipeChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_BolasChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_BowChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_BrawlChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_CanoeChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_CharmChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_ClimbChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_CookingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_DancingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_DiplomacyChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_DodgeChk" value="1" class='sheet-centre' //>
-		<span class='sheet-centre' >Acting (05%)</span>
-		<span class='sheet-centre' >Animal Guise (05%)</span>
-		<span class='sheet-centre' >Animal Handling (05%)</span>
-		<span class='sheet-centre' >Appraise (05%)</span>
-		<span class='sheet-centre' >Axe (15%)</span>
-		<span class='sheet-centre' >Bandaging (10%)</span>
-		<span class='sheet-centre' >Blowpipe (15%)</span>
-		<span class='sheet-centre' >Bolas (05%)</span>
-		<span class='sheet-centre' >Bow (15%)</span>
-		<span class='sheet-centre' >Brawl (25%)</span>
-		<span class='sheet-centre' >Canoe (05%)</span>
-		<span class='sheet-centre' >Charm (15%)</span>
-		<span class='sheet-centre' >Climb (20%)</span>
-		<span class='sheet-centre' >Cooking (10%)</span>
-		<span class='sheet-centre' >Dancing (05%)</span>
-		<span class='sheet-centre' >Diplomacy (05%)</span>
-		<span class='sheet-centre' >Dodge (half DEX)</span>
-		<input type="text" name="attr_Acting" class='sheet-width100' value="5" />
-		<input type="text" name="attr_AnimalGuise" class='sheet-width100' value="5" />
-		<input type="text" name="attr_AnimalHandling" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Appraise" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Axe" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Bandaging" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Blowpipe" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Bolas" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Bow" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Brawl" class='sheet-width100' value="25" />
-		<input type="text" name="attr_Canoe" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Charm" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Climb" class='sheet-width100' value="20" />
-		<input type="text" name="attr_Cooking" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Dancing" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Diplomacy" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Dodge" class='sheet-width100' value="" />
-		<button type='roll' name='roll_Acting' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_AnimalGuise' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_AnimalHandling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Appraise' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Axe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Bandaging' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Blowpipe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Bolas' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Bow' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Brawl' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Canoe' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Charm' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Climb' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Cooking' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Dancing' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Diplomacy' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Dodge' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="checkbox" name="attr_EmpathyChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_FastTalkChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_GestureChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_HerbalistChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_IntimidateChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_LanguageChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_LeadershipChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_LeatherworkChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_ListenChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_MimicryChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_MusicChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_NaturalistChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_NavigateChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_PaintingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_PersuadeChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_RacialMemoryChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_RitualsCeremoniesChk" value="1" class='sheet-centre' //>
-		<span class='sheet-centre' >Empathy (10%)</span>
-		<span class='sheet-centre' >Fast Talk (05%)</span>
-		<span class='sheet-centre' >Gesture (half INT)</span>
-		<span class='sheet-centre' >Herbalist (01%)</span>
-		<span class='sheet-centre' >Intimidate (15%)</span>
-		<span class='sheet-centre' >Language (Own) (INT)</span>
-		<span class='sheet-centre' >Leadership (05%)</span>
-		<span class='sheet-centre' >Leatherwork (10%)</span>
-		<span class='sheet-centre' >Listen (20%)</span>
-		<span class='sheet-centre' >Mimicry (05%)</span>
-		<span class='sheet-centre' >Music (05%)</span>
-		<span class='sheet-centre' >Naturalist (10%)</span>
-		<span class='sheet-centre' >Navigate (10%)</span>
-		<span class='sheet-centre' >Painting (05%)</span>
-		<span class='sheet-centre' >Persuade (10%)</span>
-		<span class='sheet-centre' >Racial Memory (05%)</span>
-		<span class='sheet-centre' >Rituals and Ceremonies (01%)</span>
-		<input type="text" name="attr_Empathy" class='sheet-width100' value="10" />
-		<input type="text" name="attr_FastTalk" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Gesture" class='sheet-width100' value="" />
-		<input type="text" name="attr_Herbalist" class='sheet-width100' value="1" />
-		<input type="text" name="attr_Intimidate" class='sheet-width100' value="15" />
-		<input type="text" name="attr_Language" class='sheet-width100' value="" />
-		<input type="text" name="attr_Leadership" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Leatherwork" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Listen" class='sheet-width100' value="20" />
-		<input type="text" name="attr_Mimicry" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Music" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Naturalist" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Navigate" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Painting" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Persuade" class='sheet-width100' value="10" />
-		<input type="text" name="attr_RacialMemory" class='sheet-width100' value="5" />
-		<input type="text" name="attr_RitualsCeremonies" class='sheet-width100' value="1" />
-		<button type='roll' name='roll_Empathy' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_FastTalk' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Gesture' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Herbalist' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Intimidate' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Language' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Leadership' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Leatherwork' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Listen' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Mimicry' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Music' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Naturalist' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Navigate' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Painting' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Persuade' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_RacialMemory' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_RitualsCeremonies' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="checkbox" name="attr_RunningChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SleightHandChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SlingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SpearChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SpotHiddenChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_StatusChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_StealthChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_StoneKnappingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SurvivalChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_SwimChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_TeachingChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_ThrowChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_TrackChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_WeatherSenseChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_WoodworkChk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_skill1Chk" value="1" class='sheet-centre' //>
-		<input type="checkbox" name="attr_skill2Chk" value="1" class='sheet-centre' //>
-		<span class='sheet-centre' >Running (20%)</span>
-		<span class='sheet-centre' >Sleight of Hand (10%)</span>
-		<span class='sheet-centre' >Sling (10%)</span>
-		<span class='sheet-centre' >Spear (20%)</span>
-		<span class='sheet-centre' >Spot Hidden (25%)</span>
-		<span class='sheet-centre' >Status (00%)</span>
-		<span class='sheet-centre' >Stealth (20%)</span>
-		<span class='sheet-centre' >Stone Knapping (10%)</span>
-		<span class='sheet-centre' >Survival (Own) (10%)</span>
-		<span class='sheet-centre' >Swim (20%)</span>
-		<span class='sheet-centre' >Teaching (05%)</span>
-		<span class='sheet-centre' >Throw (20%)</span>
-		<span class='sheet-centre' >Track (10%)</span>
-		<span class='sheet-centre' >Weather Sense (05%)</span>
-		<span class='sheet-centre' >Woodwork (10%)</span>
-		<input type="text" name="attr_SkillAName" class='sheet-width100' value="" />
-		<input type="text" name="attr_SkillBName" class='sheet-width100' value="" />
-		<input type="text" name="attr_Running" class='sheet-width100' value="20" />
-		<input type="text" name="attr_SleightHand" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Sling" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Spear" class='sheet-width100' value="20" />
-		<input type="text" name="attr_SpotHidden" class='sheet-width100' value="25" />
-		<input type="text" name="attr_Status" class='sheet-width100' value="0" />
-		<input type="text" name="attr_Stealth" class='sheet-width100' value="20" />
-		<input type="text" name="attr_StoneKnapping" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Survival" class='sheet-width100' value="10" />
-		<input type="text" name="attr_Swim" class='sheet-width100' value="20" />
-		<input type="text" name="attr_Teaching" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Throw" class='sheet-width100' value="20" />
-		<input type="text" name="attr_Track" class='sheet-width100' value="10" />
-		<input type="text" name="attr_WeatherSense" class='sheet-width100' value="5" />
-		<input type="text" name="attr_Woodwork" class='sheet-width100' value="10" />
-		<input type="text" name="attr_skill1" class='sheet-width100' value="" />
-		<input type="text" name="attr_skill2" class='sheet-width100' value="" />
-		<button type='roll' name='roll_Running' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_SleightHand' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Sling' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Spear' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_SpotHidden' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Status' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Stealth' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_StoneKnapping' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Survival' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Swim' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Teaching' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Throw' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Track' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_WeatherSense' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_Woodwork' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_skill1' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<button type='roll' name='roll_skill2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<input type="checkbox" name="attr_actingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_animalguisechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_animalhandlingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_appraisechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_axechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_bandagingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_blowpipechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_bolaschk" value="1" class='centre' />
+		<input type="checkbox" name="attr_bowchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_brawlchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_canoechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_charmchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_climbchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_cookingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_dancingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_diplomacychk" value="1" class='centre' />
+		<input type="checkbox" name="attr_dodgechk" value="1" class='centre' />
+		<span class='centre' >Acting (05%)</span>
+		<span class='centre' >Animal Guise (05%)</span>
+		<span class='centre' >Animal Handling (05%)</span>
+		<span class='centre' >Appraise (05%)</span>
+		<span class='centre' >Axe (15%)</span>
+		<span class='centre' >Bandaging (10%)</span>
+		<span class='centre' >Blowpipe (15%)</span>
+		<span class='centre' >Bolas (05%)</span>
+		<span class='centre' >Bow (15%)</span>
+		<span class='centre' >Brawl (25%)</span>
+		<span class='centre' >Canoe (05%)</span>
+		<span class='centre' >Charm (15%)</span>
+		<span class='centre' >Climb (20%)</span>
+		<span class='centre' >Cooking (10%)</span>
+		<span class='centre' >Dancing (05%)</span>
+		<span class='centre' >Diplomacy (05%)</span>
+		<span class='centre' >Dodge (half DEX)</span>
+		<input type="text" name="attr_acting" class='width100' value="5" />
+		<input type="text" name="attr_animalguise" class='width100' value="5" />
+		<input type="text" name="attr_animalhandling" class='width100' value="5" />
+		<input type="text" name="attr_appraise" class='width100' value="5" />
+		<input type="text" name="attr_axe" class='width100' value="15" />
+		<input type="text" name="attr_bandaging" class='width100' value="10" />
+		<input type="text" name="attr_blowpipe" class='width100' value="15" />
+		<input type="text" name="attr_bolas" class='width100' value="5" />
+		<input type="text" name="attr_bow" class='width100' value="15" />
+		<input type="text" name="attr_brawl" class='width100' value="25" />
+		<input type="text" name="attr_canoe" class='width100' value="5" />
+		<input type="text" name="attr_charm" class='width100' value="15" />
+		<input type="text" name="attr_climb" class='width100' value="20" />
+		<input type="text" name="attr_cooking" class='width100' value="10" />
+		<input type="text" name="attr_dancing" class='width100' value="5" />
+		<input type="text" name="attr_diplomacy" class='width100' value="5" />
+		<input type="text" name="attr_dodge" class='width100' value="0" />
+		<button type='roll' name='roll_acting' value='&{template:roll} {{name=Acting}} {{success=[[@{acting}]]}} {{hard=[[floor(@{acting}/2)]]}} {{extreme=[[floor(@{acting}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_animalguise' value='&{template:roll} {{name=Animal Guise}} {{success=[[@{animalguise}]]}} {{hard=[[floor(@{animalguise}/2)]]}} {{extreme=[[floor(@{animalguise}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_animalhandling' value='&{template:roll} {{name=Animal Handling}} {{success=[[@{animalhandling}]]}} {{hard=[[floor(@{animalhandling}/2)]]}} {{extreme=[[floor(@{animalhandling}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_appraise' value='&{template:roll} {{name=Appraise}} {{success=[[@{appraise}]]}} {{hard=[[floor(@{appraise}/2)]]}} {{extreme=[[floor(@{appraise}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_axe' value='&{template:roll} {{name=Axe}} {{success=[[@{axe}]]}} {{hard=[[floor(@{axe}/2)]]}} {{extreme=[[floor(@{axe}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_bandaging' value='&{template:roll} {{name=Bandaging}} {{success=[[@{bandaging}]]}} {{hard=[[floor(@{bandaging}/2)]]}} {{extreme=[[floor(@{bandaging}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_blowpipe' value='&{template:roll} {{name=Blowpipe}} {{success=[[@{blowpipe}]]}} {{hard=[[floor(@{blowpipe}/2)]]}} {{extreme=[[floor(@{blowpipe}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_bolas' value='&{template:roll} {{name=Bolas}} {{success=[[@{bolas}]]}} {{hard=[[floor(@{bolas}/2)]]}} {{extreme=[[floor(@{bolas}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_bow' value='&{template:roll} {{name=Bow}} {{success=[[@{bow}]]}} {{hard=[[floor(@{bow}/2)]]}} {{extreme=[[floor(@{bow}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_brawl' value='&{template:roll} {{name=Brawl}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_canoe' value='&{template:roll} {{name=Canoe}} {{success=[[@{canoe}]]}} {{hard=[[floor(@{canoe}/2)]]}} {{extreme=[[floor(@{canoe}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_charm' value='&{template:roll} {{name=Charm}} {{success=[[@{charm}]]}} {{hard=[[floor(@{charm}/2)]]}} {{extreme=[[floor(@{charm}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_climb' value='&{template:roll} {{name=Climb}} {{success=[[@{climb}]]}} {{hard=[[floor(@{climb}/2)]]}} {{extreme=[[floor(@{climb}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_cooking' value='&{template:roll} {{name=Cooking}} {{success=[[@{cooking}]]}} {{hard=[[floor(@{cooking}/2)]]}} {{extreme=[[floor(@{cooking}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_dancing' value='&{template:roll} {{name=Dancing}} {{success=[[@{dancing}]]}} {{hard=[[floor(@{dancing}/2)]]}} {{extreme=[[floor(@{dancing}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_diplomacy' value='&{template:roll} {{name=Diplomacy}} {{success=[[@{diplomacy}]]}} {{hard=[[floor(@{diplomacy}/2)]]}} {{extreme=[[floor(@{diplomacy}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_dodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="checkbox" name="attr_empathychk" value="1" class='centre' />
+		<input type="checkbox" name="attr_fasttalkchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_gesturechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_herbalistchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_intimidatechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_languagechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_leadershipchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_leatherworkchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_listenchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_mimicrychk" value="1" class='centre' />
+		<input type="checkbox" name="attr_musicchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_naturalistchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_navigatechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_paintingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_persuadechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_racialmemorychk" value="1" class='centre' />
+		<input type="checkbox" name="attr_ritualsceremonieschk" value="1" class='centre' />
+		<span class='centre' >Empathy (10%)</span>
+		<span class='centre' >Fast Talk (05%)</span>
+		<span class='centre' >Gesture (half INT)</span>
+		<span class='centre' >Herbalist (01%)</span>
+		<span class='centre' >Intimidate (15%)</span>
+		<span class='centre' >Language (Own) (INT)</span>
+		<span class='centre' >Leadership (05%)</span>
+		<span class='centre' >Leatherwork (10%)</span>
+		<span class='centre' >Listen (20%)</span>
+		<span class='centre' >Mimicry (05%)</span>
+		<span class='centre' >Music (05%)</span>
+		<span class='centre' >Naturalist (10%)</span>
+		<span class='centre' >Navigate (10%)</span>
+		<span class='centre' >Painting (05%)</span>
+		<span class='centre' >Persuade (10%)</span>
+		<span class='centre' >Racial Memory (05%)</span>
+		<span class='centre' >Rituals and Ceremonies (01%)</span>
+		<input type="text" name="attr_empathy" class='width100' value="10" />
+		<input type="text" name="attr_fasttalk" class='width100' value="5" />
+		<input type="text" name="attr_gesture" class='width100' value="0" />
+		<input type="text" name="attr_herbalist" class='width100' value="1" />
+		<input type="text" name="attr_intimidate" class='width100' value="15" />
+		<input type="text" name="attr_language" class='width100' value="0" />
+		<input type="text" name="attr_leadership" class='width100' value="5" />
+		<input type="text" name="attr_leatherwork" class='width100' value="10" />
+		<input type="text" name="attr_listen" class='width100' value="20" />
+		<input type="text" name="attr_mimicry" class='width100' value="5" />
+		<input type="text" name="attr_music" class='width100' value="5" />
+		<input type="text" name="attr_naturalist" class='width100' value="10" />
+		<input type="text" name="attr_navigate" class='width100' value="10" />
+		<input type="text" name="attr_painting" class='width100' value="5" />
+		<input type="text" name="attr_persuade" class='width100' value="10" />
+		<input type="text" name="attr_racialmemory" class='width100' value="5" />
+		<input type="text" name="attr_ritualsceremonies" class='width100' value="1" />
+		<button type='roll' name='roll_empathy' value='&{template:roll} {{name=Empathy}} {{success=[[@{empathy}]]}} {{hard=[[floor(@{empathy}/2)]]}} {{extreme=[[floor(@{empathy}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_fasttalk' value='&{template:roll} {{name=Fast Talk}} {{success=[[@{fasttalk}]]}} {{hard=[[floor(@{fasttalk}/2)]]}} {{extreme=[[floor(@{fasttalk}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_gesture' value='&{template:roll} {{name=Gesture}} {{success=[[@{gesture}]]}} {{hard=[[floor(@{gesture}/2)]]}} {{extreme=[[floor(@{gesture}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_herbalist' value='&{template:roll} {{name=Herbalist}} {{success=[[@{herbalist}]]}} {{hard=[[floor(@{herbalist}/2)]]}} {{extreme=[[floor(@{herbalist}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_intimidate' value='&{template:roll} {{name=Intimidate}} {{success=[[@{intimidate}]]}} {{hard=[[floor(@{intimidate}/2)]]}} {{extreme=[[floor(@{intimidate}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_language' value='&{template:roll} {{name=Language}} {{success=[[@{language}]]}} {{hard=[[floor(@{language}/2)]]}} {{extreme=[[floor(@{language}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_leadership' value='&{template:roll} {{name=Leadership}} {{success=[[@{leadership}]]}} {{hard=[[floor(@{leadership}/2)]]}} {{extreme=[[floor(@{leadership}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_leatherwork' value='&{template:roll} {{name=Leatherwork}} {{success=[[@{leatherwork}]]}} {{hard=[[floor(@{leatherwork}/2)]]}} {{extreme=[[floor(@{leatherwork}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_listen' value='&{template:roll} {{name=Listen}} {{success=[[@{listen}]]}} {{hard=[[floor(@{listen}/2)]]}} {{extreme=[[floor(@{listen}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_mimicry' value='&{template:roll} {{name=Mimicry}} {{success=[[@{mimicry}]]}} {{hard=[[floor(@{mimicry}/2)]]}} {{extreme=[[floor(@{mimicry}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_music' value='&{template:roll} {{name=Music}} {{success=[[@{music}]]}} {{hard=[[floor(@{music}/2)]]}} {{extreme=[[floor(@{music}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_naturalist' value='&{template:roll} {{name=Naturalist}} {{success=[[@{naturalist}]]}} {{hard=[[floor(@{naturalist}/2)]]}} {{extreme=[[floor(@{naturalist}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_navigate' value='&{template:roll} {{name=Navigate}} {{success=[[@{navigate}]]}} {{hard=[[floor(@{navigate}/2)]]}} {{extreme=[[floor(@{navigate}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_painting' value='&{template:roll} {{name=Painting}} {{success=[[@{painting}]]}} {{hard=[[floor(@{painting}/2)]]}} {{extreme=[[floor(@{painting}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_persuade' value='&{template:roll} {{name=Persuade}} {{success=[[@{persuade}]]}} {{hard=[[floor(@{persuade}/2)]]}} {{extreme=[[floor(@{persuade}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_racialmemory' value='&{template:roll} {{name=Racial Memory}} {{success=[[@{racialmemory}]]}} {{hard=[[floor(@{racialmemory}/2)]]}} {{extreme=[[floor(@{racialmemory}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_ritualsceremonies' value='&{template:roll} {{name=Rituals and Ceremonies}} {{success=[[@{ritualsceremonies}]]}} {{hard=[[floor(@{ritualsceremonies}/2)]]}} {{extreme=[[floor(@{ritualsceremonies}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="checkbox" name="attr_runningchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_sleighthandchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_slingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_spearchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_spothiddenchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_statuschk" value="1" class='centre' />
+		<input type="checkbox" name="attr_stealthchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_stoneknappingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_survivalchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_swimchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_teachingchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_throwchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_trackchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_weathersensechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_woodworkchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_skill1chk" value="1" class='centre' />
+		<input type="checkbox" name="attr_skill2chk" value="1" class='centre' />
+		<span class='centre' >Running (20%)</span>
+		<span class='centre' >Sleight of Hand (10%)</span>
+		<span class='centre' >Sling (10%)</span>
+		<span class='centre' >Spear (20%)</span>
+		<span class='centre' >Spot Hidden (25%)</span>
+		<span class='centre' >Status (00%)</span>
+		<span class='centre' >Stealth (20%)</span>
+		<span class='centre' >Stone Knapping (10%)</span>
+		<span class='centre' >Survival (Own) (10%)</span>
+		<span class='centre' >Swim (20%)</span>
+		<span class='centre' >Teaching (05%)</span>
+		<span class='centre' >Throw (20%)</span>
+		<span class='centre' >Track (10%)</span>
+		<span class='centre' >Weather Sense (05%)</span>
+		<span class='centre' >Woodwork (10%)</span>
+		<input type="text" name="attr_skill1name" class='width100' value="" />
+		<input type="text" name="attr_skill2name" class='width100' value="" />
+		<input type="text" name="attr_running" class='width100' value="20" />
+		<input type="text" name="attr_sleighthand" class='width100' value="10" />
+		<input type="text" name="attr_sling" class='width100' value="10" />
+		<input type="text" name="attr_spear" class='width100' value="20" />
+		<input type="text" name="attr_spothidden" class='width100' value="25" />
+		<input type="text" name="attr_status" class='width100' value="0" />
+		<input type="text" name="attr_stealth" class='width100' value="20" />
+		<input type="text" name="attr_stoneknapping" class='width100' value="10" />
+		<input type="text" name="attr_survival" class='width100' value="10" />
+		<input type="text" name="attr_swim" class='width100' value="20" />
+		<input type="text" name="attr_teaching" class='width100' value="5" />
+		<input type="text" name="attr_throw" class='width100' value="20" />
+		<input type="text" name="attr_track" class='width100' value="10" />
+		<input type="text" name="attr_weathersense" class='width100' value="5" />
+		<input type="text" name="attr_woodwork" class='width100' value="10" />
+		<input type="text" name="attr_skill1" class='width100' value="0" />
+		<input type="text" name="attr_skill2" class='width100' value="0" />
+		<button type='roll' name='roll_running' value='&{template:roll} {{name=Running}} {{success=[[@{running}]]}} {{hard=[[floor(@{running}/2)]]}} {{extreme=[[floor(@{running}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_sleighthand' value='&{template:roll} {{name=Sleight of Hand}} {{success=[[@{sleighthand}]]}} {{hard=[[floor(@{sleighthand}/2)]]}} {{extreme=[[floor(@{sleighthand}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_sling' value='&{template:roll} {{name=Sling}} {{success=[[@{sling}]]}} {{hard=[[floor(@{sling}/2)]]}} {{extreme=[[floor(@{sling}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_spear' value='&{template:roll} {{name=Spear}} {{success=[[@{spear}]]}} {{hard=[[floor(@{spear}/2)]]}} {{extreme=[[floor(@{spear}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_spothidden' value='&{template:roll} {{name=Spot Hidden}} {{success=[[@{spothidden}]]}} {{hard=[[floor(@{spothidden}/2)]]}} {{extreme=[[floor(@{spothidden}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_status' value='&{template:roll} {{name=Status}} {{success=[[@{status}]]}} {{hard=[[floor(@{status}/2)]]}} {{extreme=[[floor(@{status}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_stealth' value='&{template:roll} {{name=Stealth}} {{success=[[@{stealth}]]}} {{hard=[[floor(@{stealth}/2)]]}} {{extreme=[[floor(@{stealth}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_stoneknapping' value='&{template:roll} {{name=Stone Knapping}} {{success=[[@{stoneknapping}]]}} {{hard=[[floor(@{stoneknapping}/2)]]}} {{extreme=[[floor(@{stoneknapping}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_survival' value='&{template:roll} {{name=Survival}} {{success=[[@{survival}]]}} {{hard=[[floor(@{survival}/2)]]}} {{extreme=[[floor(@{survival}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_swim' value='&{template:roll} {{name=Swim}} {{success=[[@{swim}]]}} {{hard=[[floor(@{swim}/2)]]}} {{extreme=[[floor(@{swim}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_teaching' value='&{template:roll} {{name=Teaching}} {{success=[[@{teaching}]]}} {{hard=[[floor(@{teaching}/2)]]}} {{extreme=[[floor(@{teaching}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_throw' value='&{template:roll} {{name=Throw}} {{success=[[@{throw}]]}} {{hard=[[floor(@{throw}/2)]]}} {{extreme=[[floor(@{throw}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_track' value='&{template:roll} {{name=Track}} {{success=[[@{track}]]}} {{hard=[[floor(@{track}/2)]]}} {{extreme=[[floor(@{track}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weathersense' value='&{template:roll} {{name=Weather Sense}} {{success=[[@{weathersense}]]}} {{hard=[[floor(@{weathersense}/2)]]}} {{extreme=[[floor(@{weathersense}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_woodwork' value='&{template:roll} {{name=Woodwork}} {{success=[[@{woodwork}]]}} {{hard=[[floor(@{woodwork}/2)]]}} {{extreme=[[floor(@{woodwork}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_skill1' value='&{template:roll} {{name=@{skill1name}}} {{success=[[@{skill1}]]}} {{hard=[[floor(@{skill1}/2)]]}} {{extreme=[[floor(@{skill1}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_skill2' value='&{template:roll} {{name=@{skill2name}}} {{success=[[@{skill2}]]}} {{hard=[[floor(@{skill2}/2)]]}} {{extreme=[[floor(@{skill2}/5)]]}} {{result=[[1d100]]}}' ></button>
 	</div>
-	<div class="sheet-weapons">
+	<div class="weapons">
 		<h3>Weapons</h3>
-		<span class='sheet-centre' >Weapon</span>
-		<span class='sheet-centre' >Skill</span>
-		<span class='sheet-centre' >Damage</span>
-		<span class='sheet-centre' >Range</span>
-		<span class='sheet-centre' >Ammo</span>
+		<span class='centre' >Weapon</span>
+		<span class='centre' >Skill</span>
+		<span class='centre' >Damage</span>
+		<span class='centre' >Range</span>
+		<span class='centre' >Ammo</span>
 		<span></span>
-		<span class='sheet-centre' >Unarmed</span>
-		<span name="attr_Brawl"></span>
-		<span class='sheet-centre' >1d3 + db</span>
-		<span class='sheet-centre' >-</span>
-		<span class='sheet-centre' >-</span>
-		<button type='roll' name='roll_Unarmed' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons2Name" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons2Skill" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons2Damage" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons2Range" class='sheet-width100' value="" />
-		<input type="number" name="attr_weapons2Ammo" value="0" />
-		<button type='roll' name='roll_weapon2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons3Name" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons3Skill" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons3Damage" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons3Range" class='sheet-width100' value="" />
-		<input type="number" name="attr_weapons3Ammo" value="0" />
-		<button type='roll' name='roll_weapon3' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons4Name" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons4Skill" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons4Damage" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons4Range" class='sheet-width100' value="" />
-		<input type="number" name="attr_weapons4Ammo" value="0" />
-		<button type='roll' name='roll_weapon4' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons5Name" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons5Skill" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons5Damage" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons5Range" class='sheet-width100' value="" />
-		<input type="number" name="attr_weapons5Ammo" value="0" />
-		<button type='roll' name='roll_weapon5' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-		<input type="text" name="attr_weapons6Name" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons6Skill" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons6Damage" class='sheet-width100' value="" />
-		<input type="text" name="attr_weapons6Range" class='sheet-width100' value="" />
-		<input type="number" name="attr_weapons6Ammo" value="0" />
-		<button type='roll' name='roll_weapon6' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+		<span class='centre' >Unarmed</span>
+		<span name="attr_brawl"></span>
+		<span class='centre' >1d3 + db</span>
+		<span class='centre' >-</span>
+		<span class='centre' >-</span>
+		<button type='roll' name='roll_unarmed' value='&{template:roll} {{name=Unarmed}}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_weapon2name" class='width100' value="" />
+		<input type="text" name="attr_weapon2" class='width100' value="0" />
+		<input type="text" name="attr_weapon2damage" class='width100' value="" />
+		<input type="text" name="attr_weapon2range" class='width100' value="" />
+		<input type="number" name="attr_weapon2ammo" value="0" />
+		<button type='roll' name='roll_weapon2' value='&{template:roll} {{name=@{weapon2name}}} {{success=[[@{weapon2}]]}} {{hard=[[floor(@{weapon2}/2)]]}} {{extreme=[[floor(@{weapon2}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_weapon3name" class='width100' value="" />
+		<input type="text" name="attr_weapon3" class='width100' value="0" />
+		<input type="text" name="attr_weapon3damage" class='width100' value="" />
+		<input type="text" name="attr_weapon3range" class='width100' value="" />
+		<input type="number" name="attr_weapon3ammo" value="0" />
+		<button type='roll' name='roll_weapon3' value='&{template:roll} {{name=@{weapon3name}}} {{success=[[@{weapon3}]]}} {{hard=[[floor(@{weapon3}/2)]]}} {{extreme=[[floor(@{weapon3}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_weapon4name" class='width100' value="" />
+		<input type="text" name="attr_weapon4" class='width100' value="0" />
+		<input type="text" name="attr_weapon4damage" class='width100' value="" />
+		<input type="text" name="attr_weapon4range" class='width100' value="" />
+		<input type="number" name="attr_weapon4ammo" value="0" />
+		<button type='roll' name='roll_weapon4' value='&{template:roll} {{name=@{weapon4name}}} {{success=[[@{weapon4}]]}} {{hard=[[floor(@{weapon4}/2)]]}} {{extreme=[[floor(@{weapon4}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_weapon5name" class='width100' value="" />
+		<input type="text" name="attr_weapon5" class='width100' value="0" />
+		<input type="text" name="attr_weapon5damage" class='width100' value="" />
+		<input type="text" name="attr_weapon5range" class='width100' value="" />
+		<input type="number" name="attr_weapon5ammo" value="0" />
+		<button type='roll' name='roll_weapon5' value='&{template:roll} {{name=@{weapon5name}}} {{success=[[@{weapon5}]]}} {{hard=[[floor(@{weapon5}/2)]]}} {{extreme=[[floor(@{weapon5}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_weapon6name" class='width100' value="" />
+		<input type="text" name="attr_weapon6" class='width100' value="0" />
+		<input type="text" name="attr_weapon6damage" class='width100' value="" />
+		<input type="text" name="attr_weapon6range" class='width100' value="" />
+		<input type="number" name="attr_weapon6ammo" value="0" />
+		<button type='roll' name='roll_weapon6' value='&{template:roll} {{name=@{weapon6name}}} {{success=[[@{weapon6}]]}} {{hard=[[floor(@{weapon6}/2)]]}} {{extreme=[[floor(@{weapon6}/5)]]}} {{result=[[1d100]]}}' ></button>
 	</div>
-	<div class="sheet-combat">
+	<div class="combat">
 		<h3>Combat</h3>
-		<span class='sheet-centre' >Damage Bonus</span>
-		<input type="text" name="attr_DamageBonus" class='sheet-narrow' value="" />
-		<span class='sheet-centre' >Build</span>
-		<input type="text" name="attr_Build" class='sheet-narrow' value="" />
-		<span class='sheet-centre' >Dodge</span>
-		<span name="attr_Dodge" class='sheet-centre' ></span>
-		<span class='sheet-centre' >Armour</span>
-		<input type="text" name="attr_Armour" class='sheet-narrow' value="" />
+		<span class='centre' >Damage Bonus</span>
+		<input type="text" name="attr_damagebonus" class='narrow' value="0" />
+		<span class='centre' >Build</span>
+		<input type="text" name="attr_build" class='narrow' value="0" />
+		<span class='centre' >Dodge</span>
+		<span name="attr_dodge" class='centre' ></span>
+		<span class='centre' >Armour</span>
+		<input type="text" name="attr_armour" class='narrow' value="0" />
 	</div>
 </div>
 
-<div class='sheet-notes'>
+<!-- Notes tab -->
+<div class='notes'>
     <textarea name="attr_notes" value="" ></textarea>
 </div>
 
-<div class='sheet-npcs'>
+<!-- NPCs tab -->
+<div class='npcs'>
 	<fieldset class="repeating_content">
-		<div class="sheet-npc">
-			<div class="sheet-npcgeneral">
-				<span class='sheet-bold sheet-centre' >Name</span>
-				<input type="text" name="attr_npcname" class='sheet-width100' value="" />
+		<div class="npc">
+			<div class="npcgeneral">
+				<span class='bold sheet-centre' >Name</span>
+				<input type="text" name="attr_npcname" class='width100' value="" />
 			</div>
-			<div class="sheet-npcchars">
-				<span class='sheet-centre' >STR</span>
-				<input type="text" name="attr_STR" class='sheet-width100' value="" />
-				<button type='roll' name='roll_STR' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >DEX</span>
-				<input type="text" name="attr_DEX" class='sheet-width100' value="" />
-				<button type='roll' name='roll_DEX' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >INT</span>
-				<input type="text" name="attr_INT" class='sheet-width100' value="" />
-				<button type='roll' name='roll_INT' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >CON</span>
-				<input type="text" name="attr_CON" class='sheet-width100' value="" />
-				<button type='roll' name='roll_CON' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >APP</span>
-				<input type="text" name="attr_APP" class='sheet-width100' value="" />
-				<button type='roll' name='roll_APP' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >POW</span>
-				<input type="text" name="attr_POW" class='sheet-width100' value="" />
-				<button type='roll' name='roll_POW' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >SIZ</span>
-				<input type="text" name="attr_SIZ" class='sheet-width100' value="" />
-				<button type='roll' name='roll_SIZ' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >Luck</span>
-				<input type="text" name="attr_Luck" class='sheet-width100' value="" />
-				<button type='roll' name='roll_Luck' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<span class='sheet-centre' >Move Rate</span>
-				<input type="text" name="attr_MoveRate" class='sheet-width100' value="" />
+			<div class="npcchars">
+				<span class='centre' >STR</span>
+				<input type="text" name="attr_npcstr" class='width100' value="0" />
+        <button type='roll' name='roll_npcstr' value='&{template:roll} {{name=STR}} {{success=[[@{npcstr}]]}} {{hard=[[floor(@{npcstr}/2)]]}} {{extreme=[[floor(@{npcstr}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >DEX</span>
+				<input type="text" name="attr_npcdex" class='width100' value="0" />
+        <button type='roll' name='roll_npcdex' value='&{template:roll} {{name=DEX}} {{success=[[@{npcdex}]]}} {{hard=[[floor(@{npcdex}/2)]]}} {{extreme=[[floor(@{npcdex}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >INT</span>
+				<input type="text" name="attr_npcint" class='width100' value="0" />
+        <button type='roll' name='roll_npcint' value='&{template:roll} {{name=INT}} {{success=[[@{npcint}]]}} {{hard=[[floor(@{npcint}/2)]]}} {{extreme=[[floor(@{npcint}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >CON</span>
+				<input type="text" name="attr_npccon" class='width100' value="0" />
+        <button type='roll' name='roll_npccon' value='&{template:roll} {{name=CON}} {{success=[[@{npccon}]]}} {{hard=[[floor(@{npccon}/2)]]}} {{extreme=[[floor(@{npccon}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >APP</span>
+				<input type="text" name="attr_npcapp" class='width100' value="0" />
+        <button type='roll' name='roll_npcapp' value='&{template:roll} {{name=APP}} {{success=[[@{npcapp}]]}} {{hard=[[floor(@{npcapp}/2)]]}} {{extreme=[[floor(@{npcapp}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >POW</span>
+				<input type="text" name="attr_npcpow" class='width100' value="0" />
+        <button type='roll' name='roll_npcpow' value='&{template:roll} {{name=POW}} {{success=[[@{npcpow}]]}} {{hard=[[floor(@{npcpow}/2)]]}} {{extreme=[[floor(@{npcpow}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >SIZ</span>
+				<input type="text" name="attr_npcsiz" class='width100' value="0" />
+        <button type='roll' name='roll_npcsiz' value='&{template:roll} {{name=SIZ}} {{success=[[@{npcsiz}]]}} {{hard=[[floor(@{npcsiz}/2)]]}} {{extreme=[[floor(@{npcsiz}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >Luck</span>
+				<input type="text" name="attr_npcluck" class='width100' value="0" />
+        <button type='roll' name='roll_npcluck' value='&{template:roll} {{name=Luck}} {{success=[[@{npcluck}]]}} {{hard=[[floor(@{npcluck}/2)]]}} {{extreme=[[floor(@{npcluck}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<span class='centre' >Move Rate</span>
+				<input type="text" name="attr_npcmoverate" class='width100' value="0" />
 			</div>
-			<div class="sheet-npchitPoints">
-				<span class='sheet-centre' >Max HP</span>
-				<input type="text" name="attr_MaxHP" class='sheet-narrow' value="" />
-				<span class='sheet-centre' >Current HP</span>
-				<input type="number" name="attr_CurrentHP" value="0" />
-				<span class='sheet-centre' >Major Wound</span>
-				<input type="checkbox" name="attr_MajorWound" value="1" class='sheet-leftcentre' />
-				<span class='sheet-centre' >Unconscious</span>
-				<input type="checkbox" name="attr_Unconscious" value="1" class='sheet-leftcentre' />
-				<span class='sheet-centre' >Dying</span>
-				<input type="checkbox" name="attr_Dying" value="1" class='sheet-leftcentre' />
+			<div class="npchitpoints">
+				<span class='centre' >Max HP</span>
+				<input type="text" name="attr_npcmaxhp" class='narrow' value="0" />
+				<span class='centre' >Current HP</span>
+				<input type="number" name="attr_npccurrenthp" value="0" />
+				<span class='centre' >Major Wound</span>
+				<input type="checkbox" name="attr_npcmajorwound" value="1" class='leftcentre' />
+				<span class='centre' >Unconscious</span>
+				<input type="checkbox" name="attr_npcunconscious" value="1" class='leftcentre' />
+				<span class='centre' >Dying</span>
+				<input type="checkbox" name="attr_npcdying" value="1" class='leftcentre' />
 			</div>
-			<div class="sheet-npcspiritPoints">
-				<span class='sheet-centre' >Max SP</span>
-				<input type="text" name="attr_MaxSP" class='sheet-narrow' value="" />
-				<span class='sheet-centre' >Current SP</span>
-				<input type="number" name="attr_CurrentSP" value="0" />
+			<div class="npcspiritpoints">
+				<span class='centre' >Max SP</span>
+				<input type="text" name="attr_npcmaxsp" class='narrow' value="0" />
+				<span class='centre' >Current SP</span>
+				<input type="number" name="attr_npccurrentsp" value="0" />
 			</div>
-			<div class="sheet-npcskills">
-				<input type="text" name="attr_npcSkillAName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillBName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillA" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillB" class='sheet-width100' value="" />
-				<button type='roll' name='roll_npcSkillA' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<button type='roll' name='roll_npcSkillB' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSkillCName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillDName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillC" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillD" class='sheet-width100' value="" />
-				<button type='roll' name='roll_npcSkillC' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<button type='roll' name='roll_npcSkillD' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSkillEName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillFName" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillE" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSkillF" class='sheet-width100' value="" />
-				<button type='roll' name='roll_npcSkillE' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<button type='roll' name='roll_npcSkillF' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+			<div class="npcskills">
+				<input type="text" name="attr_npcskill1name" class='width100' value="" />
+				<input type="text" name="attr_npcskill2name" class='width100' value="" />
+				<input type="text" name="attr_npcskill1" class='width100' value="0" />
+				<input type="text" name="attr_npcskill2" class='width100' value="0" />
+				<button type='roll' name='roll_npcskill1' value='&{template:roll} {{name=@{npcskill1name}}} {{success=[[@{npcskill1}]]}} {{hard=[[floor(@{npcskill1}/2)]]}} {{extreme=[[floor(@{npcskill1}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill2' value='&{template:roll} {{name=@{npcskill2name}}} {{success=[[@{npcskill2}]]}} {{hard=[[floor(@{npcskill2}/2)]]}} {{extreme=[[floor(@{npcskill2}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<input type="text" name="attr_npcskill3name" class='width100' value="" />
+				<input type="text" name="attr_npcskill4name" class='width100' value="" />
+				<input type="text" name="attr_npcskill3" class='width100' value="0" />
+				<input type="text" name="attr_npcskill4" class='width100' value="0" />
+				<button type='roll' name='roll_npcskill3' value='&{template:roll} {{name=@{npcskill3name}}} {{success=[[@{npcskill3}]]}} {{hard=[[floor(@{npcskill3}/2)]]}} {{extreme=[[floor(@{npcskill3}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill4' value='&{template:roll} {{name=@{npcskill4name}}} {{success=[[@{npcskill4}]]}} {{hard=[[floor(@{npcskill4}/2)]]}} {{extreme=[[floor(@{npcskill4}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<input type="text" name="attr_npcskill5name" class='width100' value="" />
+				<input type="text" name="attr_npcskill6name" class='width100' value="" />
+				<input type="text" name="attr_npcskill5" class='width100' value="0" />
+				<input type="text" name="attr_npcskill6" class='width100' value="0" />
+				<button type='roll' name='roll_npcskill5' value='&{template:roll} {{name=@{npcskill5name}}} {{success=[[@{npcskill5}]]}} {{hard=[[floor(@{npcskill5}/2)]]}} {{extreme=[[floor(@{npcskill5}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill6' value='&{template:roll} {{name=@{npcskill6name}}} {{success=[[@{npcskill6}]]}} {{hard=[[floor(@{npcskill6}/2)]]}} {{extreme=[[floor(@{npcskill6}/5)]]}} {{result=[[1d100]]}}' ></button>
 			</div>
-			<div class="sheet-npcweapons">
-				<span class='sheet-centre' >Weapon</span>
-				<span class='sheet-centre' >Skill</span>
-				<span class='sheet-centre' >Damage</span>
-				<span class='sheet-centre' >Range</span>
-				<span class='sheet-centre' >Ammo</span>
+			<div class="npcweapons">
+				<span class='centre' >Weapon</span>
+				<span class='centre' >Skill</span>
+				<span class='centre' >Damage</span>
+				<span class='centre' >Range</span>
+				<span class='centre' >Ammo</span>
 				<span></span>
-				<input type="text" name="attr_npcSweapons1Name" class='sheet-width100' value="Unarmed" />
-				<input type="text" name="attr_npcSweapons1Skill" class='sheet-width100' value="25" />
-				<input type="text" name="attr_npcSweapons1Damage" class='sheet-width100' value="1d3 + db" />
-				<input type="text" name="attr_npcSweapons1Range" class='sheet-width100' value="-" />
-				<input type="number" name="attr_npcSweapons1Ammo" value="0" />
-				<button type='roll' name='roll_npcSweapon1' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSweapons2Name" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons2Skill" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons2Damage" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons2Range" class='sheet-width100' value="" />
-				<input type="number" name="attr_npcSweapons2Ammo" value="0" />
-				<button type='roll' name='roll_npcSweapon2' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
-				<input type="text" name="attr_npcSweapons3Name" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons3Skill" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons3Damage" class='sheet-width100' value="" />
-				<input type="text" name="attr_npcSweapons3Range" class='sheet-width100' value="" />
-				<input type="number" name="attr_npcSweapons3Ammo" value="0" />
-				<button type='roll' name='roll_npcSweapon3' value='&{template:default} {{name=@{character_name}}} {{result=[[1d100]]}}'></button>
+				<input type="text" name="attr_npcweapon1name" class='width100' value="Unarmed" />
+				<input type="text" name="attr_npcweapon1" class='width100' value="25" />
+				<input type="text" name="attr_npcweapon1damage" class='width100' value="1d3 + db" />
+				<input type="text" name="attr_npcweapon1range" class='width100' value="-" />
+				<input type="number" name="attr_npcweapon1ammo" value="0" />
+				<button type='roll' name='roll_npcweapon1' value='&{template:roll} {{name=@{npcweapon1name}}} {{success=[[@{npcweapon1}]]}} {{hard=[[floor(@{npcweapon1}/2)]]}} {{extreme=[[floor(@{npcweapon1}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<input type="text" name="attr_npcweapon2name" class='width100' value="" />
+				<input type="text" name="attr_npcweapon2" class='width100' value="0" />
+				<input type="text" name="attr_npcweapon2damage" class='width100' value="" />
+				<input type="text" name="attr_npcweapon2range" class='width100' value="" />
+				<input type="number" name="attr_npcweapon2ammo" value="0" />
+				<button type='roll' name='roll_npcweapon2' value='&{template:roll} {{name=@{npcweapon2name}}} {{success=[[@{npcweapon2}]]}} {{hard=[[floor(@{npcweapon2}/2)]]}} {{extreme=[[floor(@{npcweapon2}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<input type="text" name="attr_npcweapon3name" class='width100' value="" />
+				<input type="text" name="attr_npcweapon3" class='width100' value="0" />
+				<input type="text" name="attr_npcweapon3damage" class='width100' value="" />
+				<input type="text" name="attr_npcweapon3range" class='width100' value="" />
+				<input type="number" name="attr_npcweapon3ammo" value="0" />
+				<button type='roll' name='roll_npcweapon3' value='&{template:roll} {{name=@{npcweapon3name}}} {{success=[[@{npcweapon3}]]}} {{hard=[[floor(@{npcweapon3}/2)]]}} {{extreme=[[floor(@{npcweapon3}/5)]]}} {{result=[[1d100]]}}' ></button>
 			</div>
-			<div class="sheet-npccombat">
-				<span class='sheet-centre' >Damage Bonus</span>
-				<input type="text" name="attr_npcSDamageBonus" class='sheet-narrow' value="" />
-				<span class='sheet-centre' >Build</span>
-				<input type="text" name="attr_npcSBuild" class='sheet-narrow' value="" />
-				<span class='sheet-centre' >Dodge</span>
-				<input type="text" name="attr_npcDodge" class='sheet-narrow' value="" />
-				<span class='sheet-centre' >Armour</span>
-				<input type="text" name="attr_Armour" class='sheet-narrow' value="" />
+			<div class="npccombat">
+				<span class='centre' >Damage Bonus</span>
+				<input type="text" name="attr_npcdamagebonus" class='narrow' value="0" />
+				<span class='centre' >Build</span>
+				<input type="text" name="attr_npcbuild" class='narrow' value="0" />
+				<span class='centre' >Dodge</span>
+				<input type="text" name="attr_npcdodge" class='narrow' value="0" />
+				<span class='centre' >Armour</span>
+				<input type="text" name="attr_armour" class='narrow' value="0" />
 			</div>
-			<div class="sheet-npcnotes">
+			<div class="npcnotes">
 				<textarea name="attr_npcnotes" value="" ></textarea>
 			</div>
 			<hr>
@@ -461,6 +465,7 @@
 	</fieldset>
 </div>
 
+<!-- Tabs sheet worker -->
 <script type="text/worker">
     const buttonlist = ["character","notes","npcs"];
     buttonlist.forEach(button => {
@@ -471,3 +476,73 @@
         });
     });
 </script>
+
+<!-- Roll templates -->
+
+<!-- &{template:roll} {{name=Test}} {{success=[[50]]}} {{hard=[[floor(50/2)]]}} {{extreme=[[floor(50/5)]]}} {{result=[[1d100]]}} -->
+<rolltemplate class="sheet-rolltemplate-roll">
+	<span class='bold' >Rolling:</span>
+	<span>{{name}}</span>
+	<span class='bold' >Value:</span>
+  
+	<!-- If "success" is 0, the default value 0 is still in place and a value needs to be filled in -->
+	{{#rollBetween() success 0 0}}
+		<span>0</span>
+		<span class='error' >The default value is still in place</span>
+	{{/rollBetween() success 0 0}}
+  
+  <!-- If "success" is not 0 -->
+	{{#^rollBetween() success 0 0}}
+		<span>{{success}}/{{hard}}/{{extreme}}</span>
+		<span class='bold' >Rolled:</span>
+		<span>{{result}}</span>
+		
+		<!-- 01 is always Critical -->
+		{{#rollTotal() result 1}}
+			<span class='critical' >Critical</span>
+		{{/rollTotal() result 1}}
+		<!-- Is Success -->
+		{{#rollBetween() result 2 success}}
+			<!-- Is Standard -->
+			{{#rollGreater() result hard}}
+				<span class='success' >Success</span>
+			{{/rollGreater() result hard}}
+			<!-- Is Hard or Extreme -->
+			{{#rollBetween() result 2 hard}}
+				<!-- Is Hard -->
+				{{#rollGreater() result extreme}}
+					<span class='hard' >Hard</span>
+				{{/rollGreater() result extreme}}
+				<!-- Is Extreme -->
+				{{#rollBetween() result 2 extreme}}
+					<span class='extreme' >Extreme<span>
+				{{/rollBetween() result 2 extreme}}
+			{{/rollBetween() result 2 hard}}
+		{{/rollBetween() result 2 success}}
+		<!-- Is Not Success -->
+		{{#rollGreater() result success}}
+			<!-- Is skill >= 50 -->
+			{{#rollGreater() success 49}}
+				<!-- Is Fumble -->
+				{{#rollTotal() result 100}}
+					<span class='fumble' >Fumble</span>
+				{{/rollTotal() result 100}}
+				<!-- Is Fail -->
+				{{#rollLess() result 100}}
+					<span class='fail' >Fail</span>
+				{{/rollLess() result 100}}
+			{{/rollGreater() success 49}}
+			<!-- Is skill < 50 -->
+			{{#rollLess() success 50}}
+				<!-- Is Fumble -->
+				{{#rollGreater() result 95}}
+					<span class='fumble' >Fumble</span>
+				{{/rollGreater() result 95}}
+				<!-- Is Fail -->
+				{{#rollLess() result 96}}
+					<span class='fail' >Fail</span>
+				{{/rollLess() result 96}}
+			{{/rollLess() success 50}}
+		{{/rollGreater() result success}}
+	{{/^rollBetween() success 0 0}}
+</rolltemplate>

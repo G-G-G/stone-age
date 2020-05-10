@@ -1,23 +1,22 @@
 /* Tab buttons */
-
-div.sheet-tabButtons {
+.sheet-tabbuttons {
 	margin-bottom: 2em;
 }
 
 /* Character tab */
 
-div.sheet-character {
+.sheet-character {
 	display: none;
 	width: 800px;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:	"general	general		chars	chars	logo			logo"
-							"hitPoints	hitPoints	hitPoints	hitPoints	spiritPoints	spiritPoints"
-							"skills		skills		skills	skills	skills			skills"
-							"weapons	weapons		weapons	weapons	combat			combat";
+	grid-template-areas:	"general	general		chars		chars		logo			logo"
+							"hitpoints	hitpoints	hitpoints	hitpoints	spiritpoints	spiritpoints"
+							"skills		skills		skills		skills		skills			skills"
+							"weapons	weapons		weapons		weapons		combat			combat";
 }
 
-div.sheet-general {
+.sheet-general {
 	grid-area: general;
 	display: grid;
 	grid-gap: 4px;
@@ -29,7 +28,7 @@ div.sheet-general {
 	background-color: #e6e6e6;
 }
 
-div.sheet-chars {
+.sheet-chars {
 	grid-area: chars;
 	display: grid;
 	grid-row-gap: 4px;
@@ -42,19 +41,19 @@ div.sheet-chars {
 	background-color: #e6e6e6;
 }
 
-div.sheet-chars h3 {
+.sheet-chars h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
-div.sheet-logo {
+.sheet-logo {
 	grid-area: logo;
     border-style: solid;
 	border-width: thin;
 }
 
-div.sheet-hitPoints {
-	grid-area: hitPoints;
+.sheet-hitpoints {
+	grid-area: hitpoints;
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: repeat(4, 1fr);
@@ -65,13 +64,13 @@ div.sheet-hitPoints {
 	background-color: #e6e6e6;
 }
 
-div.sheet-hitPoints h3 {
+.sheet-hitpoints h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
-div.sheet-spiritPoints {
-	grid-area: spiritPoints;
+.sheet-spiritpoints {
+	grid-area: spiritpoints;
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 1fr 1fr;
@@ -82,12 +81,12 @@ div.sheet-spiritPoints {
 	background-color: #e6e6e6;
 }
 
-div.sheet-spiritPoints h3 {
+.sheet-spiritpoints h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
-div.sheet-skills {
+.sheet-skills {
 	grid-area: skills;
 	display: grid;
 	grid-gap: 4px;
@@ -100,12 +99,12 @@ div.sheet-skills {
 	background-color: #e6e6e6;
 }
 
-div.sheet-skills h3 {
+.sheet-skills h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
-div.sheet-weapons {
+.sheet-weapons {
 	grid-area: weapons;
 	display: grid;
 	grid-gap: 4px;
@@ -117,12 +116,12 @@ div.sheet-weapons {
 	background-color: #e6e6e6;
 }
 
-div.sheet-weapons h3 {
+.sheet-weapons h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
-div.sheet-combat {
+.sheet-combat {
 	grid-area: combat;
 	display: grid;
 	grid-gap: 4px;
@@ -134,14 +133,13 @@ div.sheet-combat {
 	background-color: #e6e6e6;
 }
 
-div.sheet-combat h3 {
+.sheet-combat h3 {
     grid-column: 1 / -1;
 	text-align: center;
 }
 
 /* Notes tab */
-
-div.sheet-notes {
+.sheet-notes {
 	display: none;
 	width: 800px;
     border-style: solid;
@@ -150,7 +148,7 @@ div.sheet-notes {
 	background-color: #e6e6e6;
 }
 
-div.sheet-notes textarea {
+.sheet-notes textarea {
 	height: 60em;
 	width: 100%;
 	-webkit-box-sizing: border-box;
@@ -161,24 +159,24 @@ div.sheet-notes textarea {
 
 /* NPCs tab */
 
-div.sheet-npcs {
+.sheet-npcs {
 	display: none;
 	width: 800px;
 }
 
-div.sheet-npc {
+.sheet-npc {
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:	"npcgeneral	npcgeneral	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
-							"npcchars	npcchars	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
-							"npcchars	npcchars	npchitPoints	npchitPoints	npcspiritPoints	npcspiritPoints"
+	grid-template-areas:	"npcgeneral	npcgeneral	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
+							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
+							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
 							"npcskills	npcskills	npcskills		npcskills		npcskills		npcskills"
 							"npcweapons	npcweapons	npcweapons		npcweapons		npccombat		npccombat"
 							"npcnotes	npcnotes	npcnotes		npcnotes		npcnotes		npcnotes";
 }
 
-div.sheet-npcgeneral {
+.sheet-npcgeneral {
 	grid-area: npcgeneral;
 	display: grid;
 	grid-gap: 4px;
@@ -190,7 +188,7 @@ div.sheet-npcgeneral {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcchars {
+.sheet-npcchars {
 	grid-area: npcchars;
 	display: grid;
 	grid-row-gap: 4px;
@@ -203,8 +201,8 @@ div.sheet-npcchars {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npchitPoints {
-	grid-area: npchitPoints;
+.sheet-npchitpoints {
+	grid-area: npchitpoints;
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 1fr 1fr;
@@ -215,8 +213,8 @@ div.sheet-npchitPoints {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcspiritPoints {
-	grid-area: npcspiritPoints;
+.sheet-npcspiritpoints {
+	grid-area: npcspiritpoints;
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 1fr 1fr;
@@ -227,7 +225,7 @@ div.sheet-npcspiritPoints {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcskills {
+.sheet-npcskills {
 	grid-area: npcskills;
 	display: grid;
 	grid-gap: 4px;
@@ -240,7 +238,7 @@ div.sheet-npcskills {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcweapons {
+.sheet-npcweapons {
 	grid-area: npcweapons;
 	display: grid;
 	grid-gap: 4px;
@@ -252,7 +250,7 @@ div.sheet-npcweapons {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npccombat {
+.sheet-npccombat {
 	grid-area: npccombat;
 	display: grid;
 	grid-gap: 4px;
@@ -264,7 +262,7 @@ div.sheet-npccombat {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcnotes {
+.sheet-npcnotes {
 	grid-area: npcnotes;
     border-style: solid;
 	border-width: thin;
@@ -272,12 +270,14 @@ div.sheet-npcnotes {
 	background-color: #e6e6e6;
 }
 
-div.sheet-npcnotes textarea {
+.sheet-npcnotes textarea {
 	height: 10em;
 	width: 100%;
+	/* Required for "textarea" width 100% to work properly */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
 	resize: vertical;
 }
 
@@ -309,12 +309,74 @@ input.sheet-narrow {
 }
 
 /* Tab logic */
-
+/* Tabs are hidden by default */
 /* Show the selected tab */
-.sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="npcs"] ~ div.sheet-npcs {
+.sheet-tabstoggle[value="character"] ~ .sheet-character,
+.sheet-tabstoggle[value="npcs"] ~ .sheet-npcs {
 	display: grid;
 }
-.sheet-tabstoggle[value="notes"] ~ div.sheet-notes {
+.sheet-tabstoggle[value="notes"] ~ .sheet-notes {
 	display: block;
+}
+
+/* Roll template */
+.sheet-rolltemplate-roll {
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+.sheet-rolltemplate-roll .sheet-error {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: Black;
+	color: white;
+}
+
+.sheet-rolltemplate-roll .sheet-critical {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: Lime;
+}
+
+.sheet-rolltemplate-roll .sheet-extreme {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: LightGreen;
+}
+
+.sheet-rolltemplate-roll .sheet-hard {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: Green;
+	color: white;
+}
+
+.sheet-rolltemplate-roll .sheet-success {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: DarkGreen;
+	color: white;
+}
+
+.sheet-rolltemplate-roll .sheet-fail {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: Crimson;
+	color: white;
+}
+
+.sheet-rolltemplate-roll .sheet-fumble {
+    grid-column: 1 / -1;
+	text-align: center;
+	background: Red;
+	color: white;
+}
+
+.sheet-rolltemplate-roll .sheet-bold {
+	font-weight: bold;
 }
