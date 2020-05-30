@@ -81,8 +81,6 @@
 		<h3>Skills</h3>
 		<input type="checkbox" name="attr_actingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_animalguisechk" value="1" class='centre' />
-		<input type="checkbox" name="attr_animalhandlingchk" value="1" class='centre' />
-		<input type="checkbox" name="attr_appraisechk" value="1" class='centre' />
 		<input type="checkbox" name="attr_axechk" value="1" class='centre' />
 		<input type="checkbox" name="attr_bandagingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_blowpipechk" value="1" class='centre' />
@@ -96,10 +94,10 @@
 		<input type="checkbox" name="attr_dancingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_diplomacychk" value="1" class='centre' />
 		<input type="checkbox" name="attr_dodgechk" value="1" class='centre' />
+		<input type="checkbox" name="attr_empathychk" value="1" class='centre' />
+		<input type="checkbox" name="attr_fasttalkchk" value="1" class='centre' />
 		<span class='centre' >Acting (05%)</span>
 		<span class='centre' >Animal Guise (05%)</span>
-		<span class='centre' >Animal Handling (05%)</span>
-		<span class='centre' >Appraise (05%)</span>
 		<span class='centre' >Axe (15%)</span>
 		<span class='centre' >Bandaging (10%)</span>
 		<span class='centre' >Blowpipe (15%)</span>
@@ -113,10 +111,10 @@
 		<span class='centre' >Dancing (05%)</span>
 		<span class='centre' >Diplomacy (05%)</span>
 		<span class='centre' >Dodge (half DEX)</span>
+		<span class='centre' >Empathy (10%)</span>
+		<span class='centre' >Fast Talk (05%)</span>
 		<input type="text" name="attr_acting" class='width100' value="5" />
 		<input type="text" name="attr_animalguise" class='width100' value="5" />
-		<input type="text" name="attr_animalhandling" class='width100' value="5" />
-		<input type="text" name="attr_appraise" class='width100' value="5" />
 		<input type="text" name="attr_axe" class='width100' value="15" />
 		<input type="text" name="attr_bandaging" class='width100' value="10" />
 		<input type="text" name="attr_blowpipe" class='width100' value="15" />
@@ -130,10 +128,10 @@
 		<input type="text" name="attr_dancing" class='width100' value="5" />
 		<input type="text" name="attr_diplomacy" class='width100' value="5" />
 		<input type="text" name="attr_dodge" class='width100' value="0" />
+		<input type="text" name="attr_empathy" class='width100' value="10" />
+		<input type="text" name="attr_fasttalk" class='width100' value="5" />
 		<button type='roll' name='roll_acting' value='&{template:roll} {{name=Acting}} {{success=[[@{acting}]]}} {{hard=[[floor(@{acting}/2)]]}} {{extreme=[[floor(@{acting}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_animalguise' value='&{template:roll} {{name=Animal Guise}} {{success=[[@{animalguise}]]}} {{hard=[[floor(@{animalguise}/2)]]}} {{extreme=[[floor(@{animalguise}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_animalhandling' value='&{template:roll} {{name=Animal Handling}} {{success=[[@{animalhandling}]]}} {{hard=[[floor(@{animalhandling}/2)]]}} {{extreme=[[floor(@{animalhandling}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_appraise' value='&{template:roll} {{name=Appraise}} {{success=[[@{appraise}]]}} {{hard=[[floor(@{appraise}/2)]]}} {{extreme=[[floor(@{appraise}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_axe' value='&{template:roll} {{name=Axe}} {{success=[[@{axe}]]}} {{hard=[[floor(@{axe}/2)]]}} {{extreme=[[floor(@{axe}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_bandaging' value='&{template:roll} {{name=Bandaging}} {{success=[[@{bandaging}]]}} {{hard=[[floor(@{bandaging}/2)]]}} {{extreme=[[floor(@{bandaging}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_blowpipe' value='&{template:roll} {{name=Blowpipe}} {{success=[[@{blowpipe}]]}} {{hard=[[floor(@{blowpipe}/2)]]}} {{extreme=[[floor(@{blowpipe}/5)]]}} {{result=[[1d100]]}}' ></button>
@@ -147,8 +145,8 @@
 		<button type='roll' name='roll_dancing' value='&{template:roll} {{name=Dancing}} {{success=[[@{dancing}]]}} {{hard=[[floor(@{dancing}/2)]]}} {{extreme=[[floor(@{dancing}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_diplomacy' value='&{template:roll} {{name=Diplomacy}} {{success=[[@{diplomacy}]]}} {{hard=[[floor(@{diplomacy}/2)]]}} {{extreme=[[floor(@{diplomacy}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_dodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<input type="checkbox" name="attr_empathychk" value="1" class='centre' />
-		<input type="checkbox" name="attr_fasttalkchk" value="1" class='centre' />
+		<button type='roll' name='roll_empathy' value='&{template:roll} {{name=Empathy}} {{success=[[@{empathy}]]}} {{hard=[[floor(@{empathy}/2)]]}} {{extreme=[[floor(@{empathy}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_fasttalk' value='&{template:roll} {{name=Fast Talk}} {{success=[[@{fasttalk}]]}} {{hard=[[floor(@{fasttalk}/2)]]}} {{extreme=[[floor(@{fasttalk}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<input type="checkbox" name="attr_gesturechk" value="1" class='centre' />
 		<input type="checkbox" name="attr_herbalistchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_intimidatechk" value="1" class='centre' />
@@ -164,8 +162,8 @@
 		<input type="checkbox" name="attr_persuadechk" value="1" class='centre' />
 		<input type="checkbox" name="attr_racialmemorychk" value="1" class='centre' />
 		<input type="checkbox" name="attr_ritualsceremonieschk" value="1" class='centre' />
-		<span class='centre' >Empathy (10%)</span>
-		<span class='centre' >Fast Talk (05%)</span>
+		<input type="checkbox" name="attr_runningchk" value="1" class='centre' />
+		<input type="checkbox" name="attr_sleighthandchk" value="1" class='centre' />
 		<span class='centre' >Gesture (half INT)</span>
 		<span class='centre' >Herbalist (01%)</span>
 		<span class='centre' >Intimidate (15%)</span>
@@ -181,8 +179,8 @@
 		<span class='centre' >Persuade (10%)</span>
 		<span class='centre' >Racial Memory (05%)</span>
 		<span class='centre' >Rituals and Ceremonies (01%)</span>
-		<input type="text" name="attr_empathy" class='width100' value="10" />
-		<input type="text" name="attr_fasttalk" class='width100' value="5" />
+		<span class='centre' >Running (20%)</span>
+		<span class='centre' >Sleight of Hand (10%)</span>
 		<input type="text" name="attr_gesture" class='width100' value="0" />
 		<input type="text" name="attr_herbalist" class='width100' value="1" />
 		<input type="text" name="attr_intimidate" class='width100' value="15" />
@@ -198,8 +196,8 @@
 		<input type="text" name="attr_persuade" class='width100' value="10" />
 		<input type="text" name="attr_racialmemory" class='width100' value="5" />
 		<input type="text" name="attr_ritualsceremonies" class='width100' value="1" />
-		<button type='roll' name='roll_empathy' value='&{template:roll} {{name=Empathy}} {{success=[[@{empathy}]]}} {{hard=[[floor(@{empathy}/2)]]}} {{extreme=[[floor(@{empathy}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_fasttalk' value='&{template:roll} {{name=Fast Talk}} {{success=[[@{fasttalk}]]}} {{hard=[[floor(@{fasttalk}/2)]]}} {{extreme=[[floor(@{fasttalk}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_running" class='width100' value="20" />
+		<input type="text" name="attr_sleighthand" class='width100' value="10" />
 		<button type='roll' name='roll_gesture' value='&{template:roll} {{name=Gesture}} {{success=[[@{gesture}]]}} {{hard=[[floor(@{gesture}/2)]]}} {{extreme=[[floor(@{gesture}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_herbalist' value='&{template:roll} {{name=Herbalist}} {{success=[[@{herbalist}]]}} {{hard=[[floor(@{herbalist}/2)]]}} {{extreme=[[floor(@{herbalist}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_intimidate' value='&{template:roll} {{name=Intimidate}} {{success=[[@{intimidate}]]}} {{hard=[[floor(@{intimidate}/2)]]}} {{extreme=[[floor(@{intimidate}/5)]]}} {{result=[[1d100]]}}' ></button>
@@ -215,12 +213,12 @@
 		<button type='roll' name='roll_persuade' value='&{template:roll} {{name=Persuade}} {{success=[[@{persuade}]]}} {{hard=[[floor(@{persuade}/2)]]}} {{extreme=[[floor(@{persuade}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_racialmemory' value='&{template:roll} {{name=Racial Memory}} {{success=[[@{racialmemory}]]}} {{hard=[[floor(@{racialmemory}/2)]]}} {{extreme=[[floor(@{racialmemory}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_ritualsceremonies' value='&{template:roll} {{name=Rituals and Ceremonies}} {{success=[[@{ritualsceremonies}]]}} {{hard=[[floor(@{ritualsceremonies}/2)]]}} {{extreme=[[floor(@{ritualsceremonies}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<input type="checkbox" name="attr_runningchk" value="1" class='centre' />
-		<input type="checkbox" name="attr_sleighthandchk" value="1" class='centre' />
+		<button type='roll' name='roll_running' value='&{template:roll} {{name=Running}} {{success=[[@{running}]]}} {{hard=[[floor(@{running}/2)]]}} {{extreme=[[floor(@{running}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_sleighthand' value='&{template:roll} {{name=Sleight of Hand}} {{success=[[@{sleighthand}]]}} {{hard=[[floor(@{sleighthand}/2)]]}} {{extreme=[[floor(@{sleighthand}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<input type="checkbox" name="attr_slingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_spearchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_spothiddenchk" value="1" class='centre' />
-		<input type="checkbox" name="attr_statuschk" value="1" class='centre' />
+		<span></span>
 		<input type="checkbox" name="attr_stealthchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_stoneknappingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_survivalchk" value="1" class='centre' />
@@ -232,8 +230,8 @@
 		<input type="checkbox" name="attr_woodworkchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_skill1chk" value="1" class='centre' />
 		<input type="checkbox" name="attr_skill2chk" value="1" class='centre' />
-		<span class='centre' >Running (20%)</span>
-		<span class='centre' >Sleight of Hand (10%)</span>
+		<input type="checkbox" name="attr_skill3chk" value="1" class='centre' />
+		<input type="checkbox" name="attr_skill4chk" value="1" class='centre' />
 		<span class='centre' >Sling (10%)</span>
 		<span class='centre' >Spear (20%)</span>
 		<span class='centre' >Spot Hidden (25%)</span>
@@ -249,8 +247,8 @@
 		<span class='centre' >Woodwork (10%)</span>
 		<input type="text" name="attr_skill1name" class='width100' value="" />
 		<input type="text" name="attr_skill2name" class='width100' value="" />
-		<input type="text" name="attr_running" class='width100' value="20" />
-		<input type="text" name="attr_sleighthand" class='width100' value="10" />
+		<input type="text" name="attr_skill3name" class='width100' value="" />
+		<input type="text" name="attr_skill4name" class='width100' value="" />
 		<input type="text" name="attr_sling" class='width100' value="10" />
 		<input type="text" name="attr_spear" class='width100' value="20" />
 		<input type="text" name="attr_spothidden" class='width100' value="25" />
@@ -266,8 +264,8 @@
 		<input type="text" name="attr_woodwork" class='width100' value="10" />
 		<input type="text" name="attr_skill1" class='width100' value="0" />
 		<input type="text" name="attr_skill2" class='width100' value="0" />
-		<button type='roll' name='roll_running' value='&{template:roll} {{name=Running}} {{success=[[@{running}]]}} {{hard=[[floor(@{running}/2)]]}} {{extreme=[[floor(@{running}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_sleighthand' value='&{template:roll} {{name=Sleight of Hand}} {{success=[[@{sleighthand}]]}} {{hard=[[floor(@{sleighthand}/2)]]}} {{extreme=[[floor(@{sleighthand}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<input type="text" name="attr_skill3" class='width100' value="0" />
+		<input type="text" name="attr_skill4" class='width100' value="0" />
 		<button type='roll' name='roll_sling' value='&{template:roll} {{name=Sling}} {{success=[[@{sling}]]}} {{hard=[[floor(@{sling}/2)]]}} {{extreme=[[floor(@{sling}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_spear' value='&{template:roll} {{name=Spear}} {{success=[[@{spear}]]}} {{hard=[[floor(@{spear}/2)]]}} {{extreme=[[floor(@{spear}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_spothidden' value='&{template:roll} {{name=Spot Hidden}} {{success=[[@{spothidden}]]}} {{hard=[[floor(@{spothidden}/2)]]}} {{extreme=[[floor(@{spothidden}/5)]]}} {{result=[[1d100]]}}' ></button>
@@ -283,6 +281,8 @@
 		<button type='roll' name='roll_woodwork' value='&{template:roll} {{name=Woodwork}} {{success=[[@{woodwork}]]}} {{hard=[[floor(@{woodwork}/2)]]}} {{extreme=[[floor(@{woodwork}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_skill1' value='&{template:roll} {{name=@{skill1name}}} {{success=[[@{skill1}]]}} {{hard=[[floor(@{skill1}/2)]]}} {{extreme=[[floor(@{skill1}/5)]]}} {{result=[[1d100]]}}' ></button>
 		<button type='roll' name='roll_skill2' value='&{template:roll} {{name=@{skill2name}}} {{success=[[@{skill2}]]}} {{hard=[[floor(@{skill2}/2)]]}} {{extreme=[[floor(@{skill2}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_skill3' value='&{template:roll} {{name=@{skill3name}}} {{success=[[@{skill3}]]}} {{hard=[[floor(@{skill3}/2)]]}} {{extreme=[[floor(@{skill3}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_skill4' value='&{template:roll} {{name=@{skill4name}}} {{success=[[@{skill4}]]}} {{hard=[[floor(@{skill4}/2)]]}} {{extreme=[[floor(@{skill4}/5)]]}} {{result=[[1d100]]}}' ></button>
 	</div>
 	<div class="weapons">
 		<h3>Weapons</h3>
