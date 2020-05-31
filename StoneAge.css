@@ -126,7 +126,7 @@
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 4fr 2fr 1fr 1fr;
-	grid-template-rows: 2em repeat(4, 2em);
+	grid-template-rows: 2em repeat(5, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
@@ -255,7 +255,7 @@
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: 4fr 2fr 1fr 1fr;
-	grid-template-rows: repeat(4, 2em);
+	grid-template-rows: repeat(5, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
@@ -324,7 +324,7 @@ input.sheet-width100 {
 	display: block;
 }
 
-/* Roll template */
+/* Roll template roll */
 .sheet-rolltemplate-roll {
 	display: grid;
 	grid-gap: 4px;
@@ -383,5 +383,20 @@ input.sheet-width100 {
 }
 
 .sheet-rolltemplate-roll .sheet-bold {
+	font-weight: bold;
+}
+
+/* Roll template initiative */
+.sheet-rolltemplate-initiative {
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+
+.sheet-rolltemplate-initiative .sheet-bold {
 	font-weight: bold;
 }

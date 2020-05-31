@@ -352,6 +352,11 @@
 		<span></span>
 		<span class='centre' >Armour</span>
 		<input type="text" name="attr_armour" class='wide' value="0" />
+		<span></span>
+		<span></span>
+		<span class='centre' >Initiative (DEX)</span>
+		<span name="attr_dex" class='centre' ></span>
+		<button type='roll' name='roll_initiative' value='&{template:initiative} {{name=Initiative}} {{DEX=[[@{dex} &{tracker}]]}}' ></button>
 	</div>
 </div>
 
@@ -463,6 +468,13 @@
 				<input type="number" name="attr_npcweapon3ammo" value="0" />
 				<input type="text" name="attr_npcweapon3break" class='width100' value="" />
 				<button type='roll' name='roll_npcweapon3' value='&{template:roll} {{name=@{npcweapon3name}}} {{success=[[@{npcweapon3}]]}} {{hard=[[floor(@{npcweapon3}/2)]]}} {{extreme=[[floor(@{npcweapon3}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<input type="text" name="attr_npcweapon4name" class='width100' value="" />
+				<input type="text" name="attr_npcweapon4" class='width100' value="0" />
+				<input type="text" name="attr_npcweapon4damage" class='width100' value="" />
+				<input type="text" name="attr_npcweapon4range" class='width100' value="" />
+				<input type="number" name="attr_npcweapon4ammo" value="0" />
+				<input type="text" name="attr_npcweapon4break" class='width100' value="" />
+				<button type='roll' name='roll_npcweapon4' value='&{template:roll} {{name=@{npcweapon4name}}} {{success=[[@{npcweapon4}]]}} {{hard=[[floor(@{npcweapon4}/2)]]}} {{extreme=[[floor(@{npcweapon4}/5)]]}} {{result=[[1d100]]}}' ></button>
 			</div>
 			<div class="npccombat">
 				<span class='centre' >Damage Bonus</span>
@@ -479,6 +491,11 @@
 				<span></span>
 				<span class='centre' >Armour</span>
 				<input type="text" name="attr_armour" class='wide' value="0" />
+				<span></span>
+				<span></span>
+				<span class='centre' >Initiative (DEX)</span>
+				<span name="attr_npcdex" class='centre' ></span>
+				<button type='roll' name='roll_npcinitiative' value='&{template:initiative} {{name=Initiative}} {{DEX=[[@{npcdex} &{tracker}]]}}' ></button>
 			</div>
 			<div class="npcnotes">
 				<textarea name="attr_npcnotes" value="" ></textarea>
@@ -568,4 +585,10 @@
 			{{/rollLess() success 50}}
 		{{/rollGreater() result success}}
 	{{/^rollBetween() success 0 0}}
+</rolltemplate>
+
+<!-- &{template:initiative} {{DEX=[[@{dex} &{tracker}]]}} -->
+<rolltemplate class="sheet-rolltemplate-initiative">
+	<span class='bold' >Initiative (DEX)</span>
+	<span>{{DEX}}</span>
 </rolltemplate>
