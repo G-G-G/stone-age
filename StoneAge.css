@@ -168,12 +168,12 @@
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:	"npcchars	npcchars	npchitpoints	npchitpoints	npcgeneral	npcgeneral"
-							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
-							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
-							"npcskills	npcskills	npcskills		npcskills		npcskills		npcskills"
-							"npcweapons	npcweapons	npcweapons		npcweapons		npccombat		npccombat"
-							"npcnotes	npcnotes	npcnotes		npcnotes		npcnotes		npcnotes";
+	grid-template-areas:	"npcgeneral			npcgeneral		npcchars	npcchars	npchitpoints	npchitpoints"
+							"npcspiritpoints	npcspiritpoints	npcchars	npcchars	npchitpoints	npchitpoints"
+							"npcspiritpoints	npcspiritpoints	npcchars	npcchars	npchitpoints	npchitpoints"
+							"npcskills			npcskills		npcskills	npcskills	npcskills		npcskills"
+							"npcweapons			npcweapons		npcweapons	npcweapons	npccombat		npccombat"
+							"npcnotes			npcnotes		npcnotes	npcnotes	npcnotes		npcnotes";
 }
 
 .sheet-npcgeneral {
