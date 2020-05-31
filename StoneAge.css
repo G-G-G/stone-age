@@ -33,8 +33,8 @@
 	display: grid;
 	grid-row-gap: 4px;
 	grid-column-gap: 2px;
-	grid-template-columns: repeat(9, 1fr);
-	grid-template-rows: 2em repeat(3, 2em);
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 2em repeat(5, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px 5px;
@@ -108,7 +108,7 @@
 	grid-area: weapons;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
+	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr 1fr;
 	grid-template-rows: 2em repeat(7, 2em);
     border-style: solid;
 	border-width: thin;
@@ -125,7 +125,7 @@
 	grid-area: combat;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 4fr 2fr 1fr 1fr;
 	grid-template-rows: 2em repeat(4, 2em);
     border-style: solid;
 	border-width: thin;
@@ -168,7 +168,7 @@
 	display: grid;
 	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:	"npcgeneral	npcgeneral	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
+	grid-template-areas:	"npcchars	npcchars	npchitpoints	npchitpoints	npcgeneral	npcgeneral"
 							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
 							"npcchars	npcchars	npchitpoints	npchitpoints	npcspiritpoints	npcspiritpoints"
 							"npcskills	npcskills	npcskills		npcskills		npcskills		npcskills"
@@ -193,8 +193,8 @@
 	display: grid;
 	grid-row-gap: 4px;
 	grid-column-gap: 2px;
-	grid-template-columns: repeat(9, 1fr);
-	grid-template-rows: repeat(3, 2em);
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 2em);
     border-style: solid;
 	border-width: thin;
 	padding: 10px 5px;
@@ -242,7 +242,7 @@
 	grid-area: npcweapons;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
+	grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(4, 2em);
     border-style: solid;
 	border-width: thin;
@@ -254,7 +254,7 @@
 	grid-area: npccombat;
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 4fr 2fr 1fr 1fr;
 	grid-template-rows: repeat(4, 2em);
     border-style: solid;
 	border-width: thin;
@@ -282,14 +282,19 @@
 }
 
 /* Targetted styling that only effects elements with these classes */
-/* On all the "input" "text" I use either "sheet-narrow" or at least "sheet-width100" to avoid size weirdness */
-input.sheet-width100 {
-	width: 100%;
-}
-
-/* On all the "input" "text" I use either "sheet-narrow" or at least "sheet-width100" to avoid size weirdness */
+/* On all the "input" "text" I use either "sheet-narrow", "sheet-wide" or at least "sheet-width100" to avoid size weirdness */
 input.sheet-narrow {
 	width: 38%;
+}
+
+/* On all the "input" "text" I use either "sheet-narrow", "sheet-wide" or at least "sheet-width100" to avoid size weirdness */
+input.sheet-wide {
+	width: 66%;
+}
+
+/* On all the "input" "text" I use either "sheet-narrow", "sheet-wide" or at least "sheet-width100" to avoid size weirdness */
+input.sheet-width100 {
+	width: 100%;
 }
 
 .sheet-bold {
