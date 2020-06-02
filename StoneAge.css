@@ -3,19 +3,19 @@
 	display: grid;
 	width: 800px;
 	grid-gap: 4px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 4fr 6fr;
 }
 
 /* Tab buttons */
 .sheet-tabbuttons {
-	padding: 15px 0;
+	padding: 7px 0;
 }
 
 /* Roll type */
 .sheet-rolltype {
 	display: grid;
 	grid-gap: 4px;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, 3fr 1fr);
     border-style: solid;
 	border-width: thin;
 	padding: 10px;
@@ -334,8 +334,13 @@ input.sheet-width100 {
 }
 
 /* justify-self is on the horizontal axis */
-.sheet-hcentre {
-	justify-self: center;
+.sheet-end {
+	justify-self: end;
+}
+
+/* justify-self is on the horizontal axis */
+.sheet-start {
+	justify-self: start;
 }
 
 /* Tab logic */
