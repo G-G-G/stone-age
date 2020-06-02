@@ -1,6 +1,25 @@
+/* Header */
+.sheet-header {
+	display: grid;
+	width: 800px;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+}
+
 /* Tab buttons */
 .sheet-tabbuttons {
-	margin-bottom: 2em;
+	padding: 15px 0;
+}
+
+/* Roll type */
+.sheet-rolltype {
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: repeat(5, 1fr);
+    border-style: solid;
+	border-width: thin;
+	padding: 10px;
+	margin-bottom: 4px;
 }
 
 /* Character tab */
@@ -31,8 +50,7 @@
 .sheet-chars {
 	grid-area: chars;
 	display: grid;
-	grid-row-gap: 4px;
-	grid-column-gap: 2px;
+	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 2em repeat(5, 2em);
     border-style: solid;
@@ -191,8 +209,7 @@
 .sheet-npcchars {
 	grid-area: npcchars;
 	display: grid;
-	grid-row-gap: 4px;
-	grid-column-gap: 2px;
+	grid-gap: 4px;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: repeat(5, 2em);
     border-style: solid;
@@ -302,6 +319,8 @@ input.sheet-width100 {
 }
 
 /* On all the "input" "checkbox" I use either "sheet-leftcentre" or at least "sheet-centre" to avoid size weirdness */
+/* justify-self is on the horizontal axis */
+/* align-self is on the vertical axis */
 .sheet-leftcentre {
 	justify-self: start;
 	align-self: center;
@@ -309,8 +328,14 @@ input.sheet-width100 {
 
 /* On all the "input" "checkbox" I use either "sheet-leftcentre" or at least "sheet-centre" to avoid size weirdness */
 /* Used for most "span" */
+/* align-self is on the vertical axis */
 .sheet-centre {
 	align-self: center;
+}
+
+/* justify-self is on the horizontal axis */
+.sheet-hcentre {
+	justify-self: center;
 }
 
 /* Tab logic */

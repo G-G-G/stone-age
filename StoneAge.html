@@ -1,10 +1,28 @@
-<!-- Tab buttons -->
-<div class="tabbuttons">
-    <button type="action" name="act_character" >Character</button>
-    <button type="action" name="act_notes" >Notes</button>
-    <button type="action" name="act_npcs" >NPCs</button>
+<!-- Header -->
+<div class="header">
+	<!-- Tab buttons -->
+	<div class="tabbuttons">
+		<button type="action" name="act_character" >Character</button>
+		<button type="action" name="act_notes" >Notes</button>
+		<button type="action" name="act_npcs" >NPCs</button>
+	</div>
+
+	<!-- Roll type -->
+	<div class="rolltype">
+		<span class='hcentre' >2D penalty</span>
+		<span class='hcentre' >1D penalty</span>
+		<span class='hcentre' >Regular</span>
+		<span class='hcentre' >1D bonus</span>
+		<span class='hcentre' >2D bonus</span>
+		<input type="radio" value="0" name="attr_rollbonpen" />
+		<input type="radio" value="1" name="attr_rollbonpen" />
+		<input type="radio" value="2" name="attr_rollbonpen" checked="true" />
+		<input type="radio" value="3" name="attr_rollbonpen" />
+		<input type="radio" value="4" name="attr_rollbonpen" />
+	</div>
 </div>
 
+<!-- This must remain at the root level -->
 <input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='character'  />
 
 <!-- Character tab -->
@@ -27,28 +45,28 @@
 		<h3>Characteristics</h3>
 		<span class='centre' >STR</span>
 		<input type="text" name="attr_str" class='width100' value="0" />
-		<button type='roll' name='roll_str' value='&{template:roll} {{name=STR}} {{success=[[@{str}]]}} {{hard=[[floor(@{str}/2)]]}} {{extreme=[[floor(@{str}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_str' value='&{template:roll} {{name=STR}} {{success=[[@{str}]]}} {{hard=[[floor(@{str}/2)]]}} {{extreme=[[floor(@{str}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >DEX</span>
 		<input type="text" name="attr_dex" class='width100' value="0" />
-		<button type='roll' name='roll_dex' value='&{template:roll} {{name=DEX}} {{success=[[@{dex}]]}} {{hard=[[floor(@{dex}/2)]]}} {{extreme=[[floor(@{dex}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_dex' value='&{template:roll} {{name=DEX}} {{success=[[@{dex}]]}} {{hard=[[floor(@{dex}/2)]]}} {{extreme=[[floor(@{dex}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >INT</span>
 		<input type="text" name="attr_int" class='width100' value="0" />
-		<button type='roll' name='roll_int' value='&{template:roll} {{name=INT}} {{success=[[@{int}]]}} {{hard=[[floor(@{int}/2)]]}} {{extreme=[[floor(@{int}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_int' value='&{template:roll} {{name=INT}} {{success=[[@{int}]]}} {{hard=[[floor(@{int}/2)]]}} {{extreme=[[floor(@{int}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >CON</span>
 		<input type="text" name="attr_con" class='width100' value="0" />
-		<button type='roll' name='roll_con' value='&{template:roll} {{name=CON}} {{success=[[@{con}]]}} {{hard=[[floor(@{con}/2)]]}} {{extreme=[[floor(@{con}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_con' value='&{template:roll} {{name=CON}} {{success=[[@{con}]]}} {{hard=[[floor(@{con}/2)]]}} {{extreme=[[floor(@{con}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >APP</span>
 		<input type="text" name="attr_app" class='width100' value="0" />
-		<button type='roll' name='roll_app' value='&{template:roll} {{name=APP}} {{success=[[@{app}]]}} {{hard=[[floor(@{app}/2)]]}} {{extreme=[[floor(@{app}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_app' value='&{template:roll} {{name=APP}} {{success=[[@{app}]]}} {{hard=[[floor(@{app}/2)]]}} {{extreme=[[floor(@{app}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >POW</span>
 		<input type="text" name="attr_pow" class='width100' value="0" />
-		<button type='roll' name='roll_pow' value='&{template:roll} {{name=POW}} {{success=[[@{pow}]]}} {{hard=[[floor(@{pow}/2)]]}} {{extreme=[[floor(@{pow}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_pow' value='&{template:roll} {{name=POW}} {{success=[[@{pow}]]}} {{hard=[[floor(@{pow}/2)]]}} {{extreme=[[floor(@{pow}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >SIZ</span>
 		<input type="text" name="attr_siz" class='width100' value="0" />
-		<button type='roll' name='roll_siz' value='&{template:roll} {{name=SIZ}} {{success=[[@{siz}]]}} {{hard=[[floor(@{siz}/2)]]}} {{extreme=[[floor(@{siz}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_siz' value='&{template:roll} {{name=SIZ}} {{success=[[@{siz}]]}} {{hard=[[floor(@{siz}/2)]]}} {{extreme=[[floor(@{siz}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >Luck</span>
 		<input type="text" name="attr_luck" class='width100' value="0" />
-		<button type='roll' name='roll_luck' value='&{template:roll} {{name=Luck}} {{success=[[@{luck}]]}} {{hard=[[floor(@{luck}/2)]]}} {{extreme=[[floor(@{luck}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_luck' value='&{template:roll} {{name=Luck}} {{success=[[@{luck}]]}} {{hard=[[floor(@{luck}/2)]]}} {{extreme=[[floor(@{luck}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span class='centre' >Move Rate</span>
 		<input type="text" name="attr_moverate" class='width100' value="" />
 	</div>
@@ -130,23 +148,23 @@
 		<input type="text" name="attr_dodge" class='width100' value="0" />
 		<input type="text" name="attr_empathy" class='width100' value="10" />
 		<input type="text" name="attr_fasttalk" class='width100' value="5" />
-		<button type='roll' name='roll_acting' value='&{template:roll} {{name=Acting}} {{success=[[@{acting}]]}} {{hard=[[floor(@{acting}/2)]]}} {{extreme=[[floor(@{acting}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_animalguise' value='&{template:roll} {{name=Animal Guise}} {{success=[[@{animalguise}]]}} {{hard=[[floor(@{animalguise}/2)]]}} {{extreme=[[floor(@{animalguise}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_axe' value='&{template:roll} {{name=Axe}} {{success=[[@{axe}]]}} {{hard=[[floor(@{axe}/2)]]}} {{extreme=[[floor(@{axe}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_bandaging' value='&{template:roll} {{name=Bandaging}} {{success=[[@{bandaging}]]}} {{hard=[[floor(@{bandaging}/2)]]}} {{extreme=[[floor(@{bandaging}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_blowpipe' value='&{template:roll} {{name=Blowpipe}} {{success=[[@{blowpipe}]]}} {{hard=[[floor(@{blowpipe}/2)]]}} {{extreme=[[floor(@{blowpipe}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_bolas' value='&{template:roll} {{name=Bolas}} {{success=[[@{bolas}]]}} {{hard=[[floor(@{bolas}/2)]]}} {{extreme=[[floor(@{bolas}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_bow' value='&{template:roll} {{name=Bow}} {{success=[[@{bow}]]}} {{hard=[[floor(@{bow}/2)]]}} {{extreme=[[floor(@{bow}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_brawl' value='&{template:roll} {{name=Brawl}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_canoe' value='&{template:roll} {{name=Canoe}} {{success=[[@{canoe}]]}} {{hard=[[floor(@{canoe}/2)]]}} {{extreme=[[floor(@{canoe}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_charm' value='&{template:roll} {{name=Charm}} {{success=[[@{charm}]]}} {{hard=[[floor(@{charm}/2)]]}} {{extreme=[[floor(@{charm}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_climb' value='&{template:roll} {{name=Climb}} {{success=[[@{climb}]]}} {{hard=[[floor(@{climb}/2)]]}} {{extreme=[[floor(@{climb}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_cooking' value='&{template:roll} {{name=Cooking}} {{success=[[@{cooking}]]}} {{hard=[[floor(@{cooking}/2)]]}} {{extreme=[[floor(@{cooking}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_dancing' value='&{template:roll} {{name=Dancing}} {{success=[[@{dancing}]]}} {{hard=[[floor(@{dancing}/2)]]}} {{extreme=[[floor(@{dancing}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_diplomacy' value='&{template:roll} {{name=Diplomacy}} {{success=[[@{diplomacy}]]}} {{hard=[[floor(@{diplomacy}/2)]]}} {{extreme=[[floor(@{diplomacy}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_dodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_empathy' value='&{template:roll} {{name=Empathy}} {{success=[[@{empathy}]]}} {{hard=[[floor(@{empathy}/2)]]}} {{extreme=[[floor(@{empathy}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_fasttalk' value='&{template:roll} {{name=Fast Talk}} {{success=[[@{fasttalk}]]}} {{hard=[[floor(@{fasttalk}/2)]]}} {{extreme=[[floor(@{fasttalk}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_acting' value='&{template:roll} {{name=Acting}} {{success=[[@{acting}]]}} {{hard=[[floor(@{acting}/2)]]}} {{extreme=[[floor(@{acting}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_animalguise' value='&{template:roll} {{name=Animal Guise}} {{success=[[@{animalguise}]]}} {{hard=[[floor(@{animalguise}/2)]]}} {{extreme=[[floor(@{animalguise}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_axe' value='&{template:roll} {{name=Axe}} {{success=[[@{axe}]]}} {{hard=[[floor(@{axe}/2)]]}} {{extreme=[[floor(@{axe}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_bandaging' value='&{template:roll} {{name=Bandaging}} {{success=[[@{bandaging}]]}} {{hard=[[floor(@{bandaging}/2)]]}} {{extreme=[[floor(@{bandaging}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_blowpipe' value='&{template:roll} {{name=Blowpipe}} {{success=[[@{blowpipe}]]}} {{hard=[[floor(@{blowpipe}/2)]]}} {{extreme=[[floor(@{blowpipe}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_bolas' value='&{template:roll} {{name=Bolas}} {{success=[[@{bolas}]]}} {{hard=[[floor(@{bolas}/2)]]}} {{extreme=[[floor(@{bolas}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_bow' value='&{template:roll} {{name=Bow}} {{success=[[@{bow}]]}} {{hard=[[floor(@{bow}/2)]]}} {{extreme=[[floor(@{bow}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_brawl' value='&{template:roll} {{name=Brawl}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_canoe' value='&{template:roll} {{name=Canoe}} {{success=[[@{canoe}]]}} {{hard=[[floor(@{canoe}/2)]]}} {{extreme=[[floor(@{canoe}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_charm' value='&{template:roll} {{name=Charm}} {{success=[[@{charm}]]}} {{hard=[[floor(@{charm}/2)]]}} {{extreme=[[floor(@{charm}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_climb' value='&{template:roll} {{name=Climb}} {{success=[[@{climb}]]}} {{hard=[[floor(@{climb}/2)]]}} {{extreme=[[floor(@{climb}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_cooking' value='&{template:roll} {{name=Cooking}} {{success=[[@{cooking}]]}} {{hard=[[floor(@{cooking}/2)]]}} {{extreme=[[floor(@{cooking}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_dancing' value='&{template:roll} {{name=Dancing}} {{success=[[@{dancing}]]}} {{hard=[[floor(@{dancing}/2)]]}} {{extreme=[[floor(@{dancing}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_diplomacy' value='&{template:roll} {{name=Diplomacy}} {{success=[[@{diplomacy}]]}} {{hard=[[floor(@{diplomacy}/2)]]}} {{extreme=[[floor(@{diplomacy}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_dodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_empathy' value='&{template:roll} {{name=Empathy}} {{success=[[@{empathy}]]}} {{hard=[[floor(@{empathy}/2)]]}} {{extreme=[[floor(@{empathy}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_fasttalk' value='&{template:roll} {{name=Fast Talk}} {{success=[[@{fasttalk}]]}} {{hard=[[floor(@{fasttalk}/2)]]}} {{extreme=[[floor(@{fasttalk}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="checkbox" name="attr_gesturechk" value="1" class='centre' />
 		<input type="checkbox" name="attr_herbalistchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_intimidatechk" value="1" class='centre' />
@@ -198,23 +216,23 @@
 		<input type="text" name="attr_ritualsceremonies" class='width100' value="1" />
 		<input type="text" name="attr_running" class='width100' value="20" />
 		<input type="text" name="attr_sleighthand" class='width100' value="10" />
-		<button type='roll' name='roll_gesture' value='&{template:roll} {{name=Gesture}} {{success=[[@{gesture}]]}} {{hard=[[floor(@{gesture}/2)]]}} {{extreme=[[floor(@{gesture}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_herbalist' value='&{template:roll} {{name=Herbalist}} {{success=[[@{herbalist}]]}} {{hard=[[floor(@{herbalist}/2)]]}} {{extreme=[[floor(@{herbalist}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_intimidate' value='&{template:roll} {{name=Intimidate}} {{success=[[@{intimidate}]]}} {{hard=[[floor(@{intimidate}/2)]]}} {{extreme=[[floor(@{intimidate}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_language' value='&{template:roll} {{name=Language}} {{success=[[@{language}]]}} {{hard=[[floor(@{language}/2)]]}} {{extreme=[[floor(@{language}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_leadership' value='&{template:roll} {{name=Leadership}} {{success=[[@{leadership}]]}} {{hard=[[floor(@{leadership}/2)]]}} {{extreme=[[floor(@{leadership}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_leatherwork' value='&{template:roll} {{name=Leatherwork}} {{success=[[@{leatherwork}]]}} {{hard=[[floor(@{leatherwork}/2)]]}} {{extreme=[[floor(@{leatherwork}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_listen' value='&{template:roll} {{name=Listen}} {{success=[[@{listen}]]}} {{hard=[[floor(@{listen}/2)]]}} {{extreme=[[floor(@{listen}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_mimicry' value='&{template:roll} {{name=Mimicry}} {{success=[[@{mimicry}]]}} {{hard=[[floor(@{mimicry}/2)]]}} {{extreme=[[floor(@{mimicry}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_music' value='&{template:roll} {{name=Music}} {{success=[[@{music}]]}} {{hard=[[floor(@{music}/2)]]}} {{extreme=[[floor(@{music}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_naturalist' value='&{template:roll} {{name=Naturalist}} {{success=[[@{naturalist}]]}} {{hard=[[floor(@{naturalist}/2)]]}} {{extreme=[[floor(@{naturalist}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_navigate' value='&{template:roll} {{name=Navigate}} {{success=[[@{navigate}]]}} {{hard=[[floor(@{navigate}/2)]]}} {{extreme=[[floor(@{navigate}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_painting' value='&{template:roll} {{name=Painting}} {{success=[[@{painting}]]}} {{hard=[[floor(@{painting}/2)]]}} {{extreme=[[floor(@{painting}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_persuade' value='&{template:roll} {{name=Persuade}} {{success=[[@{persuade}]]}} {{hard=[[floor(@{persuade}/2)]]}} {{extreme=[[floor(@{persuade}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_racialmemory' value='&{template:roll} {{name=Racial Memory}} {{success=[[@{racialmemory}]]}} {{hard=[[floor(@{racialmemory}/2)]]}} {{extreme=[[floor(@{racialmemory}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_ritualsceremonies' value='&{template:roll} {{name=Rituals and Ceremonies}} {{success=[[@{ritualsceremonies}]]}} {{hard=[[floor(@{ritualsceremonies}/2)]]}} {{extreme=[[floor(@{ritualsceremonies}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_running' value='&{template:roll} {{name=Running}} {{success=[[@{running}]]}} {{hard=[[floor(@{running}/2)]]}} {{extreme=[[floor(@{running}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_sleighthand' value='&{template:roll} {{name=Sleight of Hand}} {{success=[[@{sleighthand}]]}} {{hard=[[floor(@{sleighthand}/2)]]}} {{extreme=[[floor(@{sleighthand}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_gesture' value='&{template:roll} {{name=Gesture}} {{success=[[@{gesture}]]}} {{hard=[[floor(@{gesture}/2)]]}} {{extreme=[[floor(@{gesture}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_herbalist' value='&{template:roll} {{name=Herbalist}} {{success=[[@{herbalist}]]}} {{hard=[[floor(@{herbalist}/2)]]}} {{extreme=[[floor(@{herbalist}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_intimidate' value='&{template:roll} {{name=Intimidate}} {{success=[[@{intimidate}]]}} {{hard=[[floor(@{intimidate}/2)]]}} {{extreme=[[floor(@{intimidate}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_language' value='&{template:roll} {{name=Language}} {{success=[[@{language}]]}} {{hard=[[floor(@{language}/2)]]}} {{extreme=[[floor(@{language}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_leadership' value='&{template:roll} {{name=Leadership}} {{success=[[@{leadership}]]}} {{hard=[[floor(@{leadership}/2)]]}} {{extreme=[[floor(@{leadership}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_leatherwork' value='&{template:roll} {{name=Leatherwork}} {{success=[[@{leatherwork}]]}} {{hard=[[floor(@{leatherwork}/2)]]}} {{extreme=[[floor(@{leatherwork}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_listen' value='&{template:roll} {{name=Listen}} {{success=[[@{listen}]]}} {{hard=[[floor(@{listen}/2)]]}} {{extreme=[[floor(@{listen}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_mimicry' value='&{template:roll} {{name=Mimicry}} {{success=[[@{mimicry}]]}} {{hard=[[floor(@{mimicry}/2)]]}} {{extreme=[[floor(@{mimicry}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_music' value='&{template:roll} {{name=Music}} {{success=[[@{music}]]}} {{hard=[[floor(@{music}/2)]]}} {{extreme=[[floor(@{music}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_naturalist' value='&{template:roll} {{name=Naturalist}} {{success=[[@{naturalist}]]}} {{hard=[[floor(@{naturalist}/2)]]}} {{extreme=[[floor(@{naturalist}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_navigate' value='&{template:roll} {{name=Navigate}} {{success=[[@{navigate}]]}} {{hard=[[floor(@{navigate}/2)]]}} {{extreme=[[floor(@{navigate}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_painting' value='&{template:roll} {{name=Painting}} {{success=[[@{painting}]]}} {{hard=[[floor(@{painting}/2)]]}} {{extreme=[[floor(@{painting}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_persuade' value='&{template:roll} {{name=Persuade}} {{success=[[@{persuade}]]}} {{hard=[[floor(@{persuade}/2)]]}} {{extreme=[[floor(@{persuade}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_racialmemory' value='&{template:roll} {{name=Racial Memory}} {{success=[[@{racialmemory}]]}} {{hard=[[floor(@{racialmemory}/2)]]}} {{extreme=[[floor(@{racialmemory}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_ritualsceremonies' value='&{template:roll} {{name=Rituals and Ceremonies}} {{success=[[@{ritualsceremonies}]]}} {{hard=[[floor(@{ritualsceremonies}/2)]]}} {{extreme=[[floor(@{ritualsceremonies}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_running' value='&{template:roll} {{name=Running}} {{success=[[@{running}]]}} {{hard=[[floor(@{running}/2)]]}} {{extreme=[[floor(@{running}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_sleighthand' value='&{template:roll} {{name=Sleight of Hand}} {{success=[[@{sleighthand}]]}} {{hard=[[floor(@{sleighthand}/2)]]}} {{extreme=[[floor(@{sleighthand}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="checkbox" name="attr_slingchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_spearchk" value="1" class='centre' />
 		<input type="checkbox" name="attr_spothiddenchk" value="1" class='centre' />
@@ -266,23 +284,23 @@
 		<input type="text" name="attr_skill2" class='width100' value="0" />
 		<input type="text" name="attr_skill3" class='width100' value="0" />
 		<input type="text" name="attr_skill4" class='width100' value="0" />
-		<button type='roll' name='roll_sling' value='&{template:roll} {{name=Sling}} {{success=[[@{sling}]]}} {{hard=[[floor(@{sling}/2)]]}} {{extreme=[[floor(@{sling}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_spear' value='&{template:roll} {{name=Spear}} {{success=[[@{spear}]]}} {{hard=[[floor(@{spear}/2)]]}} {{extreme=[[floor(@{spear}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_spothidden' value='&{template:roll} {{name=Spot Hidden}} {{success=[[@{spothidden}]]}} {{hard=[[floor(@{spothidden}/2)]]}} {{extreme=[[floor(@{spothidden}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_status' value='&{template:roll} {{name=Status}} {{success=[[@{status}]]}} {{hard=[[floor(@{status}/2)]]}} {{extreme=[[floor(@{status}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_stealth' value='&{template:roll} {{name=Stealth}} {{success=[[@{stealth}]]}} {{hard=[[floor(@{stealth}/2)]]}} {{extreme=[[floor(@{stealth}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_stoneknapping' value='&{template:roll} {{name=Stone Knapping}} {{success=[[@{stoneknapping}]]}} {{hard=[[floor(@{stoneknapping}/2)]]}} {{extreme=[[floor(@{stoneknapping}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_survival' value='&{template:roll} {{name=Survival}} {{success=[[@{survival}]]}} {{hard=[[floor(@{survival}/2)]]}} {{extreme=[[floor(@{survival}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_swim' value='&{template:roll} {{name=Swim}} {{success=[[@{swim}]]}} {{hard=[[floor(@{swim}/2)]]}} {{extreme=[[floor(@{swim}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_teaching' value='&{template:roll} {{name=Teaching}} {{success=[[@{teaching}]]}} {{hard=[[floor(@{teaching}/2)]]}} {{extreme=[[floor(@{teaching}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_throw' value='&{template:roll} {{name=Throw}} {{success=[[@{throw}]]}} {{hard=[[floor(@{throw}/2)]]}} {{extreme=[[floor(@{throw}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_track' value='&{template:roll} {{name=Track}} {{success=[[@{track}]]}} {{hard=[[floor(@{track}/2)]]}} {{extreme=[[floor(@{track}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_weathersense' value='&{template:roll} {{name=Weather Sense}} {{success=[[@{weathersense}]]}} {{hard=[[floor(@{weathersense}/2)]]}} {{extreme=[[floor(@{weathersense}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_woodwork' value='&{template:roll} {{name=Woodwork}} {{success=[[@{woodwork}]]}} {{hard=[[floor(@{woodwork}/2)]]}} {{extreme=[[floor(@{woodwork}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_skill1' value='&{template:roll} {{name=@{skill1name}}} {{success=[[@{skill1}]]}} {{hard=[[floor(@{skill1}/2)]]}} {{extreme=[[floor(@{skill1}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_skill2' value='&{template:roll} {{name=@{skill2name}}} {{success=[[@{skill2}]]}} {{hard=[[floor(@{skill2}/2)]]}} {{extreme=[[floor(@{skill2}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_skill3' value='&{template:roll} {{name=@{skill3name}}} {{success=[[@{skill3}]]}} {{hard=[[floor(@{skill3}/2)]]}} {{extreme=[[floor(@{skill3}/5)]]}} {{result=[[1d100]]}}' ></button>
-		<button type='roll' name='roll_skill4' value='&{template:roll} {{name=@{skill4name}}} {{success=[[@{skill4}]]}} {{hard=[[floor(@{skill4}/2)]]}} {{extreme=[[floor(@{skill4}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_sling' value='&{template:roll} {{name=Sling}} {{success=[[@{sling}]]}} {{hard=[[floor(@{sling}/2)]]}} {{extreme=[[floor(@{sling}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_spear' value='&{template:roll} {{name=Spear}} {{success=[[@{spear}]]}} {{hard=[[floor(@{spear}/2)]]}} {{extreme=[[floor(@{spear}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_spothidden' value='&{template:roll} {{name=Spot Hidden}} {{success=[[@{spothidden}]]}} {{hard=[[floor(@{spothidden}/2)]]}} {{extreme=[[floor(@{spothidden}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_status' value='&{template:roll} {{name=Status}} {{success=[[@{status}]]}} {{hard=[[floor(@{status}/2)]]}} {{extreme=[[floor(@{status}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_stealth' value='&{template:roll} {{name=Stealth}} {{success=[[@{stealth}]]}} {{hard=[[floor(@{stealth}/2)]]}} {{extreme=[[floor(@{stealth}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_stoneknapping' value='&{template:roll} {{name=Stone Knapping}} {{success=[[@{stoneknapping}]]}} {{hard=[[floor(@{stoneknapping}/2)]]}} {{extreme=[[floor(@{stoneknapping}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_survival' value='&{template:roll} {{name=Survival}} {{success=[[@{survival}]]}} {{hard=[[floor(@{survival}/2)]]}} {{extreme=[[floor(@{survival}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_swim' value='&{template:roll} {{name=Swim}} {{success=[[@{swim}]]}} {{hard=[[floor(@{swim}/2)]]}} {{extreme=[[floor(@{swim}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_teaching' value='&{template:roll} {{name=Teaching}} {{success=[[@{teaching}]]}} {{hard=[[floor(@{teaching}/2)]]}} {{extreme=[[floor(@{teaching}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_throw' value='&{template:roll} {{name=Throw}} {{success=[[@{throw}]]}} {{hard=[[floor(@{throw}/2)]]}} {{extreme=[[floor(@{throw}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_track' value='&{template:roll} {{name=Track}} {{success=[[@{track}]]}} {{hard=[[floor(@{track}/2)]]}} {{extreme=[[floor(@{track}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_weathersense' value='&{template:roll} {{name=Weather Sense}} {{success=[[@{weathersense}]]}} {{hard=[[floor(@{weathersense}/2)]]}} {{extreme=[[floor(@{weathersense}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_woodwork' value='&{template:roll} {{name=Woodwork}} {{success=[[@{woodwork}]]}} {{hard=[[floor(@{woodwork}/2)]]}} {{extreme=[[floor(@{woodwork}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_skill1' value='&{template:roll} {{name=@{skill1name}}} {{success=[[@{skill1}]]}} {{hard=[[floor(@{skill1}/2)]]}} {{extreme=[[floor(@{skill1}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_skill2' value='&{template:roll} {{name=@{skill2name}}} {{success=[[@{skill2}]]}} {{hard=[[floor(@{skill2}/2)]]}} {{extreme=[[floor(@{skill2}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_skill3' value='&{template:roll} {{name=@{skill3name}}} {{success=[[@{skill3}]]}} {{hard=[[floor(@{skill3}/2)]]}} {{extreme=[[floor(@{skill3}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+		<button type='roll' name='roll_skill4' value='&{template:roll} {{name=@{skill4name}}} {{success=[[@{skill4}]]}} {{hard=[[floor(@{skill4}/2)]]}} {{extreme=[[floor(@{skill4}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 	</div>
 	<div class="weapons">
 		<h3>Weapons</h3>
@@ -299,42 +317,42 @@
 		<span class='centre' >-</span>
 		<span class='centre' >-</span>
 		<span class='centre' >-</span>
-		<button type='roll' name='roll_unarmed' value='&{template:roll} {{name=Unarmed}}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_unarmed' value='&{template:roll} {{name=Unarmed}}} {{success=[[@{brawl}]]}} {{hard=[[floor(@{brawl}/2)]]}} {{extreme=[[floor(@{brawl}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="text" name="attr_weapon2name" class='width100' value="" />
 		<input type="text" name="attr_weapon2" class='width100' value="0" />
 		<input type="text" name="attr_weapon2damage" class='width100' value="" />
 		<input type="text" name="attr_weapon2range" class='width100' value="" />
 		<input type="number" name="attr_weapon2ammo" value="0" />
 		<input type="text" name="attr_weapon2break" class='width100' value="" />
-		<button type='roll' name='roll_weapon2' value='&{template:roll} {{name=@{weapon2name}}} {{success=[[@{weapon2}]]}} {{hard=[[floor(@{weapon2}/2)]]}} {{extreme=[[floor(@{weapon2}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weapon2' value='&{template:roll} {{name=@{weapon2name}}} {{success=[[@{weapon2}]]}} {{hard=[[floor(@{weapon2}/2)]]}} {{extreme=[[floor(@{weapon2}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="text" name="attr_weapon3name" class='width100' value="" />
 		<input type="text" name="attr_weapon3" class='width100' value="0" />
 		<input type="text" name="attr_weapon3damage" class='width100' value="" />
 		<input type="text" name="attr_weapon3range" class='width100' value="" />
 		<input type="number" name="attr_weapon3ammo" value="0" />
 		<input type="text" name="attr_weapon3break" class='width100' value="" />
-		<button type='roll' name='roll_weapon3' value='&{template:roll} {{name=@{weapon3name}}} {{success=[[@{weapon3}]]}} {{hard=[[floor(@{weapon3}/2)]]}} {{extreme=[[floor(@{weapon3}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weapon3' value='&{template:roll} {{name=@{weapon3name}}} {{success=[[@{weapon3}]]}} {{hard=[[floor(@{weapon3}/2)]]}} {{extreme=[[floor(@{weapon3}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="text" name="attr_weapon4name" class='width100' value="" />
 		<input type="text" name="attr_weapon4" class='width100' value="0" />
 		<input type="text" name="attr_weapon4damage" class='width100' value="" />
 		<input type="text" name="attr_weapon4range" class='width100' value="" />
 		<input type="number" name="attr_weapon4ammo" value="0" />
 		<input type="text" name="attr_weapon4break" class='width100' value="" />
-		<button type='roll' name='roll_weapon4' value='&{template:roll} {{name=@{weapon4name}}} {{success=[[@{weapon4}]]}} {{hard=[[floor(@{weapon4}/2)]]}} {{extreme=[[floor(@{weapon4}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weapon4' value='&{template:roll} {{name=@{weapon4name}}} {{success=[[@{weapon4}]]}} {{hard=[[floor(@{weapon4}/2)]]}} {{extreme=[[floor(@{weapon4}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="text" name="attr_weapon5name" class='width100' value="" />
 		<input type="text" name="attr_weapon5" class='width100' value="0" />
 		<input type="text" name="attr_weapon5damage" class='width100' value="" />
 		<input type="text" name="attr_weapon5range" class='width100' value="" />
 		<input type="number" name="attr_weapon5ammo" value="0" />
 		<input type="text" name="attr_weapon5break" class='width100' value="" />
-		<button type='roll' name='roll_weapon5' value='&{template:roll} {{name=@{weapon5name}}} {{success=[[@{weapon5}]]}} {{hard=[[floor(@{weapon5}/2)]]}} {{extreme=[[floor(@{weapon5}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weapon5' value='&{template:roll} {{name=@{weapon5name}}} {{success=[[@{weapon5}]]}} {{hard=[[floor(@{weapon5}/2)]]}} {{extreme=[[floor(@{weapon5}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<input type="text" name="attr_weapon6name" class='width100' value="" />
 		<input type="text" name="attr_weapon6" class='width100' value="0" />
 		<input type="text" name="attr_weapon6damage" class='width100' value="" />
 		<input type="text" name="attr_weapon6range" class='width100' value="" />
 		<input type="number" name="attr_weapon6ammo" value="0" />
 		<input type="text" name="attr_weapon6break" class='width100' value="" />
-		<button type='roll' name='roll_weapon6' value='&{template:roll} {{name=@{weapon6name}}} {{success=[[@{weapon6}]]}} {{hard=[[floor(@{weapon6}/2)]]}} {{extreme=[[floor(@{weapon6}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_weapon6' value='&{template:roll} {{name=@{weapon6name}}} {{success=[[@{weapon6}]]}} {{hard=[[floor(@{weapon6}/2)]]}} {{extreme=[[floor(@{weapon6}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 	</div>
 	<div class="combat">
 		<h3>Combat</h3>
@@ -348,7 +366,7 @@
 		<span></span>
 		<span class='centre' >Dodge</span>
 		<span name="attr_dodge" class='centre' ></span>
-		<button type='roll' name='roll_dodge_2' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{result=[[1d100]]}}' ></button>
+		<button type='roll' name='roll_dodge_2' value='&{template:roll} {{name=Dodge}} {{success=[[@{dodge}]]}} {{hard=[[floor(@{dodge}/2)]]}} {{extreme=[[floor(@{dodge}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 		<span></span>
 		<span class='centre' >Armour</span>
 		<input type="text" name="attr_armour" class='wide' value="0" />
@@ -376,28 +394,28 @@
 			<div class="npcchars">
 				<span class='centre' >STR</span>
 				<input type="text" name="attr_npcstr" class='width100' value="0" />
-        <button type='roll' name='roll_npcstr' value='&{template:roll} {{name=STR}} {{success=[[@{npcstr}]]}} {{hard=[[floor(@{npcstr}/2)]]}} {{extreme=[[floor(@{npcstr}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcstr' value='&{template:roll} {{name=STR}} {{success=[[@{npcstr}]]}} {{hard=[[floor(@{npcstr}/2)]]}} {{extreme=[[floor(@{npcstr}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >DEX</span>
 				<input type="text" name="attr_npcdex" class='width100' value="0" />
-        <button type='roll' name='roll_npcdex' value='&{template:roll} {{name=DEX}} {{success=[[@{npcdex}]]}} {{hard=[[floor(@{npcdex}/2)]]}} {{extreme=[[floor(@{npcdex}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcdex' value='&{template:roll} {{name=DEX}} {{success=[[@{npcdex}]]}} {{hard=[[floor(@{npcdex}/2)]]}} {{extreme=[[floor(@{npcdex}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >INT</span>
 				<input type="text" name="attr_npcint" class='width100' value="0" />
-        <button type='roll' name='roll_npcint' value='&{template:roll} {{name=INT}} {{success=[[@{npcint}]]}} {{hard=[[floor(@{npcint}/2)]]}} {{extreme=[[floor(@{npcint}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcint' value='&{template:roll} {{name=INT}} {{success=[[@{npcint}]]}} {{hard=[[floor(@{npcint}/2)]]}} {{extreme=[[floor(@{npcint}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >CON</span>
 				<input type="text" name="attr_npccon" class='width100' value="0" />
-        <button type='roll' name='roll_npccon' value='&{template:roll} {{name=CON}} {{success=[[@{npccon}]]}} {{hard=[[floor(@{npccon}/2)]]}} {{extreme=[[floor(@{npccon}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npccon' value='&{template:roll} {{name=CON}} {{success=[[@{npccon}]]}} {{hard=[[floor(@{npccon}/2)]]}} {{extreme=[[floor(@{npccon}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >APP</span>
 				<input type="text" name="attr_npcapp" class='width100' value="0" />
-        <button type='roll' name='roll_npcapp' value='&{template:roll} {{name=APP}} {{success=[[@{npcapp}]]}} {{hard=[[floor(@{npcapp}/2)]]}} {{extreme=[[floor(@{npcapp}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcapp' value='&{template:roll} {{name=APP}} {{success=[[@{npcapp}]]}} {{hard=[[floor(@{npcapp}/2)]]}} {{extreme=[[floor(@{npcapp}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >POW</span>
 				<input type="text" name="attr_npcpow" class='width100' value="0" />
-        <button type='roll' name='roll_npcpow' value='&{template:roll} {{name=POW}} {{success=[[@{npcpow}]]}} {{hard=[[floor(@{npcpow}/2)]]}} {{extreme=[[floor(@{npcpow}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcpow' value='&{template:roll} {{name=POW}} {{success=[[@{npcpow}]]}} {{hard=[[floor(@{npcpow}/2)]]}} {{extreme=[[floor(@{npcpow}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >SIZ</span>
 				<input type="text" name="attr_npcsiz" class='width100' value="0" />
-        <button type='roll' name='roll_npcsiz' value='&{template:roll} {{name=SIZ}} {{success=[[@{npcsiz}]]}} {{hard=[[floor(@{npcsiz}/2)]]}} {{extreme=[[floor(@{npcsiz}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcsiz' value='&{template:roll} {{name=SIZ}} {{success=[[@{npcsiz}]]}} {{hard=[[floor(@{npcsiz}/2)]]}} {{extreme=[[floor(@{npcsiz}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >Luck</span>
 				<input type="text" name="attr_npcluck" class='width100' value="0" />
-        <button type='roll' name='roll_npcluck' value='&{template:roll} {{name=Luck}} {{success=[[@{npcluck}]]}} {{hard=[[floor(@{npcluck}/2)]]}} {{extreme=[[floor(@{npcluck}/5)]]}} {{result=[[1d100]]}}' ></button>
+        <button type='roll' name='roll_npcluck' value='&{template:roll} {{name=Luck}} {{success=[[@{npcluck}]]}} {{hard=[[floor(@{npcluck}/2)]]}} {{extreme=[[floor(@{npcluck}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span class='centre' >Move Rate</span>
 				<input type="text" name="attr_npcmoverate" class='width100' value="" />
 			</div>
@@ -424,20 +442,20 @@
 				<input type="text" name="attr_npcskill2name" class='width100' value="" />
 				<input type="text" name="attr_npcskill1" class='width100' value="0" />
 				<input type="text" name="attr_npcskill2" class='width100' value="0" />
-				<button type='roll' name='roll_npcskill1' value='&{template:roll} {{name=@{npcskill1name}}} {{success=[[@{npcskill1}]]}} {{hard=[[floor(@{npcskill1}/2)]]}} {{extreme=[[floor(@{npcskill1}/5)]]}} {{result=[[1d100]]}}' ></button>
-				<button type='roll' name='roll_npcskill2' value='&{template:roll} {{name=@{npcskill2name}}} {{success=[[@{npcskill2}]]}} {{hard=[[floor(@{npcskill2}/2)]]}} {{extreme=[[floor(@{npcskill2}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill1' value='&{template:roll} {{name=@{npcskill1name}}} {{success=[[@{npcskill1}]]}} {{hard=[[floor(@{npcskill1}/2)]]}} {{extreme=[[floor(@{npcskill1}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+				<button type='roll' name='roll_npcskill2' value='&{template:roll} {{name=@{npcskill2name}}} {{success=[[@{npcskill2}]]}} {{hard=[[floor(@{npcskill2}/2)]]}} {{extreme=[[floor(@{npcskill2}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<input type="text" name="attr_npcskill3name" class='width100' value="" />
 				<input type="text" name="attr_npcskill4name" class='width100' value="" />
 				<input type="text" name="attr_npcskill3" class='width100' value="0" />
 				<input type="text" name="attr_npcskill4" class='width100' value="0" />
-				<button type='roll' name='roll_npcskill3' value='&{template:roll} {{name=@{npcskill3name}}} {{success=[[@{npcskill3}]]}} {{hard=[[floor(@{npcskill3}/2)]]}} {{extreme=[[floor(@{npcskill3}/5)]]}} {{result=[[1d100]]}}' ></button>
-				<button type='roll' name='roll_npcskill4' value='&{template:roll} {{name=@{npcskill4name}}} {{success=[[@{npcskill4}]]}} {{hard=[[floor(@{npcskill4}/2)]]}} {{extreme=[[floor(@{npcskill4}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill3' value='&{template:roll} {{name=@{npcskill3name}}} {{success=[[@{npcskill3}]]}} {{hard=[[floor(@{npcskill3}/2)]]}} {{extreme=[[floor(@{npcskill3}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+				<button type='roll' name='roll_npcskill4' value='&{template:roll} {{name=@{npcskill4name}}} {{success=[[@{npcskill4}]]}} {{hard=[[floor(@{npcskill4}/2)]]}} {{extreme=[[floor(@{npcskill4}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<input type="text" name="attr_npcskill5name" class='width100' value="" />
 				<input type="text" name="attr_npcskill6name" class='width100' value="" />
 				<input type="text" name="attr_npcskill5" class='width100' value="0" />
 				<input type="text" name="attr_npcskill6" class='width100' value="0" />
-				<button type='roll' name='roll_npcskill5' value='&{template:roll} {{name=@{npcskill5name}}} {{success=[[@{npcskill5}]]}} {{hard=[[floor(@{npcskill5}/2)]]}} {{extreme=[[floor(@{npcskill5}/5)]]}} {{result=[[1d100]]}}' ></button>
-				<button type='roll' name='roll_npcskill6' value='&{template:roll} {{name=@{npcskill6name}}} {{success=[[@{npcskill6}]]}} {{hard=[[floor(@{npcskill6}/2)]]}} {{extreme=[[floor(@{npcskill6}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcskill5' value='&{template:roll} {{name=@{npcskill5name}}} {{success=[[@{npcskill5}]]}} {{hard=[[floor(@{npcskill5}/2)]]}} {{extreme=[[floor(@{npcskill5}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
+				<button type='roll' name='roll_npcskill6' value='&{template:roll} {{name=@{npcskill6name}}} {{success=[[@{npcskill6}]]}} {{hard=[[floor(@{npcskill6}/2)]]}} {{extreme=[[floor(@{npcskill6}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 			</div>
 			<div class="npcweapons">
 				<span class='centre' >Weapon</span>
@@ -453,28 +471,28 @@
 				<input type="text" name="attr_npcweapon1range" class='width100' value="-" />
 				<input type="number" name="attr_npcweapon1ammo" value="0" />
 				<input type="text" name="attr_npcweapon1break" class='width100' value="" />
-				<button type='roll' name='roll_npcweapon1' value='&{template:roll} {{name=@{npcweapon1name}}} {{success=[[@{npcweapon1}]]}} {{hard=[[floor(@{npcweapon1}/2)]]}} {{extreme=[[floor(@{npcweapon1}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcweapon1' value='&{template:roll} {{name=@{npcweapon1name}}} {{success=[[@{npcweapon1}]]}} {{hard=[[floor(@{npcweapon1}/2)]]}} {{extreme=[[floor(@{npcweapon1}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<input type="text" name="attr_npcweapon2name" class='width100' value="" />
 				<input type="text" name="attr_npcweapon2" class='width100' value="0" />
 				<input type="text" name="attr_npcweapon2damage" class='width100' value="" />
 				<input type="text" name="attr_npcweapon2range" class='width100' value="" />
 				<input type="number" name="attr_npcweapon2ammo" value="0" />
 				<input type="text" name="attr_npcweapon2break" class='width100' value="" />
-				<button type='roll' name='roll_npcweapon2' value='&{template:roll} {{name=@{npcweapon2name}}} {{success=[[@{npcweapon2}]]}} {{hard=[[floor(@{npcweapon2}/2)]]}} {{extreme=[[floor(@{npcweapon2}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcweapon2' value='&{template:roll} {{name=@{npcweapon2name}}} {{success=[[@{npcweapon2}]]}} {{hard=[[floor(@{npcweapon2}/2)]]}} {{extreme=[[floor(@{npcweapon2}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<input type="text" name="attr_npcweapon3name" class='width100' value="" />
 				<input type="text" name="attr_npcweapon3" class='width100' value="0" />
 				<input type="text" name="attr_npcweapon3damage" class='width100' value="" />
 				<input type="text" name="attr_npcweapon3range" class='width100' value="" />
 				<input type="number" name="attr_npcweapon3ammo" value="0" />
 				<input type="text" name="attr_npcweapon3break" class='width100' value="" />
-				<button type='roll' name='roll_npcweapon3' value='&{template:roll} {{name=@{npcweapon3name}}} {{success=[[@{npcweapon3}]]}} {{hard=[[floor(@{npcweapon3}/2)]]}} {{extreme=[[floor(@{npcweapon3}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcweapon3' value='&{template:roll} {{name=@{npcweapon3name}}} {{success=[[@{npcweapon3}]]}} {{hard=[[floor(@{npcweapon3}/2)]]}} {{extreme=[[floor(@{npcweapon3}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<input type="text" name="attr_npcweapon4name" class='width100' value="" />
 				<input type="text" name="attr_npcweapon4" class='width100' value="0" />
 				<input type="text" name="attr_npcweapon4damage" class='width100' value="" />
 				<input type="text" name="attr_npcweapon4range" class='width100' value="" />
 				<input type="number" name="attr_npcweapon4ammo" value="0" />
 				<input type="text" name="attr_npcweapon4break" class='width100' value="" />
-				<button type='roll' name='roll_npcweapon4' value='&{template:roll} {{name=@{npcweapon4name}}} {{success=[[@{npcweapon4}]]}} {{hard=[[floor(@{npcweapon4}/2)]]}} {{extreme=[[floor(@{npcweapon4}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcweapon4' value='&{template:roll} {{name=@{npcweapon4name}}} {{success=[[@{npcweapon4}]]}} {{hard=[[floor(@{npcweapon4}/2)]]}} {{extreme=[[floor(@{npcweapon4}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 			</div>
 			<div class="npccombat">
 				<span class='centre' >Damage Bonus</span>
@@ -487,7 +505,7 @@
 				<span></span>
 				<span class='centre' >Dodge</span>
 				<input type="text" name="attr_npcdodge" class='wide' value="0" />
-				<button type='roll' name='roll_npcdodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{npcdodge}]]}} {{hard=[[floor(@{npcdodge}/2)]]}} {{extreme=[[floor(@{npcdodge}/5)]]}} {{result=[[1d100]]}}' ></button>
+				<button type='roll' name='roll_npcdodge' value='&{template:roll} {{name=Dodge}} {{success=[[@{npcdodge}]]}} {{hard=[[floor(@{npcdodge}/2)]]}} {{extreme=[[floor(@{npcdodge}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}}' ></button>
 				<span></span>
 				<span class='centre' >Armour</span>
 				<input type="text" name="attr_armour" class='wide' value="0" />
@@ -519,71 +537,754 @@
 
 <!-- Roll templates -->
 
-<!-- &{template:roll} {{name=Test}} {{success=[[50]]}} {{hard=[[floor(50/2)]]}} {{extreme=[[floor(50/5)]]}} {{result=[[1d100]]}} -->
+<!-- &{template:roll} {{name=Test}} {{success=[[50]]}} {{hard=[[floor(50/2)]]}} {{extreme=[[floor(50/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}} {{bonpen=[[@{rollbonpen}]]}} -->
 <rolltemplate class="sheet-rolltemplate-roll">
 	<span class='bold' >Rolling:</span>
 	<span>{{name}}</span>
-	<span class='bold' >Value:</span>
-  
+
 	<!-- If "success" is 0, the default value 0 is still in place and a value needs to be filled in -->
 	{{#rollBetween() success 0 0}}
+		<span class='bold' >Value:</span>
 		<span>0</span>
 		<span class='error' >The default value is still in place</span>
 	{{/rollBetween() success 0 0}}
-  
-  <!-- If "success" is not 0 -->
+
+	<!-- If "success" is not 0 -->
 	{{#^rollBetween() success 0 0}}
-		<span>{{success}}/{{hard}}/{{extreme}}</span>
-		<span class='bold' >Rolled:</span>
-		<span>{{result}}</span>
-		
-		<!-- 01 is always Critical -->
-		{{#rollTotal() result 1}}
-			<span class='critical' >Critical</span>
-		{{/rollTotal() result 1}}
-		<!-- Is Success -->
-		{{#rollBetween() result 2 success}}
-			<!-- Is Standard -->
-			{{#rollGreater() result hard}}
-				<span class='success' >Success</span>
-			{{/rollGreater() result hard}}
-			<!-- Is Hard or Extreme -->
-			{{#rollBetween() result 2 hard}}
-				<!-- Is Hard -->
-				{{#rollGreater() result extreme}}
-					<span class='hard' >Hard</span>
-				{{/rollGreater() result extreme}}
-				<!-- Is Extreme -->
-				{{#rollBetween() result 2 extreme}}
-					<span class='extreme' >Extreme<span>
-				{{/rollBetween() result 2 extreme}}
-			{{/rollBetween() result 2 hard}}
-		{{/rollBetween() result 2 success}}
-		<!-- Is Not Success -->
-		{{#rollGreater() result success}}
-			<!-- Is skill >= 50 -->
-			{{#rollGreater() success 49}}
-				<!-- Is Fumble -->
-				{{#rollTotal() result 100}}
-					<span class='fumble' >Fumble</span>
-				{{/rollTotal() result 100}}
-				<!-- Is Fail -->
-				{{#rollLess() result 100}}
-					<span class='fail' >Fail</span>
-				{{/rollLess() result 100}}
-			{{/rollGreater() success 49}}
-			<!-- Is skill < 50 -->
-			{{#rollLess() success 50}}
-				<!-- Is Fumble -->
-				{{#rollGreater() result 95}}
-					<span class='fumble' >Fumble</span>
-				{{/rollGreater() result 95}}
-				<!-- Is Fail -->
-				{{#rollLess() result 96}}
-					<span class='fail' >Fail</span>
-				{{/rollLess() result 96}}
-			{{/rollLess() success 50}}
-		{{/rollGreater() result success}}
+
+		<!-- If "bonpen" is 0 => 2D penalty -->
+		{{#rollBetween() bonpen 0 0}}
+			<span class='bold' >Type:</span>
+			<span>2D penalty</span>
+			<span class='bold' >Value:</span>
+			<span>{{success}}/{{hard}}/{{extreme}}</span>
+			<span class='bold' >Rolled:</span>
+			<span>{{roll1}}/{{roll2}}/{{roll3}}</span>
+
+			{{#rollGreater() roll1 roll2}}
+				{{#rollGreater() roll1 roll3}}
+					<!-- Main roll check block with roll1 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll1 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll1 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll1 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll1 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll1 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll1 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll1 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll1 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll1 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll1 2 extreme}}
+						{{/rollBetween() roll1 2 hard}}
+					{{/rollBetween() roll1 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll1 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll1 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll1 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll1 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll1 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll1 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll1 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll1 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll1 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll1 success}}
+					<!-- Main roll check block -->
+				{{/rollGreater() roll1 roll3}}
+				{{#^rollGreater() roll1 roll3}}
+					<!-- Main roll check block with roll3 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll3 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll3 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll3 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll3 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll3 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll3 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll3 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll3 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll3 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll3 2 extreme}}
+						{{/rollBetween() roll3 2 hard}}
+					{{/rollBetween() roll3 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll3 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll3 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll3 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll3 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll3 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll3 success}}
+					<!-- Main roll check block -->
+				{{/^rollGreater() roll1 roll3}}
+			{{/rollGreater() roll1 roll2}}
+
+			{{#^rollGreater() roll1 roll2}}
+				{{#rollGreater() roll2 roll3}}
+					<!-- Main roll check block with roll2 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll2 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll2 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll2 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll2 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll2 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll2 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll2 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll2 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll2 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll2 2 extreme}}
+						{{/rollBetween() roll2 2 hard}}
+					{{/rollBetween() roll2 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll2 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll2 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll2 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll2 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll2 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll2 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll2 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll2 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll2 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll2 success}}
+					<!-- Main roll check block -->
+				{{/rollGreater() roll2 roll3}}
+				{{#^rollGreater() roll2 roll3}}
+					<!-- Main roll check block with roll3 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll3 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll3 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll3 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll3 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll3 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll3 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll3 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll3 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll3 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll3 2 extreme}}
+						{{/rollBetween() roll3 2 hard}}
+					{{/rollBetween() roll3 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll3 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll3 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll3 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll3 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll3 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll3 success}}
+					<!-- Main roll check block -->
+				{{/^rollGreater() roll2 roll3}}
+			{{/^rollGreater() roll1 roll2}}
+
+		{{/rollBetween() bonpen 0 0}}
+
+		<!-- If "bonpen" is 1 => 1D penalty -->
+		{{#rollBetween() bonpen 1 1}}
+			<span class='bold' >Type:</span>
+			<span>1D penalty</span>
+			<span class='bold' >Value:</span>
+			<span>{{success}}/{{hard}}/{{extreme}}</span>
+			<span class='bold' >Rolled:</span>
+			<span>{{roll1}}/{{roll2}}</span>
+
+			{{#rollGreater() roll1 roll2}}
+				<!-- Main roll check block with roll1 -->
+				<!-- 01 is always Critical -->
+				{{#rollTotal() roll1 1}}
+					<span class='critical' >Critical</span>
+				{{/rollTotal() roll1 1}}
+				<!-- Is Success -->
+				{{#rollBetween() roll1 2 success}}
+					<!-- Is Standard -->
+					{{#rollGreater() roll1 hard}}
+						<span class='success' >Success</span>
+					{{/rollGreater() roll1 hard}}
+					<!-- Is Hard or Extreme -->
+					{{#rollBetween() roll1 2 hard}}
+						<!-- Is Hard -->
+						{{#rollGreater() roll1 extreme}}
+							<span class='hard' >Hard</span>
+						{{/rollGreater() roll1 extreme}}
+						<!-- Is Extreme -->
+						{{#rollBetween() roll1 2 extreme}}
+							<span class='extreme' >Extreme<span>
+						{{/rollBetween() roll1 2 extreme}}
+					{{/rollBetween() roll1 2 hard}}
+				{{/rollBetween() roll1 2 success}}
+				<!-- Is Not Success -->
+				{{#rollGreater() roll1 success}}
+					<!-- Is skill >= 50 -->
+					{{#rollGreater() success 49}}
+						<!-- Is Fumble -->
+						{{#rollTotal() roll1 100}}
+							<span class='fumble' >Fumble</span>
+						{{/rollTotal() roll1 100}}
+						<!-- Is Fail -->
+						{{#rollLess() roll1 100}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll1 100}}
+					{{/rollGreater() success 49}}
+					<!-- Is skill < 50 -->
+					{{#rollLess() success 50}}
+						<!-- Is Fumble -->
+						{{#rollGreater() roll1 95}}
+							<span class='fumble' >Fumble</span>
+						{{/rollGreater() roll1 95}}
+						<!-- Is Fail -->
+						{{#rollLess() roll1 96}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll1 96}}
+					{{/rollLess() success 50}}
+				{{/rollGreater() roll1 success}}
+				<!-- Main roll check block -->
+			{{/rollGreater() roll1 roll2}}
+
+			{{#^rollGreater() roll1 roll2}}
+				<!-- Main roll check block with roll2 -->
+				<!-- 01 is always Critical -->
+				{{#rollTotal() roll2 1}}
+					<span class='critical' >Critical</span>
+				{{/rollTotal() roll2 1}}
+				<!-- Is Success -->
+				{{#rollBetween() roll2 2 success}}
+					<!-- Is Standard -->
+					{{#rollGreater() roll2 hard}}
+						<span class='success' >Success</span>
+					{{/rollGreater() roll2 hard}}
+					<!-- Is Hard or Extreme -->
+					{{#rollBetween() roll2 2 hard}}
+						<!-- Is Hard -->
+						{{#rollGreater() roll2 extreme}}
+							<span class='hard' >Hard</span>
+						{{/rollGreater() roll2 extreme}}
+						<!-- Is Extreme -->
+						{{#rollBetween() roll2 2 extreme}}
+							<span class='extreme' >Extreme<span>
+						{{/rollBetween() roll2 2 extreme}}
+					{{/rollBetween() roll2 2 hard}}
+				{{/rollBetween() roll2 2 success}}
+				<!-- Is Not Success -->
+				{{#rollGreater() roll2 success}}
+					<!-- Is skill >= 50 -->
+					{{#rollGreater() success 49}}
+						<!-- Is Fumble -->
+						{{#rollTotal() roll2 100}}
+							<span class='fumble' >Fumble</span>
+						{{/rollTotal() roll2 100}}
+						<!-- Is Fail -->
+						{{#rollLess() roll2 100}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll2 100}}
+					{{/rollGreater() success 49}}
+					<!-- Is skill < 50 -->
+					{{#rollLess() success 50}}
+						<!-- Is Fumble -->
+						{{#rollGreater() roll2 95}}
+							<span class='fumble' >Fumble</span>
+						{{/rollGreater() roll2 95}}
+						<!-- Is Fail -->
+						{{#rollLess() roll2 96}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll2 96}}
+					{{/rollLess() success 50}}
+				{{/rollGreater() roll2 success}}
+				<!-- Main roll check block -->
+			{{/^rollGreater() roll1 roll2}}
+
+		{{/rollBetween() bonpen 1 1}}
+
+		<!-- If "bonpen" is 2 => Regular -->
+		{{#rollBetween() bonpen 2 2}}
+			<span class='bold' >Type:</span>
+			<span>Regular</span>
+			<span class='bold' >Value:</span>
+			<span>{{success}}/{{hard}}/{{extreme}}</span>
+			<span class='bold' >Rolled:</span>
+			<span>{{roll1}}</span>
+
+			<!-- Main roll check block -->
+			<!-- 01 is always Critical -->
+			{{#rollTotal() roll1 1}}
+				<span class='critical' >Critical</span>
+			{{/rollTotal() roll1 1}}
+			<!-- Is Success -->
+			{{#rollBetween() roll1 2 success}}
+				<!-- Is Standard -->
+				{{#rollGreater() roll1 hard}}
+					<span class='success' >Success</span>
+				{{/rollGreater() roll1 hard}}
+				<!-- Is Hard or Extreme -->
+				{{#rollBetween() roll1 2 hard}}
+					<!-- Is Hard -->
+					{{#rollGreater() roll1 extreme}}
+						<span class='hard' >Hard</span>
+					{{/rollGreater() roll1 extreme}}
+					<!-- Is Extreme -->
+					{{#rollBetween() roll1 2 extreme}}
+						<span class='extreme' >Extreme<span>
+					{{/rollBetween() roll1 2 extreme}}
+				{{/rollBetween() roll1 2 hard}}
+			{{/rollBetween() roll1 2 success}}
+			<!-- Is Not Success -->
+			{{#rollGreater() roll1 success}}
+				<!-- Is skill >= 50 -->
+				{{#rollGreater() success 49}}
+					<!-- Is Fumble -->
+					{{#rollTotal() roll1 100}}
+						<span class='fumble' >Fumble</span>
+					{{/rollTotal() roll1 100}}
+					<!-- Is Fail -->
+					{{#rollLess() roll1 100}}
+						<span class='fail' >Fail</span>
+					{{/rollLess() roll1 100}}
+				{{/rollGreater() success 49}}
+				<!-- Is skill < 50 -->
+				{{#rollLess() success 50}}
+					<!-- Is Fumble -->
+					{{#rollGreater() roll1 95}}
+						<span class='fumble' >Fumble</span>
+					{{/rollGreater() roll1 95}}
+					<!-- Is Fail -->
+					{{#rollLess() roll1 96}}
+						<span class='fail' >Fail</span>
+					{{/rollLess() roll1 96}}
+				{{/rollLess() success 50}}
+			{{/rollGreater() roll1 success}}
+			<!-- Main roll check block -->
+
+		{{/rollBetween() bonpen 2 2}}
+
+		<!-- If "bonpen" is 3 => 1D bonus -->
+		{{#rollBetween() bonpen 3 3}}
+			<span class='bold' >Type:</span>
+			<span>1D bonus</span>
+			<span class='bold' >Value:</span>
+			<span>{{success}}/{{hard}}/{{extreme}}</span>
+			<span class='bold' >Rolled:</span>
+			<span>{{roll1}}/{{roll2}}</span>
+
+			{{#rollLess() roll1 roll2}}
+				<!-- Main roll check block with roll1 -->
+				<!-- 01 is always Critical -->
+				{{#rollTotal() roll1 1}}
+					<span class='critical' >Critical</span>
+				{{/rollTotal() roll1 1}}
+				<!-- Is Success -->
+				{{#rollBetween() roll1 2 success}}
+					<!-- Is Standard -->
+					{{#rollGreater() roll1 hard}}
+						<span class='success' >Success</span>
+					{{/rollGreater() roll1 hard}}
+					<!-- Is Hard or Extreme -->
+					{{#rollBetween() roll1 2 hard}}
+						<!-- Is Hard -->
+						{{#rollGreater() roll1 extreme}}
+							<span class='hard' >Hard</span>
+						{{/rollGreater() roll1 extreme}}
+						<!-- Is Extreme -->
+						{{#rollBetween() roll1 2 extreme}}
+							<span class='extreme' >Extreme<span>
+						{{/rollBetween() roll1 2 extreme}}
+					{{/rollBetween() roll1 2 hard}}
+				{{/rollBetween() roll1 2 success}}
+				<!-- Is Not Success -->
+				{{#rollGreater() roll1 success}}
+					<!-- Is skill >= 50 -->
+					{{#rollGreater() success 49}}
+						<!-- Is Fumble -->
+						{{#rollTotal() roll1 100}}
+							<span class='fumble' >Fumble</span>
+						{{/rollTotal() roll1 100}}
+						<!-- Is Fail -->
+						{{#rollLess() roll1 100}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll1 100}}
+					{{/rollGreater() success 49}}
+					<!-- Is skill < 50 -->
+					{{#rollLess() success 50}}
+						<!-- Is Fumble -->
+						{{#rollGreater() roll1 95}}
+							<span class='fumble' >Fumble</span>
+						{{/rollGreater() roll1 95}}
+						<!-- Is Fail -->
+						{{#rollLess() roll1 96}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll1 96}}
+					{{/rollLess() success 50}}
+				{{/rollGreater() roll1 success}}
+				<!-- Main roll check block -->
+			{{/rollLess() roll1 roll2}}
+
+			{{#^rollLess() roll1 roll2}}
+				<!-- Main roll check block with roll2 -->
+				<!-- 01 is always Critical -->
+				{{#rollTotal() roll2 1}}
+					<span class='critical' >Critical</span>
+				{{/rollTotal() roll2 1}}
+				<!-- Is Success -->
+				{{#rollBetween() roll2 2 success}}
+					<!-- Is Standard -->
+					{{#rollGreater() roll2 hard}}
+						<span class='success' >Success</span>
+					{{/rollGreater() roll2 hard}}
+					<!-- Is Hard or Extreme -->
+					{{#rollBetween() roll2 2 hard}}
+						<!-- Is Hard -->
+						{{#rollGreater() roll2 extreme}}
+							<span class='hard' >Hard</span>
+						{{/rollGreater() roll2 extreme}}
+						<!-- Is Extreme -->
+						{{#rollBetween() roll2 2 extreme}}
+							<span class='extreme' >Extreme<span>
+						{{/rollBetween() roll2 2 extreme}}
+					{{/rollBetween() roll2 2 hard}}
+				{{/rollBetween() roll2 2 success}}
+				<!-- Is Not Success -->
+				{{#rollGreater() roll2 success}}
+					<!-- Is skill >= 50 -->
+					{{#rollGreater() success 49}}
+						<!-- Is Fumble -->
+						{{#rollTotal() roll2 100}}
+							<span class='fumble' >Fumble</span>
+						{{/rollTotal() roll2 100}}
+						<!-- Is Fail -->
+						{{#rollLess() roll2 100}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll2 100}}
+					{{/rollGreater() success 49}}
+					<!-- Is skill < 50 -->
+					{{#rollLess() success 50}}
+						<!-- Is Fumble -->
+						{{#rollGreater() roll2 95}}
+							<span class='fumble' >Fumble</span>
+						{{/rollGreater() roll2 95}}
+						<!-- Is Fail -->
+						{{#rollLess() roll2 96}}
+							<span class='fail' >Fail</span>
+						{{/rollLess() roll2 96}}
+					{{/rollLess() success 50}}
+				{{/rollGreater() roll2 success}}
+				<!-- Main roll check block -->
+			{{/^rollLess() roll1 roll2}}
+
+		{{/rollBetween() bonpen 3 3}}
+
+		<!-- If "bonpen" is 4 => 2D bonus -->
+		{{#rollBetween() bonpen 4 4}}
+			<span class='bold' >Type:</span>
+			<span>2D bonus</span>
+			<span class='bold' >Value:</span>
+			<span>{{success}}/{{hard}}/{{extreme}}</span>
+			<span class='bold' >Rolled:</span>
+			<span>{{roll1}}/{{roll2}}/{{roll3}}</span>
+
+			{{#rollLess() roll1 roll2}}
+				{{#rollLess() roll1 roll3}}
+					<!-- Main roll check block with roll1 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll1 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll1 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll1 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll1 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll1 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll1 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll1 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll1 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll1 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll1 2 extreme}}
+						{{/rollBetween() roll1 2 hard}}
+					{{/rollBetween() roll1 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll1 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll1 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll1 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll1 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll1 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll1 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll1 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll1 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll1 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll1 success}}
+					<!-- Main roll check block -->
+				{{/rollLess() roll1 roll3}}
+				{{#^rollLess() roll1 roll3}}
+					<!-- Main roll check block with roll3 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll3 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll3 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll3 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll3 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll3 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll3 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll3 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll3 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll3 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll3 2 extreme}}
+						{{/rollBetween() roll3 2 hard}}
+					{{/rollBetween() roll3 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll3 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll3 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll3 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll3 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll3 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll3 success}}
+					<!-- Main roll check block -->
+				{{/^rollLess() roll1 roll3}}
+			{{/rollLess() roll1 roll2}}
+
+			{{#^rollLess() roll1 roll2}}
+				{{#rollLess() roll2 roll3}}
+					<!-- Main roll check block with roll2 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll2 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll2 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll2 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll2 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll2 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll2 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll2 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll2 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll2 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll2 2 extreme}}
+						{{/rollBetween() roll2 2 hard}}
+					{{/rollBetween() roll2 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll2 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll2 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll2 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll2 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll2 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll2 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll2 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll2 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll2 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll2 success}}
+					<!-- Main roll check block -->
+				{{/rollLess() roll2 roll3}}
+				{{#^rollLess() roll2 roll3}}
+					<!-- Main roll check block with roll3 -->
+					<!-- 01 is always Critical -->
+					{{#rollTotal() roll3 1}}
+						<span class='critical' >Critical</span>
+					{{/rollTotal() roll3 1}}
+					<!-- Is Success -->
+					{{#rollBetween() roll3 2 success}}
+						<!-- Is Standard -->
+						{{#rollGreater() roll3 hard}}
+							<span class='success' >Success</span>
+						{{/rollGreater() roll3 hard}}
+						<!-- Is Hard or Extreme -->
+						{{#rollBetween() roll3 2 hard}}
+							<!-- Is Hard -->
+							{{#rollGreater() roll3 extreme}}
+								<span class='hard' >Hard</span>
+							{{/rollGreater() roll3 extreme}}
+							<!-- Is Extreme -->
+							{{#rollBetween() roll3 2 extreme}}
+								<span class='extreme' >Extreme<span>
+							{{/rollBetween() roll3 2 extreme}}
+						{{/rollBetween() roll3 2 hard}}
+					{{/rollBetween() roll3 2 success}}
+					<!-- Is Not Success -->
+					{{#rollGreater() roll3 success}}
+						<!-- Is skill >= 50 -->
+						{{#rollGreater() success 49}}
+							<!-- Is Fumble -->
+							{{#rollTotal() roll3 100}}
+								<span class='fumble' >Fumble</span>
+							{{/rollTotal() roll3 100}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 100}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 100}}
+						{{/rollGreater() success 49}}
+						<!-- Is skill < 50 -->
+						{{#rollLess() success 50}}
+							<!-- Is Fumble -->
+							{{#rollGreater() roll3 95}}
+								<span class='fumble' >Fumble</span>
+							{{/rollGreater() roll3 95}}
+							<!-- Is Fail -->
+							{{#rollLess() roll3 96}}
+								<span class='fail' >Fail</span>
+							{{/rollLess() roll3 96}}
+						{{/rollLess() success 50}}
+					{{/rollGreater() roll3 success}}
+					<!-- Main roll check block -->
+				{{/^rollLess() roll2 roll3}}
+			{{/^rollLess() roll1 roll2}}
+
+		{{/rollBetween() bonpen 4 4}}
+
 	{{/^rollBetween() success 0 0}}
 </rolltemplate>
 
